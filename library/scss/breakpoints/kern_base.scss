@@ -1,0 +1,658 @@
+
+h1, h2, h3, h4 , h5, h6 {
+	font-family: 'Lato', sans-serif;
+	letter-spacing: .1em;
+
+}
+
+
+body {
+	background-color: #01587e;
+	background-image:url(../images/home-page-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	black: white;
+}
+
+
+.wrap {
+	width: 1151px; 
+}
+
+
+#inner-header {
+	position: relative;
+
+}
+
+
+#number-and-search-wrap {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	width: 45%;
+}
+
+
+#kern-phone {
+	color: #84a990;
+	float: right;
+	width: 130px;
+	text-weight: 600;
+	font-size: 1.1em;
+	margin-top: 13px;
+
+}
+
+
+#search-wrap {
+
+	position: relative;
+	float: right;
+	input#search {
+		height: 30px;
+		width: 178px;
+		background: none;
+		border: solid 1px #a1a1a1;
+		border-radius: 0;
+		margin-top: 11px;
+		padding-left: 30px;
+		padding-top: 3px;
+		color: white;
+		line-height: 15px;
+		
+		
+		
+	}
+	
+	$placeholderLineHeight: 15px;
+	
+	*::-webkit-input-placeholder { /* WebKit browsers */
+    line-height: $placeholderLineHeight;
+}
+*:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   line-height: $placeholderLineHeight;
+}
+*::-moz-placeholder { /* Mozilla Firefox 19+ */
+   line-height: $placeholderLineHeight;
+}
+*:-ms-input-placeholder { /* Internet Explorer 10+ */
+  line-height: $placeholderLineHeight;
+}
+	
+	#header-search-icon-submit {
+		position: absolute;
+		top: 12px;
+		background-image: url(../images/kern-sprites.png);
+		background-position: -128px -2px;
+		width: 23px;
+		height: 22px;
+		border:0 none !important;
+		outline: 0 none;
+	}
+	
+}
+
+
+#logo {
+	float: left;
+	background-image: url("../images/kern-transit-logo.png");
+	background-repeat: no-repeat;
+	width: 405px;
+	height: 102px;
+	margin-top: 44px;
+}
+
+
+#inner-content {
+	width: 1151px;
+}
+
+
+#home-desktop-map-container {
+	background: #8bb58a;
+	height: 695px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	margin-bottom: 20px;
+	position: relative;
+	background-image: url(../images/map-top-rim.jpg);
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+	
+	img {
+		height: 680px !important;
+	}
+}
+
+#map-alerts-wrap {
+	position:absolute;
+	left: 23px;
+	bottom: 24px;
+	z-index: 999;
+	color: white;
+	text-decoration: underline;
+	font-size: 1.1em; 
+	font-weight: 500;
+	
+	i {
+		background-image: url(../images/kern-sprites.png);
+		width: 30px;
+		height: 25px;
+		float: left;
+		background-position: -187px -8px;
+		margin-right: 4px;
+	}
+
+}
+
+#drop-down-info-text-wrap {
+	z-index: 99;
+	position: absolute;
+	top: 21px;
+	right: 50px;
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+#map-background {
+	position: absolute;
+	top: 10px;
+	z-index: 1;
+	background-repeat: no-repeat;
+	
+	
+}
+
+#planner-wrap {
+
+	width: 233px;
+	margin: 8px 0 0 18px;
+	z-index: 999;
+	position: absolute;
+	top: 10px;
+
+}
+
+#planner-expand-contract-tab {
+	float: left;
+	font-size: .8em;
+	line-height: .7em;
+	height: 22px;
+	padding: 0px 4px 3px 5px;
+	color: #5f5850;
+	cursor: pointer;
+	background-image: url(../images/kern-sprites.png);
+
+}
+
+
+#trip-planner-container form {
+	padding: 5px;
+}
+
+
+#trip-planner-container.minimized {
+	form {
+	height: 38px; 
+	}
+}
+
+#trip-planner-container {
+
+ input{
+ 	line-height: inherit;
+ }
+
+}
+
+.planner-title {
+}
+#planner-expand-contract-tab.minimized {
+	background-position: -35px  -102px;
+	width: 77px;
+}
+
+
+#planner-expand-contract-tab.expanded {
+	background-position:  -45px  -127px;
+	width: 84px;
+}
+
+
+#trip-planner-container {
+	background-color: #f5e5d0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 4px;
+	float: left;
+	-webkit-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.25);
+	box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.25);
+	padding-bottom: 7px;	
+	
+	td {
+	
+		width: 100%;
+	}
+	
+	
+
+ h2 {
+ 	color: #de791c;
+ 	background-color: #fff98d;
+ 	border-top-left-radius: 10px;
+ 	width: 100%;
+ 	text-align: center;
+ 	font-style: italic;
+ 	text-transform: uppercase;
+ 	font-size: 22px;
+ 	padding: 5px;
+ 	margin-bottom: 2px;
+ 	font-weight: 500;
+ 	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.67);
+ }
+ 
+ table {
+ width: 100%;
+ 
+ }
+ 
+ input[type="text"] {
+ background-color: #e4d4bf;
+ border: 1px solid #d2c1ab;
+ color: black;
+ width: 100%; 
+ height: 32px;
+ margin-bottom: 2px;
+
+ border-radius: 0;
+ 
+ }
+ 
+ input[type="radio"] {
+	margin-left: 1px;
+ 	margin-right: 4px;
+ 
+ }
+ 
+ input[type="submit"] {
+	margin: 7px 0 7px 0 ;
+	width: 100%;
+ 
+ }
+ 
+ 
+ 
+ #fdate, #ftime {
+ 	width: 49%;
+ 	float: left;
+ }
+ 
+ #ftime {
+ 	margin-left: 2%;
+ }
+ 
+ #daddr {
+ width: 100%;
+ }
+ 
+ 
+
+
+}
+
+
+	
+
+
+#home-secondary-container {
+
+	margin-bottom: 20px;
+	color: white;
+	border: 1px solid #8d9790; 
+	padding: 10px;
+	background: #3c759c; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #3c759c 0%, #28516e 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3c759c), color-stop(100%,#28516e)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #3c759c 0%,#28516e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c759c', endColorstr='#28516e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+
+
+	h1, h2 {
+		font-style:italic;
+		font-size: 1.3em;
+		color: #ffc57f;
+		text-transform: uppercase;
+		margin-top: 0;
+		padding-top: 0;
+		position:relative;
+		top: -5px;
+	}
+
+	#secondard-links-row {
+		margin-top: 35px;
+	
+	}
+	
+	.secondary-col {
+		height: 260px;
+		
+		li {
+			font-size: .9em;
+		}
+	}
+
+
+    #home-news-area{
+    	
+    	border-right: 1px solid #5e8aa9;
+    	margin-left: 43px;
+    	width: 40%;
+    	
+    	 h2 {
+    	 	margin-right: 43px;
+    	 	padding-bottom: 19px;
+    	 	margin-bottom: 10px;
+    		border-bottom: 1px dashed #a5bfd1;
+    	}
+    }
+    
+    
+	a:link, a:active, a:visited {
+		color: white;
+		text-decoration: none;
+	} a:hover {
+		text-decoration: underline;
+	}
+
+	#how-to-ride-links {
+		float: left;
+		width: 25%;
+		margin-left: 43px;
+		border-right: 1px solid #5e8aa9;
+		
+		
+		li {
+			margin-bottom: 7px;
+			font-size: .9em;
+		}
+		
+		#connections-icon,
+		#accessibility-icon,
+#dial-a-ride-icon,
+#bikes-on-buses-icon,
+#passenger-conduct-icon,
+#mobile-and-desktop-apps-icon,
+#holidays-icon {
+	background-image: url(../images/kern-sprites.png);
+	width: 22px; 
+	height: 20px;
+	float: left;
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+
+}
+
+		#connections-icon {
+			background-position: -160px -75px;
+		}
+		#accessibility-icon {
+			background-position: -13px -75px;
+		}
+		#dial-a-ride-icon {
+			background-position: -35px -75px;
+			left: -3px;
+		}
+		#bikes-on-buses-icon {
+			background-position: -60px -75px;
+			left: -5px;		
+		}
+		#passenger-conduct-icon {
+			background-position: -87px -75px;
+			left: -4px;
+		}
+		#mobile-and-desktop-apps-icon {
+			background-position: -115px -75px;
+			left: 1px;
+		}
+		#holidays-icon {
+			background-position: -136px -74px;
+		}
+
+
+
+	}
+
+	#home-description-of-services {
+
+	margin: 10px 24px 57px 24px;
+	padding-top: 36px;
+	border-top: 1px solid #5e8aa9;
+	
+		a:link {
+			color: #ffc57f !important;
+			text-decoration: underline;
+		}
+	}
+	
+	.menu-secondary-links-home-right-container {
+		float: left;
+		margin-left: 43px;
+	}
+	
+	ul#menu-secondary-links-home-right {
+	
+		
+    list-style: none;
+    padding:0;
+  margin-top: 0;
+
+
+	li { 
+		margin-bottom: 12px;
+		padding-left: 1.1em; 
+		text-indent: -.7em;
+		a:link{
+			margin-left: 5px;
+		}
+	}
+
+	li:before {
+		content: "•  ";
+		color: #8baac1; /* or whatever color you prefer */
+	}
+	
+	}
+	
+	
+	#home-news-area {
+		float: left;
+		
+		ul {
+		
+			li {
+			
+				font-size: 1.03em;
+				min-height: 46px;
+				vertical-align: center;
+				
+				a i {
+						background-image: url(../images/kern-sprites.png);
+						background-position: -168px -4px;
+						width: 15px;
+						height: 40px;
+						float: left;
+						margin-right: 7px;
+
+				}
+			}
+			li:before {
+				
+				color: #8baac1; /* or whatever color you prefer */
+		}
+	
+		
+		}
+		
+
+	}
+
+}
+
+#main-nav {
+
+	float: left;
+	margin: 74px 0 10px 41px;
+	
+
+	ul {
+		li {
+			cursor: pointer;
+		
+			text-align: center;
+			float: left;
+			margin: 0 20px;	
+			height: 57px;
+			
+			a:link, a:active, a:visited, a:hover  {
+			color: white; 
+			text-decoration: none;
+			font-family: 'Lato', sans-serif;
+			font-size: 1.05em;
+			text-transform: uppercase;
+			} 
+			
+			a:hover{
+				
+				
+			
+			}
+			
+			
+			.main-nav-icon {
+				height: 25px;
+				width: 25px;
+				margin-right: 8px;
+				float: left;
+				background-image: url(../images/kern-sprites.png);
+			
+			}
+			
+			$main-nav-y: -7px;
+			
+			#routes-and-schedules-icon {
+				margin-top: 10px;
+				background-position: -10px $main-nav-y;
+			}
+			#dial-a-ride-icon {
+				background-position: -39px $main-nav-y;
+			}
+			#fares-icon {
+				background-position: -69px $main-nav-y;
+			}
+			
+			#how-to-ride-icon {
+				background-position: -100px $main-nav-y;
+			}
+			
+			
+			span {
+			float: right;
+			}
+			
+		}
+		li:hover {
+		border-bottom: 2px solid white;
+		
+		
+		$main-nav-y: -37px;
+			
+			#routes-and-schedules-icon {
+				background-position: -10px $main-nav-y;
+			}
+			#dial-a-ride-icon {
+				background-position: -39px $main-nav-y;
+			}
+			#fares-icon {
+				background-position: -69px $main-nav-y;
+			}
+			
+			#how-to-ride-icon {
+				background-position: -100px $main-nav-y;
+			}
+			
+		
+		}
+		li#dial-a-ride-link, li#fares-link, li#how-to-ride-link {
+			padding-top: 10px;
+		}
+	
+	}
+
+}
+
+
+
+.footer {
+
+	a:link, a:visited, a:active {
+	color: white;
+	}
+
+	a:hover {
+ 			text-decoration: underline;
+ 	}
+ 	
+ 	
+ 	#footer-attributions {
+ 	font-size: .8em;
+ 	margin-top: 13px;
+ 	margin-right: 15px;
+ 	float: right;
+		a:link, a:active, a:visited {
+		color: grey !important;
+		text-decoration: none;
+		}
+ 	}
+}
+#menu-footer-links {
+	float: left;
+ 	li {
+ 		float: left;
+ 		
+ 	}
+}
+
+#footer-copyright {
+margin-top: 10px;
+float: right;
+}
+
+#inner-footer {
+	height: 60px;
+}
+
+///  home planner 
+#ui-datepicker-div {font-size:60%}
+
+.min-hide {
+display: none;
+}
+
+#trip_planner {
+width: 233px;
+ 	h2 {
+ 		border-top-left-radius: 10px;
+ 		border-top-right-radius: 4px;
+ 		margin-top: 0;
+ 		font-size: 1.35em;
+
+ 	}
+}
