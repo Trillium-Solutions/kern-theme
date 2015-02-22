@@ -942,7 +942,7 @@ function my_sort_route( $vars ) {
 
 
 function my_admin_enqueue_css() {
-	echo '<link rel="stylesheet" id="route_icons-css"  href="http://kerntransit.trilliumtransit.com/wp-content/themes/kern/library/css/route-icons.css" type="text/css" media="all" />';
+	echo '<link rel="stylesheet" id="route_icons-css"  href="http://kerntransit.org/wp-content/themes/kern/library/css/route-icons.css" type="text/css" media="all" />';
 }
 
 add_action( 'admin_enqueue_scripts', 'my_admin_enqueue_css' );

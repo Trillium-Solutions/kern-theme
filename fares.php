@@ -43,7 +43,7 @@ $site_base_dir = '/nas/wp/www/cluster-30005/kerntransit';
 									 
 									 <h4 class="subtitle">FARE CALCULATOR</h4> 
 									 <div id="fare-form-holder">
-										<form id="fare_zones" method="GET" action="http://trilliumtransit.com/applications/fare_calculator/calculate_fare_result.php">
+										<form id="fare_zones" method="GET" action="http://applications.trilliumtransit.com/fare_calculator/calculate_fare_result.php">
 										<input type="hidden" name="agency_id" value="194">
 										<div id="fare-calculator-details">
 										<div id="fare-start" >Start zone: <select class="from" name="origin_id" id="start_zone" onchange="clear_fare_result();"><option>Select start zone</option></select></div>
