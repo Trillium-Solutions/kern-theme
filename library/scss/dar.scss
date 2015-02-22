@@ -1,0 +1,41 @@
+#dar-map-container {
+	float: right;
+	width: 800px;
+}
+
+#dar-info-container {
+	float: left;
+	width: 350px;
+	
+	div {
+		padding: 15px;
+		border-bottom: 1px #e6ddce solid; 
+	}
+	
+}
+
+#dar-right-col {
+float: right;
+width: 400px;
+}
+
+#route-page-connections {
+ul
+{
+    list-style: initial;
+    margin: initial;
+    padding: 0 0 0 40px;
+}
+
+ li
+{
+    display: list-item;
+}
+
+}
+
+#route-page-connections {
+	h2 {
+		margin-top: .375em;
+	}
+}

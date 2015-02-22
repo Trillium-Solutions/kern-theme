@@ -25,9 +25,24 @@
 							&#9660; Click a route for details
 						</div><!-- end #drop-down-info-text -->
 						
+						<?php  $count_posts = get_alertCount(); 
+						if($count_posts > 0) { ?>
 						<div id="map-alerts-wrap">
-							<i id="alerts-icon"> </i> Alerts (2)
+						
+							<i id="alerts-icon"> </i> <a href="<?php echo get_site_url(); ?>/alerts">Alerts<? if($count_posts > 0) { echo '('.$count_posts.')'; } ?></a> 
 						</div> <!-- end #map-alerts-wrap -->
+						<?php
+						} else {
+						
+						?>
+							<div id="map-alerts-wrap" class="no-alerts">
+						
+							No service alerts at this time.
+						</div> <!-- end #map-alerts-wrap -->
+						<?php
+						
+						}
+						?>
 					
 					</div><!-- end #home-desktop-map-container -->
 
@@ -37,8 +52,8 @@
 								<div id="how-to-ride-links" class="secondary-col">
 								<h2>How to Ride</h2>
 								<ul>
-								<li><a href="<?php echo get_permalink( 5 ); ?>" ><i id="connections-icon"></i>Connections</a></li>
-								<li><a href="<?php echo get_permalink( 7 ); ?>" ><i id="dial-a-ride-icon"></i>Dial-A-Ride</a></li>
+								<li><a href="<?php echo get_permalink( 1267 ); ?>" ><i id="connections-icon"></i>Connections</a></li>
+							<!--	<li><a href="<?php echo get_permalink( 7 ); ?>" ><i id="dial-a-ride-icon"></i>Dial-A-Ride</a></li>-->
 								<li><a href="<?php echo get_permalink( 5 ); ?>" ><i id="accessibility-icon"></i>Accessibility</a></li>
 								<li><a href="<?php echo get_permalink( 9 ); ?>" ><i id="bikes-on-buses-icon"></i>Bikes on Buses</a></li>
 								<li><a href="<?php echo get_permalink(11 ); ?>" ><i id="passenger-conduct-icon"></i>Passenger Conduct</a></li>
@@ -52,22 +67,46 @@
 							
 						<div id="home-news-area" class="secondary-col" >
 						<h2>News</h2>
-						<?php query_posts('category_name=news&showposts=3'); ?>
-						<ul>
-						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-								<li class="home-news-outer" >
-    								 <a href="<?php the_permalink(); ?>" class="home-news-inner">
+						<?php
+							
+								
+							$query = new WP_Query(array(
+							'posts_per_page' => 3,
+							"post_type"=>"news", 
+								
+
+							));
+
+						
+						
+								if ( $query->have_posts() ) {
+									?>
+									<ul>
+									<?php
+									
+										while ( $query->have_posts() ) {
+											$query->the_post();
+											
+											?>
+												<li class="home-news-outer" >
+													 <a href="<?php the_permalink(); ?>" class="home-news-inner">
 									   
-										 <i></i> <?php the_title(); ?>
+														 <i></i> <?php the_title(); ?>
 										 
-									 </a>
-						   		</li>
-						     
-							<?php endwhile; ?>
-							</ul>
+													 </a>
+												</li>	
+											
+										<?php
+										}
+										?>
+										</ul>
+										<?php
+									}  
+							wp_reset_postdata();
+							?>
 						
 						<div id="home-more-news"><a href="./news">See More News >></a></div>
-						<?php endif; ?>
+						
 					</div> <!-- end #home-news-area -->
 								<div id="right-secondary-links" class="secondary-col">
 
@@ -79,8 +118,8 @@
 							</div> <!-- end #secondary-links-row -->
 							<br style="clear: both;" />
 														<div id="home-description-of-services">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-							<a href="<?php echo get_permalink( 56); ?>" >More About Kern Transit</a>
+							Kern Transit provides passenger bus service between and in the rural communities of Kern County. There are 17 fixed transit routes, and Dial-A-Ride (DAR) service is available in most communities. The transit system offers intercity service between Arvin, Bakersfield, Bodfish, Boron, Buttonwillow, California City, Delano, Edwards, Frazier Park, Inyokern, Keene, Kernville, Lake Isabella, Lamont, Lebec, Lost Hills, McFarland, Mojave, Onyx, Ridgecrest, Rosamond, Shafter, Taft, Tehachapi, Wasco, Weldon, and Wofford Heights, along with local transit service. Connections to Metrolink in Lancaster are also available. Kern Transit is a division of the Kern County Roads Department.
+							&nbsp;<a href="<?php echo get_permalink( 56); ?>" >More About Kern Transit</a>
 							</div> <!-- end #home-description-of-services -->
 						
 						

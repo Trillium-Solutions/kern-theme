@@ -16,15 +16,15 @@
  </tr>
  
  <tr class="minimized-visible">
-            <td valign="top"><input  type="text" alt="Start address"  name="saddr" tabindex="1" maxlength="2048" id="saddr"/>
+            <td valign="top"><input  type="text" alt="Start address"  name="saddr" tabindex="1" maxlength="2048" id="saddr" placeholder="Enter your start location"/>
             <span class="min-hide"><font size="-2">e.g. 1801 Panorama Dr, Bakersfield, CA</font></td></span>
 </tr>
 
 <tr class="min-hide">
 <td style="font-size:14px;" class="planner-title" ><strong>End</strong>&nbsp;&nbsp;</td></tr>
 <tr class="min-hide">
-<td><input  type="text" alt="Destination address" name="daddr" id="daddr" tabindex="1" maxlength="2048"/><input type="hidden" name="sll" value="35.372915,-119.018819"/>
-<font size="-2">e.g. Lake Isabella Public Library</font></td></tr>
+<td><input  type="text" alt="Destination address" placeholder="Enter your destination" name="daddr" id="daddr" tabindex="1" maxlength="2048"/><input type="hidden" name="sll" value="35.372915,-119.018819" />
+<font size="-2">e.g. Lake Isabella Public Library</font></td></tr> 
 
 
 <tr class="min-hide">

@@ -1,0 +1,143 @@
+#main {
+ 	background-color:#f9f5e5;
+ 	background-image: url(../images/grain-manilla.jpg);
+ 	border-top-left-radius: 10px;
+ 	min-height: 500px;
+ 	
+ 	padding-right: 0 !important;
+ 	article {
+ 		background: none;
+ 		border: 0;
+
+ 	}
+ 	
+ 	
+}
+
+.d-5of7 {
+	padding-right: 0px !important;
+}
+
+#sidebar1 {
+
+background-color: #0072bc;
+border-top-right-radius: 10px;
+ 		 	min-height: 500px;
+ 		 	padding:  10px 30px;
+color: white;
+}
+
+
+#generic-wide-container {
+
+	width: 100%; 
+	min-height: 400px;
+ 	background-color:#f9f5e5;
+ 	background-image: url(../images/grain-manilla.jpg);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	position: relative; 
+
+   
+}
+
+#blue-top-divider {
+	width: 100%;
+	background-color: #0072bc;
+	height: 10px;
+}
+
+
+h1#page-title {
+
+	margin: 10px 0 10px 0; 
+}
+
+#breadcrumbs{
+	font-size: 12px;
+    list-style:none;
+    margin:10px 0;
+    overflow:hidden;
+     color: #c6e9ff;
+     margin-top: 0;
+    
+    a:link, a:active, a:visited {
+    color: #c6e9ff;
+    
+    }
+    a:hover {
+    	color: white;
+    }
+}
+ 
+#breadcrumbs li{
+    float:left;
+    margin-right:15px;
+}
+ 
+#breadcrumbs .separator{
+    font-weight:700;
+
+    color:#999;
+}
+
+#page-anchor-links {
+	border-top: 1px solid #b1aba6;
+	border-bottom: 1px solid #b1aba6;
+	padding: 10px;
+	margin: 0px 0 10px 0;
+}
+
+.page-template-fares-php {
+
+	
+
+	table {
+		caption {
+			color: black;
+			
+		}
+		color: black;
+		background: #f1f1f1;
+	}
+
+}
+
+
+.page-template-fares-php {
+
+	table {
+	background: white;
+	margin-bottom: 0;
+	margin-top: 15px;
+	
+	 		 
+-moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+-webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+	
+	td {
+		background: white;
+	}
+	
+		caption {
+			 		 
+-moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+-webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+			background: #80A9BD;
+			color: white;
+			font-size: 21px;
+			padding: 5px;
+			border-top-right-radius: 3px;
+			border-top-left-radius: 3px;
+			margin-bottom: 0;
+			
+		}
+	
+	}
+	
+	.discount-text {
+		font-size: 12px;
+	}
+}

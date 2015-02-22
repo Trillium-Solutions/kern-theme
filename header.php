@@ -11,7 +11,7 @@
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title><?php wp_title(''); ?></title>
+		<title><?php wp_title(' | '); ?></title>
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
@@ -47,7 +47,14 @@
 		
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/interactive-map.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/sml_interactive-map.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/route-icons.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/single-route.css">   
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/kern-transit.css">  
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/dar.css">  
 
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' /> 
 
 
 		<script>
@@ -75,10 +82,22 @@
 
 
 		</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-53349417-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta name="google-translate-customization" content="f25af25643c7b829-5e44eb73351882d9-gcc7ef8ab8e200b71-13"></meta>
+        
 	</head>
 
 	<body <?php body_class(); ?>>
+
 
 		<div id="container">
 
@@ -86,7 +105,14 @@
 
 				<div id="inner-header" class="wrap cf">
 
+			
+        
 					<div id="number-and-search-wrap">
+					<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 						
 						<div id="search-wrap">
 							<form action="/" method="get">
@@ -95,15 +121,15 @@
 							</form>
 						</div>
 						<div id="kern-phone">
-							555-555-5555
+							<a href="tel:8003232396">800-323-2396</a>
 						</div><!-- end #kern-phone -->
 					</div> <!-- end #number-and-search-wrap -->
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 					<a href="<?php echo home_url(); ?>" rel="nofollow"><div id="logo"></div></a>
 					<nav id="main-nav">
 						<ul>
-							<li id="routes_and_schedules_link"><a href="<?php echo get_permalink(17) ?>"><i id="routes-and-schedules-icon" class="main-nav-icon"></i><span>Routes &amp; <br />Schedules</span></a></li>
-							<li id="dial-a-ride-link"><a href="<?php echo get_permalink(7) ?>"><i id="dial-a-ride-icon" class="main-nav-icon"></i><span>Dial-A-Ride</span></a></li>
+							<li id="routes_and_schedules_link" class="<?php if( is_post_type_archive('route')){echo 'current';}else if ( 'route' == get_post_type() ||  'timetable' == get_post_type()) {echo "parent-active"; }?>"><a href="<?php echo get_permalink(17) ?>"><i id="routes-and-schedules-icon" class="main-nav-icon"></i><span>Routes &amp; <br />Schedules</span></a></li>
+							<li id="dial-a-ride-link" class="<?php if( is_post_type_archive('dar')){echo 'current';}else if ( 'dar' == get_post_type()) {echo "parent-active"; }?>"><a href="<?php echo get_site_url(); ?>/dial-a-ride"><i id="dial-a-ride-icon" class="main-nav-icon"></i><span>Dial-A-Ride</span></a></li>
 							<li id="fares-link"><a href="<?php echo get_permalink(23) ?>"><i id="fares-icon" class="main-nav-icon"></i><span>Fares</span></a></li>
 							<li id="how-to-ride-link"><a href="<?php echo get_permalink(19) ?>" ><i id="how-to-ride-icon" class="main-nav-icon"></i><span>How &nbsp; to &nbsp; Ride</span></a></li>
 						</ul>
@@ -132,3 +158,4 @@
 				</div>
 
 			</header>
+

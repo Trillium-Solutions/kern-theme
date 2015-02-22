@@ -1,0 +1,282 @@
+i.route-icon-lrg {
+	width: 50px;
+	height: 50px;
+
+}
+i.route-icon-med {
+	width: 35px;
+	height: 35px;
+
+}
+i.route-icon-sml {
+	width: 20px;
+	height: 20px;
+}
+
+i.route-icon {
+float: left;  
+}
+
+
+.open-close-icon {
+	padding-right: 20px;
+}
+
+#map-floaty-box {
+	width: 735px;
+
+	margin-left: 416px;
+	border-top-right-radius: 10px;
+    top:0;
+    z-index:1;
+	position: absolute; 
+
+}
+
+
+#routes-page-map {
+	background: #ceecbf;
+	border-top-right-radius: 10px;
+	background-repeat: no-repeat;
+
+	img {
+		height: 540px !important;
+	}
+
+}
+
+#route-page-connections {
+width: 100%;
+background: #ddd8d3;
+clear: both;
+padding-bottom: 20px;
+border-top: 1px solid grey;
+z-index: 999;
+
+ h2{
+ 	color: black;
+ 	padding-left: 10px;
+ }
+}
+
+#sml-map-background {
+		border-top-right-radius: 10px;
+		background-repeat: no-repeat;
+}
+#map-floaty-bottom-gradient {
+	height: 0px;
+	width: 735px;
+	background-image: url(../images/routes-map-bottom-gradient.jpg);
+}
+
+
+#routes-left-col {
+	float: left;
+	width: 416px;
+	min-height: 560px;
+	border-right: 1px solid #5b9f75;
+
+}
+
+#routes-page-blurb {
+	float: left;
+	font-size: .9em;
+	padding: 12px;
+}
+
+h1#route-page-title {
+		margin: 25px 0 10px 10px; 
+	i {
+		position: relative;
+		margin-right: 20px;
+		top: -10px;
+	
+	}
+}
+
+
+
+.area-box {
+	background: #ede0d1;
+	float: left;
+	width: 100%;
+	padding: 0;
+	color: black;
+	
+
+	h2 {
+		cursor: pointer;
+		background: #dacec0;
+		margin-top: 0;
+		padding: 10px 10px 10px 20px;
+		font-size: 15px;
+		font-weight: 700;
+	
+		i {
+			float: right;
+			font-size: .76em;
+			color: #6c665e;
+		
+		}
+		
+		i.open-close-icon {
+			width: 15px;
+			height: 15px;
+			margin-left: 5px;
+			position: relative;
+			top: 6px;
+			background-image: url(../images/kern-sprites.png);
+			background-position: -262px -10px;
+		}
+	}
+
+
+	.route-icon-med {
+		margin-right: 7px;
+	}
+
+
+		ul {
+			
+			margin: 0;
+			padding: 0;
+		 ul {
+		 	border-top: 1px solid grey;
+				margin: 0;
+				padding: 0;
+				li {
+		
+		
+					padding-left: 20px;
+					padding-bottom: 10px;
+					padding-top: 10px;
+			
+			
+			
+					i {
+						width: 35px;
+						float: left;
+						height: 35px;
+
+					}
+				}
+			
+				li:hover {
+					background-color: #eef9dc;
+				}
+			}
+		}
+	
+	.route-days-of-week {
+		font-size: .8em;
+		color:#4a4a4a;
+	}
+}
+.area-box.minimized {
+	h2 {
+		margin-bottom: 0;
+	}
+	
+	i.open-close-icon {
+			width: 15px;
+			height: 15px;
+			margin-left: 5px;
+			position: relative;
+			top: 6px;
+			background-image: url(../images/kern-sprites.png);
+			background-position: -241px -10px;
+		}
+
+}
+
+#sidebar1 {
+
+.secondary {
+		li { 
+			margin-bottom: 12px;
+			padding-left: 1.1em; 
+			text-indent: -.7em;
+			a:link{
+				margin-left: 5px;
+			}
+		}
+
+		li:before {
+			content: "•  ";
+			color: #8baac1; /* or whatever color you prefer */
+		}
+	
+	}
+}
+
+#featured-image-container {
+width: 100%;
+}
+
+.single-timetable #generic-wide-container {
+	text-align: left;
+#timetable-content {
+	background-color: transparent;
+	margin-bottom: 20px;
+	//border-top: 1px solid black;
+	//border-bottom: 1px solid black;
+	clear: both;
+	
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}
+		
+	table {
+		margin: 0 auto;
+	}	
+}
+
+#timetable-detail-maps{
+h2 {
+
+}
+background: #0072bc;
+
+border-right: white 2px solid;
+border-left: white 2px solid;
+clear: both;
+}
+
+#dar-info {
+margin-top: 0;
+}
+
+.area-box li:hover {
+	cursor: pointer; 
+}
+
+.detail-loading {
+	position: absolute;
+	top: 35px;
+	left: 10px;
+	width: 100px;
+	height: 33px;
+	background: url(../images/loading.gif); 
+	background-repeat: no-repeat;
+}
+#route-alerts {
+	ul {
+		li.expanded {
+			border-bottom: 10px solid #fef200;
+		}
+	}
+	h3 {
+		cursor: pointer;  
+	}
+}
+
+#dar-info-container.no-map {
+border-right: 1px solid grey; 
+}
+
+#no-map {
+margin: 10px;
+float: left;
+}

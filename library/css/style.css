@@ -1305,12 +1305,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #204df4;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #0b37db; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1759,11 +1759,18 @@ be seen on the Desktop.
 .wrap {
   width: 1040px; }
 
+i {
+  font-style: normal; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
   letter-spacing: .1em; }
 
+.over-blue {
+  color: white; }
+
 body {
+  color: black;
   background-color: #01587e;
   background-image: url(../images/home-page-bg.jpg);
   background-position: top center;
@@ -1780,15 +1787,34 @@ body {
   position: absolute;
   top: 10px;
   right: 20px;
-  width: 45%; }
+  width: 65%; }
+
+#google_translate_element {
+  float: right;
+  margin-left: 15px;
+  margin-top: 11px; }
+
+.goog-te-gadget-simple {
+  border: solid 1px #a1a1a1 !important;
+  background-color: #3c759c !important;
+  color: white !important;
+  height: 30px; }
+  .goog-te-gadget-simple span {
+    line-height: 27px; }
+  .goog-te-gadget-simple a {
+    color: white !important; }
 
 #kern-phone {
-  color: #84a990;
   float: right;
   width: 130px;
   text-weight: 600;
   font-size: 1.1em;
   margin-top: 13px; }
+  #kern-phone a:link, #kern-phone a:visited, #kern-phone a:active {
+    color: #84a990;
+    text-decoration: none; }
+  #kern-phone a:hover {
+    text-decoration: underline; }
 
 #search-wrap {
   position: relative;
@@ -1858,15 +1884,28 @@ body {
   z-index: 999;
   color: white;
   text-decoration: underline;
-  font-size: 1.1em;
+  font-size: 1.8em;
   font-weight: 500; }
+  #map-alerts-wrap a:link, #map-alerts-wrap a:active, #map-alerts-wrap a:visited {
+    color: white;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.67); }
+  #map-alerts-wrap a:hover {
+    color: yellow; }
   #map-alerts-wrap i {
     background-image: url(../images/kern-sprites.png);
     width: 30px;
     height: 25px;
     float: left;
     background-position: -187px -8px;
-    margin-right: 4px; }
+    margin-right: 4px;
+    position: relative;
+    top: 9px; }
+
+#map-alerts-wrap.no-alerts {
+  font-size: 1.1em;
+  font-weight: 300;
+  text-decoration: none;
+  color: #dcdcdc; }
 
 #drop-down-info-text-wrap {
   z-index: 99;
@@ -1964,6 +2003,60 @@ body {
   #trip-planner-container #daddr {
     width: 100%; }
 
+#how-to-ride-links {
+  float: left; }
+  #how-to-ride-links a:link, #how-to-ride-links a:active, #how-to-ride-links a:visited {
+    color: white;
+    text-decoration: none; }
+  #how-to-ride-links a:hover {
+    text-decoration: underline; }
+  #how-to-ride-links li {
+    margin-bottom: 7px;
+    font-size: .9em; }
+
+#connections-icon,
+#accessibility-icon,
+#dial-a-ride-icon,
+#bikes-on-buses-icon,
+#passenger-conduct-icon,
+#mobile-and-desktop-apps-icon,
+#holidays-icon {
+  background-image: url(../images/kern-sprites.png);
+  width: 22px;
+  height: 20px;
+  float: left;
+  position: relative;
+  top: 2px;
+  margin-right: 5px; }
+
+#sidebar1 #how-to-ride-links {
+  margin-left: 0px; }
+
+#connections-icon {
+  background-position: -160px -75px; }
+
+#accessibility-icon {
+  background-position: -13px -75px; }
+
+#dial-a-ride-icon {
+  background-position: -35px -75px;
+  left: -3px; }
+
+#bikes-on-buses-icon {
+  background-position: -60px -75px;
+  left: -5px; }
+
+#passenger-conduct-icon {
+  background-position: -87px -75px;
+  left: -4px; }
+
+#mobile-and-desktop-apps-icon {
+  background-position: -115px -75px;
+  left: 1px; }
+
+#holidays-icon {
+  background-position: -136px -74px; }
+
 #home-secondary-container {
   margin-bottom: 20px;
   color: white;
@@ -1985,6 +2078,11 @@ body {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3c759c', endColorstr='#28516e',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
+  #home-secondary-container #how-to-ride-links {
+    float: left;
+    border-right: 1px solid #5e8aa9;
+    margin-left: 43px;
+    width: 25%; }
   #home-secondary-container h1, #home-secondary-container h2 {
     font-style: italic;
     font-size: 1.3em;
@@ -2014,46 +2112,6 @@ body {
     text-decoration: none; }
   #home-secondary-container a:hover {
     text-decoration: underline; }
-  #home-secondary-container #how-to-ride-links {
-    float: left;
-    width: 25%;
-    margin-left: 43px;
-    border-right: 1px solid #5e8aa9; }
-    #home-secondary-container #how-to-ride-links li {
-      margin-bottom: 7px;
-      font-size: .9em; }
-    #home-secondary-container #how-to-ride-links #connections-icon,
-    #home-secondary-container #how-to-ride-links #accessibility-icon,
-    #home-secondary-container #how-to-ride-links #dial-a-ride-icon,
-    #home-secondary-container #how-to-ride-links #bikes-on-buses-icon,
-    #home-secondary-container #how-to-ride-links #passenger-conduct-icon,
-    #home-secondary-container #how-to-ride-links #mobile-and-desktop-apps-icon,
-    #home-secondary-container #how-to-ride-links #holidays-icon {
-      background-image: url(../images/kern-sprites.png);
-      width: 22px;
-      height: 20px;
-      float: left;
-      position: relative;
-      top: 2px;
-      margin-right: 5px; }
-    #home-secondary-container #how-to-ride-links #connections-icon {
-      background-position: -160px -75px; }
-    #home-secondary-container #how-to-ride-links #accessibility-icon {
-      background-position: -13px -75px; }
-    #home-secondary-container #how-to-ride-links #dial-a-ride-icon {
-      background-position: -35px -75px;
-      left: -3px; }
-    #home-secondary-container #how-to-ride-links #bikes-on-buses-icon {
-      background-position: -60px -75px;
-      left: -5px; }
-    #home-secondary-container #how-to-ride-links #passenger-conduct-icon {
-      background-position: -87px -75px;
-      left: -4px; }
-    #home-secondary-container #how-to-ride-links #mobile-and-desktop-apps-icon {
-      background-position: -115px -75px;
-      left: 1px; }
-    #home-secondary-container #how-to-ride-links #holidays-icon {
-      background-position: -136px -74px; }
   #home-secondary-container #home-description-of-services {
     margin: 10px 24px 57px 24px;
     padding-top: 36px;
@@ -2127,31 +2185,35 @@ body {
       background-position: -100px -7px; }
     #main-nav ul li span {
       float: right; }
-  #main-nav ul li:hover {
+  #main-nav ul li:hover, #main-nav ul li.current {
     border-bottom: 2px solid white; }
-    #main-nav ul li:hover #routes-and-schedules-icon {
+    #main-nav ul li:hover #routes-and-schedules-icon, #main-nav ul li.current #routes-and-schedules-icon {
       background-position: -10px -37px; }
-    #main-nav ul li:hover #dial-a-ride-icon {
+    #main-nav ul li:hover #dial-a-ride-icon, #main-nav ul li.current #dial-a-ride-icon {
       background-position: -39px -37px; }
-    #main-nav ul li:hover #fares-icon {
+    #main-nav ul li:hover #fares-icon, #main-nav ul li.current #fares-icon {
       background-position: -69px -37px; }
-    #main-nav ul li:hover #how-to-ride-icon {
+    #main-nav ul li:hover #how-to-ride-icon, #main-nav ul li.current #how-to-ride-icon {
       background-position: -100px -37px; }
   #main-nav ul li#dial-a-ride-link, #main-nav ul li#fares-link, #main-nav ul li#how-to-ride-link {
     padding-top: 10px; }
+  #main-nav ul li.parent-active {
+    border-bottom: 2px dotted #67a2bb; }
 
-.footer a:link, .footer a:visited, .footer a:active {
-  color: white; }
-.footer a:hover {
-  text-decoration: underline; }
-.footer #footer-attributions {
-  font-size: .8em;
-  margin-top: 13px;
-  margin-right: 15px;
-  float: right; }
-  .footer #footer-attributions a:link, .footer #footer-attributions a:active, .footer #footer-attributions a:visited {
-    color: grey !important;
-    text-decoration: none; }
+.footer {
+  box-shadow: 0px 500px 0px 500px #000; }
+  .footer a:link, .footer a:visited, .footer a:active {
+    color: white; }
+  .footer a:hover {
+    text-decoration: underline; }
+  .footer #footer-attributions {
+    font-size: .8em;
+    margin-top: 13px;
+    margin-right: 15px;
+    float: right; }
+    .footer #footer-attributions a:link, .footer #footer-attributions a:active, .footer #footer-attributions a:visited {
+      color: grey !important;
+      text-decoration: none; }
 
 #menu-footer-links {
   float: left; }
@@ -2178,6 +2240,394 @@ body {
     border-top-right-radius: 4px;
     margin-top: 0;
     font-size: 1.35em; }
+
+#fare-form-holder {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #e9e6d8;
+  margin: 0;
+  padding: 10px;
+  margin-bottom: 20px;
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4); }
+  #fare-form-holder select {
+    background-color: white; }
+
+.page-template-fares-php h4 {
+  color: white;
+  background-color: #80A9BD;
+  padding: 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 0;
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4); }
+
+#fare-start {
+  float: left;
+  width: 48%; }
+
+#fare-end {
+  float: left;
+  width: 48%;
+  margin-left: 1%; }
+
+#get-fares {
+  float: left;
+  width: 30%;
+  padding: 13px; }
+
+#regular_fare {
+  float: left;
+  clear: both; }
+
+#get-fares-results.fare-calculated {
+  background: #4dbe6e;
+  color: white; }
+
+#get-fares-results {
+  float: left;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 1, 0.3);
+  min-width: 50px;
+  text-align: center;
+  padding: 10px; }
+
+.archive .archive-title, .search .archive-title {
+  margin: 20px;
+  color: #343c5a; }
+.archive h3 a:link, .search h3 a:link {
+  color: #354787; }
+.archive .article-date, .search .article-date {
+  color: #595959; }
+.archive .article-header, .search .article-header {
+  border-bottom: 1px solid #c2c7d8;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+.archive #main article, .search #main article {
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #d8e0ff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 20px;
+  border-bottom: 12px solid #eee;
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4); }
+
+#main ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin: 1em 0; }
+
+#main ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 1em 0; }
+
+#route-fares-link {
+  float: right;
+  padding: 15px; }
+
+#pdf-link {
+  float: left; }
+
+#route_days_of_week {
+  float: left; }
+
+#h2-inner {
+  float: left; }
+
+i.route-icon-lrg {
+  width: 50px;
+  height: 50px; }
+
+i.route-icon-med {
+  width: 35px;
+  height: 35px; }
+
+i.route-icon-sml {
+  width: 20px;
+  height: 20px; }
+
+i.route-icon {
+  float: left; }
+
+.open-close-icon {
+  padding-right: 20px; }
+
+#map-floaty-box {
+  width: 735px;
+  margin-left: 416px;
+  border-top-right-radius: 10px;
+  top: 0;
+  z-index: 1;
+  position: absolute; }
+
+#routes-page-map {
+  background: #ceecbf;
+  border-top-right-radius: 10px;
+  background-repeat: no-repeat; }
+  #routes-page-map img {
+    height: 540px !important; }
+
+#route-page-connections {
+  width: 100%;
+  background: #ddd8d3;
+  clear: both;
+  padding-bottom: 20px;
+  border-top: 1px solid grey;
+  z-index: 999; }
+  #route-page-connections h2 {
+    color: black;
+    padding-left: 10px; }
+
+#sml-map-background {
+  border-top-right-radius: 10px;
+  background-repeat: no-repeat; }
+
+#map-floaty-bottom-gradient {
+  height: 0px;
+  width: 735px;
+  background-image: url(../images/routes-map-bottom-gradient.jpg); }
+
+#routes-left-col {
+  float: left;
+  width: 416px;
+  min-height: 560px;
+  border-right: 1px solid #5b9f75; }
+
+#routes-page-blurb {
+  float: left;
+  font-size: .9em;
+  padding: 12px; }
+
+h1#route-page-title {
+  margin: 25px 0 10px 10px; }
+  h1#route-page-title i {
+    position: relative;
+    margin-right: 20px;
+    top: -10px; }
+
+.area-box {
+  background: #ede0d1;
+  float: left;
+  width: 100%;
+  padding: 0;
+  color: black; }
+  .area-box h2 {
+    cursor: pointer;
+    background: #dacec0;
+    margin-top: 0;
+    padding: 10px 10px 10px 20px;
+    font-size: 15px;
+    font-weight: 700; }
+    .area-box h2 i {
+      float: right;
+      font-size: .76em;
+      color: #6c665e; }
+    .area-box h2 i.open-close-icon {
+      width: 15px;
+      height: 15px;
+      margin-left: 5px;
+      position: relative;
+      top: 6px;
+      background-image: url(../images/kern-sprites.png);
+      background-position: -262px -10px; }
+  .area-box .route-icon-med {
+    margin-right: 7px; }
+  .area-box ul {
+    margin: 0;
+    padding: 0; }
+    .area-box ul ul {
+      border-top: 1px solid grey;
+      margin: 0;
+      padding: 0; }
+      .area-box ul ul li {
+        padding-left: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px; }
+        .area-box ul ul li i {
+          width: 35px;
+          float: left;
+          height: 35px; }
+      .area-box ul ul li:hover {
+        background-color: #eef9dc; }
+  .area-box .route-days-of-week {
+    font-size: .8em;
+    color: #4a4a4a; }
+
+.area-box.minimized h2 {
+  margin-bottom: 0; }
+.area-box.minimized i.open-close-icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  position: relative;
+  top: 6px;
+  background-image: url(../images/kern-sprites.png);
+  background-position: -241px -10px; }
+
+#sidebar1 .secondary li {
+  margin-bottom: 12px;
+  padding-left: 1.1em;
+  text-indent: -.7em; }
+  #sidebar1 .secondary li a:link {
+    margin-left: 5px; }
+#sidebar1 .secondary li:before {
+  content: "•  ";
+  color: #8baac1;
+  /* or whatever color you prefer */ }
+
+#featured-image-container {
+  width: 100%; }
+
+.single-timetable #generic-wide-container {
+  text-align: left; }
+  .single-timetable #generic-wide-container #timetable-content {
+    background-color: transparent;
+    margin-bottom: 20px;
+    clear: both; }
+    .single-timetable #generic-wide-container #timetable-content p {
+      margin: 0;
+      padding: 0; }
+  .single-timetable #generic-wide-container table {
+    margin: 0 auto; }
+
+#timetable-detail-maps {
+  background: #0072bc;
+  border-right: white 2px solid;
+  border-left: white 2px solid;
+  clear: both; }
+
+#dar-info {
+  margin-top: 0; }
+
+.area-box li:hover {
+  cursor: pointer; }
+
+.detail-loading {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  width: 100px;
+  height: 33px;
+  background: url(../images/loading.gif);
+  background-repeat: no-repeat; }
+
+#route-alerts ul li.expanded {
+  border-bottom: 10px solid #fef200; }
+#route-alerts h3 {
+  cursor: pointer; }
+
+#dar-info-container.no-map {
+  border-right: 1px solid grey; }
+
+#no-map {
+  margin: 10px;
+  float: left; }
+
+#main {
+  background-color: #f9f5e5;
+  background-image: url(../images/grain-manilla.jpg);
+  border-top-left-radius: 10px;
+  min-height: 500px;
+  padding-right: 0 !important; }
+  #main article {
+    background: none;
+    border: 0; }
+
+.d-5of7 {
+  padding-right: 0px !important; }
+
+#sidebar1 {
+  background-color: #0072bc;
+  border-top-right-radius: 10px;
+  min-height: 500px;
+  padding: 10px 30px;
+  color: white; }
+
+#generic-wide-container {
+  width: 100%;
+  min-height: 400px;
+  background-color: #f9f5e5;
+  background-image: url(../images/grain-manilla.jpg);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  position: relative; }
+
+#blue-top-divider {
+  width: 100%;
+  background-color: #0072bc;
+  height: 10px; }
+
+h1#page-title {
+  margin: 10px 0 10px 0; }
+
+#breadcrumbs {
+  font-size: 12px;
+  list-style: none;
+  margin: 10px 0;
+  overflow: hidden;
+  color: #c6e9ff;
+  margin-top: 0; }
+  #breadcrumbs a:link, #breadcrumbs a:active, #breadcrumbs a:visited {
+    color: #c6e9ff; }
+  #breadcrumbs a:hover {
+    color: white; }
+
+#breadcrumbs li {
+  float: left;
+  margin-right: 15px; }
+
+#breadcrumbs .separator {
+  font-weight: 700;
+  color: #999; }
+
+#page-anchor-links {
+  border-top: 1px solid #b1aba6;
+  border-bottom: 1px solid #b1aba6;
+  padding: 10px;
+  margin: 0px 0 10px 0; }
+
+.page-template-fares-php table {
+  color: black;
+  background: #f1f1f1; }
+  .page-template-fares-php table caption {
+    color: black; }
+
+.page-template-fares-php table {
+  background: white;
+  margin-bottom: 0;
+  margin-top: 15px;
+  -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4); }
+  .page-template-fares-php table td {
+    background: white; }
+  .page-template-fares-php table caption {
+    -moz-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4);
+    background: #80A9BD;
+    color: white;
+    font-size: 21px;
+    padding: 5px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    margin-bottom: 0; }
+.page-template-fares-php .discount-text {
+  font-size: 12px; }
 
 /*********************
 LARGER MOBILE DEVICES
