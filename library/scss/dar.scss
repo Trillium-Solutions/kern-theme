@@ -1,11 +1,19 @@
+.single-dar {
+	i.route-icon {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
 #dar-map-container {
-	float: right;
-	width: 800px;
+
+
 }
 
 #dar-info-container {
-	float: left;
-	width: 350px;
+
+
 	
 	div {
 		padding: 15px;
@@ -15,8 +23,8 @@
 }
 
 #dar-right-col {
-float: right;
-width: 400px;
+
+
 }
 
 #route-page-connections {

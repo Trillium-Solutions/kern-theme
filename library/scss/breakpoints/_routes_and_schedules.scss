@@ -23,14 +23,21 @@ float: left;
 }
 
 #map-floaty-box {
-	width: 735px;
-
-	margin-left: 416px;
-	border-top-right-radius: 10px;
+	
+	/*border-top-right-radius: 10px;
     top:0;
     z-index:1;
 	position: absolute; 
+	right: 0;*/
 
+}
+
+#map-floaty-box.static {
+	/*border-top-right-radius: 10px;
+    top:auto;
+    z-index:1;
+	position: inherit; 
+	right: auto;*/
 }
 
 
@@ -38,11 +45,28 @@ float: left;
 	background: #ceecbf;
 	border-top-right-radius: 10px;
 	background-repeat: no-repeat;
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8f5e5+0,ceecbf+8,ceecbf+77,ceecbf+77,f8f5e5+95 */
+	background: #f8f5e5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f8f5e5 0%, #ceecbf 8%, #ceecbf 77%, #ceecbf 77%, #f8f5e5 95%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f5e5), color-stop(8%,#ceecbf), color-stop(77%,#ceecbf), color-stop(77%,#ceecbf), color-stop(95%,#f8f5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f8f5e5 0%,#ceecbf 8%,#ceecbf 77%,#ceecbf 77%,#f8f5e5 95%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f8f5e5 0%,#ceecbf 8%,#ceecbf 77%,#ceecbf 77%,#f8f5e5 95%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f8f5e5 0%,#ceecbf 8%,#ceecbf 77%,#ceecbf 77%,#f8f5e5 95%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f8f5e5 0%,#ceecbf 8%,#ceecbf 77%,#ceecbf 77%,#f8f5e5 95%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f5e5', endColorstr='#f8f5e5',GradientType=0 ); /* IE6-9 */
+
 
 	img {
 		height: 540px !important;
 	}
 
+}
+#routes-left-col {
+	.route-circle {
+		float: left;
+		margin-right: 7px;
+	}
 }
 
 #route-page-connections {
@@ -72,7 +96,7 @@ z-index: 999;
 
 #routes-left-col {
 	float: left;
-	width: 416px;
+	
 	min-height: 560px;
 	border-right: 1px solid #5b9f75;
 
@@ -85,7 +109,7 @@ z-index: 999;
 }
 
 h1#route-page-title {
-		margin: 25px 0 10px 10px; 
+		//margin: 25px 0 10px 10px; 
 	i {
 		position: relative;
 		margin-right: 20px;
@@ -274,6 +298,12 @@ margin-top: 0;
 
 #dar-info-container.no-map {
 border-right: 1px solid grey; 
+}
+
+#fares-list {
+	.route-circle {
+		margin-right: 7px;
+	}
 }
 
 #no-map {

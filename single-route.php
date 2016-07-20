@@ -8,9 +8,9 @@ Template Name: route_individual_page
 <?php get_template_part( 'route-header'); ?> 
 			
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
-					
-	<h1 id="route-page-title" class="over-blue"><i id="icon-lrg-<?php the_field('shared_class'); ?>" class="route-icon"></i><?php the_title() ?></h1>
-		<div id="route-select-container">
+					<div class="row">
+	<h1 id="route-page-title" class="over-blue col-sm-9"><?php the_route_circle(get_field('route_number'),70,3); ?> <?php the_title() ?></h1>
+		<div id="route-select-container" class="col-sm-3">
 		<?php
 							wp_reset_query(); 
 								
@@ -48,8 +48,9 @@ Template Name: route_individual_page
 							?>
 							
 											</div><!-- end #route-select-container -->
+						</div><!-- class="row" -->
 	
-						<div id="generic-wide-container">
+						<div id="generic-wide-container" style="margin-top: 20px">
 								
 
 							
@@ -113,7 +114,7 @@ Template Name: route_individual_page
 							
 										
 										
-										<div id="pdf-link">
+										<!--<div id="pdf-link">
 											
 											
 											<?php
@@ -130,9 +131,9 @@ Template Name: route_individual_page
 											?>
 											
 												<a href="<?php echo get_site_url()."/wp-content/transit-data/route-pdfs/".$pdfDic[get_field('route_pdf_download_filename')]; ?>"><i></i>Download the <?php the_field('route_pdf_download_filename'); ?> route guide [PDF, 4mb]</a>
-											</div><!-- end #pdf-link -->
+											</div> -->
 										<div id="route-fares-link">
-											<a href="/fares/#<?php the_field('shared_class'); ?>">See fares table for this route >></a>
+											<a href="<?php echo get_site_url(); ?>/fares/#<?php the_field('shared_class'); ?>">See fares table for this route >></a>
 											
 											
 											</div>
@@ -174,9 +175,9 @@ Template Name: route_individual_page
 											<?php if( $the_query->have_posts() ): ?>
 												
 												<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-												
+												<div class="table-responsive">
 												<?php the_content(); ?>
-													
+												</div><!-- table-reponsive -->
 												<?php endwhile; ?>
 												
 											<?php endif; ?>
@@ -308,8 +309,9 @@ $connectionsSplit = explode(';', $connections);
 foreach($connectionsSplit as &$connection) {
 
 	echo '<li>';
-
-	echo '<i id="icon-sml-'.$connection.'" class="route-icon"></i>';
+	$connectionClean = explode('-',str_replace('_','',$connection))[0];
+	//echo $connectionClean;
+	echo the_route_circle($connectionClean ,35,2);
 	
 
 		

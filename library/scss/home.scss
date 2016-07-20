@@ -1,0 +1,91 @@
+#how-to-ride-links {
+
+	a:link, a:active, a:visited {
+		color: white;
+		text-decoration: none;
+	} a:hover {
+		text-decoration: underline;
+	}
+		
+		
+	li {
+		margin-bottom: 7px;
+		font-size: .9em;
+	}
+	
+}
+		
+#connections-icon,
+#accessibility-icon,
+#dial-a-ride-icon,
+#bikes-on-buses-icon,
+#passenger-conduct-icon,
+#mobile-and-desktop-apps-icon,
+#holidays-icon {
+	background-image: url(../images/kern-sprites.png);
+	width: 22px; 
+	height: 20px;
+	float: left;
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+
+}
+
+#right-secondary-links {
+	margin-top: 30px;
+	
+	#left-separator {
+		position: absolute;
+		left: 0%;
+		height: 80%;
+		min-height: 160px;
+
+		border-right: 1px solid rgba(255,255,255,.3);
+	}
+}
+#mobile-map-holder {
+	.inner {
+		margin-top: 20px;
+		background: #ceecbf;
+	}
+
+}
+
+
+#home-news-area{
+	
+	
+	
+	 h2 {
+		margin-right: 43px;
+		padding-bottom: 19px;
+		margin-bottom: 10px;
+		border-bottom: 1px dashed #a5bfd1;
+	}
+}
+
+@media(min-width: 768px) {
+	#how-to-ride-links {
+		padding-left: 5%;
+	}
+}
+
+#right-separator {
+	position: absolute;
+	right: 15%;
+	height: 80%;
+	top: 10%;
+	border-right: 1px solid rgba(255,255,255,.3);
+}
+
+#home-description-of-services {
+
+}
+
+
+/*  #map-holder svg {
+    width: 100%; 
+  }
+*/
+

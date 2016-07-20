@@ -10,75 +10,9 @@ Template Name: route_individual_page
 </style>
 <?php get_template_part( 'route-header'); ?> 
 			
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?> 
+					<?php if (have_posts()) : while (have_posts()) : the_post(); 
 					
-	<h1 id="route-page-title" class="over-blue"><i id="icon-lrg-<?php the_field('shared_class'); ?>" class="route-icon"></i><?php the_title() ?></h1>
-		
-		
-		<div id="route-select-container">
-		
-				
-		<?php
-							wp_reset_query(); 
-								
-							$query = new WP_Query(array(
-							'posts_per_page' => -1,
-							"post_type"=> "dar", 
-							'orderby'		=> 'title',
-							'order'			=> 'ASC'
-								
-
-							));
-
-						
-						
-								if ( $query->have_posts() ) {
-									?>
-									<select id="routes-dropdown" onchange="location = this.options[this.selectedIndex].value;">
-									<option value="#">View a different service</option>
-									<?php
-										while ( $query->have_posts() ) {
-											$query->the_post();
-											
-											?>
-												<option value="<?php echo get_field('shared_class'); ?>"><?php echo the_title(); ?></option>
-													
-											
-										<?php
-										}
-										?>
-										</select>
-										<?php
-									}  
-							wp_reset_postdata();
-							?>
-							
-											</div><!-- end #route-select-container -->
-	
-						<div id="generic-wide-container">
-						<div id="dar-info-container" <?php if(!get_field('has_map')) echo 'class="no-map"'; ?>>
-				
-
-<div id="dar-cities">
-	<?php the_field('cities');  ?>
-</div><!-- end #dar-cities -->
-<div id="dar-days-of-week">
-		<?php  the_field('days_of_week'); ?>
-</div><!-- end #dar-days-of-week -->
-<div id="dar-times-of-day">
-		<?php  the_field('times_of_day'); ?>
-</div><!-- end #dar-times-of-day -->
-<div id="dar-info">
-		<?php  the_field('info_and_fares'); ?>
-</div><!-- end #dar-times-of-day -->
-
-		 
-		 </div><!-- end #dar-info-container -->
-		<div id="dar-map-container"  >
-		<?php 
-		
-		
-		$dar_areas_array = array (
+					$dar_areas_array = array (
 
 array("Mojave Dial-A-Ride", "East Kern", "Monday thru Saturday", "7:00 AM to 6:00 PM", "dial-mojave", "e0871b", "dial-mojave.json",""),
 array("Rosamond Dial-A-Ride", "East Kern", "Monday thru Saturday", "6:30 AM to 5:30 PM", "dial-rosamond", "e0871b", "dial-rosamond.json",""),
@@ -92,10 +26,84 @@ array("Lost Hills Dial-A-Ride", "North Kern", "Thursday and Saturday Only", "No 
 
 $the_dar = get_field('shared_class');
 
+$has_map = false;
 foreach ($dar_areas_array as &$value) {
 	// echo $value[4];
     if ($value[4] == $the_dar) {$the_dar_info = $value; $has_map = true;}
 }
+					?>
+					 
+	<div class="row">	
+		<h1 id="route-page-title" class="over-blue col-sm-9" >
+		<i id="icon-lrg-<?php the_field('shared_class'); ?>" class="route-icon"></i><?php the_title() ?></h1>
+		
+		
+			<div id="route-select-container" class="col-sm-3">
+		
+				
+			<?php
+			wp_reset_query(); 
+			
+			$query = new WP_Query(array(
+			'posts_per_page' => -1,
+			"post_type"=> "dar", 
+			'orderby'		=> 'title',
+			'order'			=> 'ASC'
+			
+
+			));
+
+	
+	
+				if ( $query->have_posts() ) {
+					?>
+					<select id="routes-dropdown" onchange="location = this.options[this.selectedIndex].value;">
+					<option value="#">View a different service</option>
+					<?php
+						while ( $query->have_posts() ) {
+							$query->the_post();
+						
+							?>
+								<option value="<?php echo get_field('shared_class'); ?>"><?php echo the_title(); ?></option>
+								
+						
+						<?php
+						}
+						?>
+						</select>
+						<?php
+					}  
+			wp_reset_postdata();
+			?>
+		
+		</div><!-- end #route-select-container -->
+</div><!-- class="row" -->
+<div id="generic-wide-container" class="row-fluid">
+<div id="dar-info-container" style="padding: 0;" class="col-sm-4 <?php if(!$has_map) {echo 'no-map'; }?>">
+				
+
+<div id="dar-cities">
+	<?php the_field('cities');  ?>
+</div><!-- end #dar-cities -->
+<div id="dar-days-of-week">
+		<?php  the_field('days_of_week'); ?>
+</div><!-- end #dar-days-of-week -->
+<div id="dar-times-of-day">
+		<?php  the_field('times_of_day'); ?>
+</div><!-- end #dar-times-of-day -->
+<?php if(get_field('info_and_fares') != '') { ?>
+<div id="dar-info">
+		<?php  the_field('info_and_fares'); ?>
+</div><!-- end #dar-times-of-day -->
+<?php } ?>
+
+		 
+		 </div><!-- end #dar-info-container -->
+		<div id="dar-map-container" class="col-sm-8" style="padding: 0;" >
+		<?php 
+		
+		
+		
 
 
 		
@@ -147,7 +155,7 @@ var map = L.mapbox.map('map', 'trilliumtransit.j3p18nh0', {touchZoom:false, scro
 		}
 		
 
-var base_json_url = '/wp-content/transit-data/dar-json/';
+var base_json_url = '<?php echo get_site_url();?>/wp-content/transit-data/dar-json/';
 
 
 <?php 

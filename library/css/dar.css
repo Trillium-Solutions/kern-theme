@@ -1,17 +1,11 @@
-#dar-map-container {
-  float: right;
-  width: 800px; }
+.single-dar i.route-icon {
+  float: none;
+  display: inline-block;
+  vertical-align: middle; }
 
-#dar-info-container {
-  float: left;
-  width: 350px; }
-  #dar-info-container div {
-    padding: 15px;
-    border-bottom: 1px #e6ddce solid; }
-
-#dar-right-col {
-  float: right;
-  width: 400px; }
+#dar-info-container div {
+  padding: 15px;
+  border-bottom: 1px #e6ddce solid; }
 
 #route-page-connections ul {
   list-style: initial;

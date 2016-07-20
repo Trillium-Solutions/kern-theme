@@ -2,15 +2,19 @@
 /*
 Template Name: Fares Page
 */
-
-$site_base_dir = '/nas/wp/www/cluster-30005/kerntransit';
-
+$site_base_dir = '';
+if(strpos($_SERVER['SERVER_NAME'],'localhost' ) !== false) {
+$site_base_dir = 'http://localhost:8888/kern';
+} else {
+	$site_base_dir = '/nas/wp/www/cluster-30005/kerntransit';
+}
  get_header(); ?>
 
 			<?php get_template_part( 'generic-page-top'); ?> 
 			
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+						<div class="row-fluid" id="page-holder">
+						<div id="main" class="col-sm-9" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -46,15 +50,22 @@ $site_base_dir = '/nas/wp/www/cluster-30005/kerntransit';
 										<form id="fare_zones" method="GET" action="http://applications.trilliumtransit.com/fare_calculator/calculate_fare_result.php">
 										<input type="hidden" name="agency_id" value="194">
 										<div id="fare-calculator-details">
-										<div id="fare-start" >Start zone: <select class="from" name="origin_id" id="start_zone" onchange="clear_fare_result();"><option>Select start zone</option></select></div>
-										<div id="fare-end" >Destination zone: <select class="to" name="destination_id" id="end_zone" onchange="clear_fare_result();"><option>(Select start first)</option></select></div>
-										<input type="submit" value="Get Regular Cash Fare:" id="get-fares"/>
-										<div id="get-fares-results">
-										<div class="info">
-										<div id="regular_fare">$ --</div>
+										<div class="row">
+											<div  class="form-group col-md-6">Start zone: <select class="from" name="origin_id" id="start_zone" onchange="clear_fare_result();"><option>Select start zone</option></select></div>
+											<div  class="form-group col-md-6" >Destination zone: <select class="to" name="destination_id" id="end_zone" onchange="clear_fare_result();"><option>(Select start first)</option></select></div>
+										</div><!-- end row-fluid -->
+										<div class="row-fluid">
+											<div class="form-group" class="col-md-4">
+												<button type="submit" value="Get Regular Cash Fare:" class="btn btn-info"  >Get Regular Cash Fare</button>
+											</div>
+											<div id="get-fares-results" class="form-group col-md-4">
+
+													<div id="regular_fare">$ --</div>
 										
-										</div>
-										</div>
+				
+
+											</div>
+										</div><!-- end row-fluid -->
 											<br style="clear: both;" />
 										</div>
 
@@ -106,7 +117,7 @@ $site_base_dir = '/nas/wp/www/cluster-30005/kerntransit';
 									
 									 
 									$files = array();
-									$fares_loc = '/nas/wp/www/cluster-30005/kerntransit/wp-content/transit-data/kern-transit-fares/';
+									$fares_loc = $site_base_dir.'/wp-content/transit-data/kern-transit-fares/';
 									if(strpos($_SERVER[HTTP_HOST],'localhost') !== false) {
 									
 										$fares_loc = '/Applications/MAMP/htdocs/kern/wp-content/transit-data/kern-transit-fares/';
@@ -176,7 +187,7 @@ $site_base_dir = '/nas/wp/www/cluster-30005/kerntransit';
 												<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
 														
 														$icon_out .= '<a name="'.get_field('shared_class',$post->ID).'"></a>'; 
-														$icon_out .= '<a href="'.get_the_permalink().'"><i id="icon-sml-'.get_field( 'shared_class', $post->ID ).'" class="route-icon" style="float: left; margin-right: 10px"></i></a>'; 
+														$icon_out .= '<a href="'.get_the_permalink().'">'.get_route_circle(get_field('route_number'),40,2).'</a>'; 
 													
 												 endwhile; ?>
 												
@@ -242,7 +253,7 @@ $site_base_dir = '/nas/wp/www/cluster-30005/kerntransit';
 
 						</div>
 
-						<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+						<div id="sidebar1" class="sidebar col-sm-3" role="complementary">
 
 						<?php get_template_part( 'generic-sidebar'); ?>
 				</div>

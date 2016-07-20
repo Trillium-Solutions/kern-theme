@@ -1,11 +1,10 @@
 <?php get_header(); ?>
 
 <?php get_template_part( 'generic-page-top'); ?> 
-			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+<div class="row-fluid" id="page-holder">
+							<div id="main" class="col-sm-9" role="main">
 
 							
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -24,7 +23,7 @@
 
 									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
-									<?php the_content(); ?>
+									<?php the_excerpt(); ?>
 
 								</section>
 
@@ -53,7 +52,7 @@
 
 						</div>
 
-						<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+						<div id="sidebar1" class="sidebar col-sm-3" role="complementary">
 
 						<?php get_template_part( 'generic-sidebar'); ?> 
 						</div>

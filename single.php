@@ -2,16 +2,16 @@
 
 			<?php get_template_part( 'generic-page-top'); ?> 
 			
-
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+<div class="row-fluid" id="page-holder">
+						<div id="main" class="col-sm-9" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<div id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 						
 
-								<section class="entry-content cf" itemprop="articleBody">
+
 									<?php
 										// the content (pretty self explanatory huh)
 										if( has_post_thumbnail()) { ?>
@@ -19,8 +19,9 @@
 											<img class="featured-image" src="
 											<?php
 										
-												$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-												echo $feat_image;	
+												$thumb_id = get_post_thumbnail_id();
+												$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
+												echo $thumb_url_array[0];
 										
 											?>
 											">
@@ -45,13 +46,13 @@
 										*/
 									
 									?>
-								</section> <?php // end article section ?>
+
 
 							
 
 
 
-							</article>
+							</div>
 
 							<?php endwhile; else : ?>
 
@@ -71,11 +72,11 @@
 
 						</div>
 
-						<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+						<div id="sidebar1" class="sidebar col-sm-3" role="complementary">
 
-						<div id="how-to-ride-links" class="secondary-col">
-						<?php get_template_part( 'generic-sidebar'); ?>
+						<?php get_template_part( 'generic-sidebar'); ?> 
 				</div>
+				</div> <!-- end row -->
 
 		<?php get_template_part( 'generic-page-bottom'); ?> 
 			

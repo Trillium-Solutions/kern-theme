@@ -199,6 +199,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
+	
   wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
   wp_enqueue_style( 'googleFonts');
   wp_register_style('route_icons', get_template_directory_uri().'/library/css/route-icons.css');
@@ -422,7 +423,7 @@ function codex_route_init() {
 		'labels'             => $labels,
 		'public'             => true,
 		'publicly_queryable' => true,
-		'show_ui'            => true,
+		'show_ui'            => false,
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'routes-and-schedules' ),
@@ -430,13 +431,14 @@ function codex_route_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
+	
 		'supports'           => array( 'title', 'revisions' )
 	);
 
 	register_post_type( 'route', $args );
 	
 	$dar_labels = array(
-		'name'               => _x( 'Dail-A-Ride', 'post type general name' ),
+		'name'               => _x( 'Dial-A-Ride', 'post type general name' ),
 		'singular_name'      => _x( 'dar', 'post type singular name' ),
 		'menu_name'          => _x( 'Dial-A-Ride', 'admin menu'),
 		'name_admin_bar'     => _x( 'Dial-A-Ride', 'add new on admin bar'),
@@ -457,7 +459,7 @@ function codex_route_init() {
 		'labels'             => $dar_labels,
 		'public'             => true,
 		'publicly_queryable' => true,
-		'show_ui'            => true,
+		'show_ui'            => false,
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'dial-a-ride' ),
@@ -492,7 +494,7 @@ function codex_route_init() {
 		'labels'             => $labels,
 		'public'             => true,
 		'publicly_queryable' => true,
-		'show_ui'            => true,
+		'show_ui'            => false,
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'timetables' ),
@@ -500,6 +502,7 @@ function codex_route_init() {
 		'has_archive'        => false,
 		'hierarchical'       => false,
 		'menu_position'      => null,
+		'exclude_from_search' => true,
 		'supports'           => array( 'title', 'editor', 'revisions','page-attributes' )
 		
 	);
@@ -802,11 +805,11 @@ foreach($service_areas as &$service_area) {
 		  )
 		);
 		wp_insert_term(
-		 'All Routes and Dail-A-Ride', // the term 
+		 'All Routes and Dial-A-Ride', // the term 
 		  'alert-zone', // the taxonomy
 		  array(
 			'description'=> '',
-			'slug' => 'all'
+			'slug' => 'all' 
 		  )
 		);
 		wp_insert_term(
@@ -1300,7 +1303,70 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+function disable_emojicons_tinymce( $plugins ) {
+  if ( is_array( $plugins ) ) {
+    return array_diff( $plugins, array( 'wpemoji' ) );
+  } else {
+    return array();
+  }
+}
+ 
+ 
+ function disable_wp_emojicons() {
 
+  // all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+  // filter to remove TinyMCE emojis
+  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+}
+add_action( 'init', 'disable_wp_emojicons' );
+
+
+function get_route_circle($route_number, $width, $border_width) {
+	if (empty($border_width)) {
+        $border_width = 2;
+    }
+	
+	$args = array(
+		'numberposts'	=> 1,
+		'post_type'		=> 'route',
+		'meta_key'		=> 'route_number',
+		'meta_value'	=> $route_number	
+	);
+	$out = '';
+	$the_query = new WP_Query( $args );
+	$route_color = "FFF";
+	$text_color = "FFF";
+	if( $the_query->have_posts() ):
+		 while( $the_query->have_posts() ) : $the_query->the_post(); 
+			$route_color = get_field('hex_route_color');
+			
+				$text_color = get_field('route_text_color');
+				if($text_color == '') {
+					$text_color = 'fff';
+				}
+			
+		 
+			//$color = str_replace('#','',$color); 
+			$text_color = str_replace('#','',$text_color);
+			$radius = $width/2; 
+			$out = '<span href="'.get_permalink().'" class="route-circle" style="letter-spacing: .3px; border: '.$border_width.'px solid white; font-style: normal;font-weight: bold; color: #'.$text_color.'; width:'.$width.'px; height:'.$width.'px; line-height:'.($width - $width*(2.0/30.0)).'px; border-radius:'.($width/2).'px; background-color:'.$route_color.'; display: inline-block; text-align: center; font-size: '.($width/2.5).'px; text-decoration: none; ">'.$route_number.'</span>';
+
+	endwhile; 
+	endif; 	 // Restore global post data stomped by the_post(). 
+	return $out;
+}
+
+function the_route_circle($route_number, $width, $border_width) {
+	echo get_route_circle($route_number, $width, $border_width);
+}
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

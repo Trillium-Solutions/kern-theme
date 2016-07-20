@@ -1,35 +1,56 @@
 #main {
- 	background-color:#f9f5e5;
- 	background-image: url(../images/grain-manilla.jpg);
+ 	background-color:#faf8f1;
  	border-top-left-radius: 10px;
  	min-height: 500px;
  	
- 	padding-right: 0 !important;
+ 	padding-top: 15px;
+ 	padding-bottom: 15px;
+
  	article {
  		background: none;
  		border: 0;
 
  	}
  	
+ 	img {
+ 		width: 100%;
+ 	}
  	
+ 	
+}
+
+#featured-image-container {
+
 }
 
 .d-5of7 {
 	padding-right: 0px !important;
 }
 
+#page-holder {
+	background: #0072bc;
+	overflow: hidden;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-top: 20px;
+}
+
 #sidebar1 {
 
 background-color: #0072bc;
 border-top-right-radius: 10px;
- 		 	min-height: 500px;
- 		 	padding:  10px 30px;
+
+ 		 	padding:  20px 25px 10px 10px; 
 color: white;
 }
 
 
 #generic-wide-container {
 
+}
+
+#generic-wide-container {
+	margin-top: 20px;
 	width: 100%; 
 	min-height: 400px;
  	background-color:#f9f5e5;
@@ -37,8 +58,12 @@ color: white;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	position: relative; 
-
-   
+	hr {
+	  margin-top: 0px;
+	  margin-bottom: 20px;
+	  /* border: 0; */
+	  border-top: 1px solid grey;
+	}
 }
 
 #blue-top-divider {
@@ -59,7 +84,7 @@ h1#page-title {
     margin:10px 0;
     overflow:hidden;
      color: #c6e9ff;
-     margin-top: 0;
+       margin-top: 26px;
     
     a:link, a:active, a:visited {
     color: #c6e9ff;
@@ -95,6 +120,7 @@ h1#page-title {
 	table {
 		caption {
 			color: black;
+		
 			
 		}
 		color: black;
@@ -127,11 +153,17 @@ box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
 box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
 			background: #80A9BD;
 			color: white;
-			font-size: 21px;
+			font-size: 1.1em;
+			font-weight: bold;
 			padding: 5px;
 			border-top-right-radius: 3px;
 			border-top-left-radius: 3px;
 			margin-bottom: 0;
+			text-transform: none;
+			
+			.small_header {
+				font-size: .8em;
+			}
 			
 		}
 	

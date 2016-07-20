@@ -67,9 +67,9 @@ Template Name: route_individual_page
 							
 											</div><!-- end #route-select-container -->
 	
-						<div id="generic-wide-container">
+						<div id="generic-wide-container"  class="row-fluid">
 						
-						<div id="routes-left-col">
+						<div id="routes-left-col" class="col-sm-4" style="padding: 0;">
 									<div id="routes-page-blurb">
 							 		Click a Dial-A-Ride service in the list below or in the map to 
 									get its detailed service info.
@@ -85,7 +85,7 @@ Template Name: route_individual_page
 						
 						
 							</div> <!-- #end left col -->
-								<div id="map-floaty-box">
+								<div id="map-floaty-box" class="col-sm-8 hidden-xs" style="padding: 0;">
 									<div id='map'></div>
 									<div id="map-floaty-bottom-gradient">
 									</div><!-- end #map-floaty-bottom-gradient -->
@@ -140,8 +140,8 @@ var map = L.mapbox.map('map', 'trilliumtransit.j3p18nh0', {touchZoom:false, scro
 		}
 		
 
-var base_json_url = '/wp-content/transit-data/dar-json/';
-var base_dar_info_url = 'http://kerntransit.org/dial-a-ride/';
+var base_json_url = '<?php echo get_site_url();?>/wp-content/transit-data/dar-json/';
+var base_dar_info_url = '<?php echo get_site_url();?>/dial-a-ride/';
 
 var dar_areas_array = new Array(
 

@@ -73,6 +73,8 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @import "breakpoints/kern_base";
 @import "breakpoints/_routes_and_schedules";
 @import "breakpoints/_page_templates";
+@import "header";
+@import "home";
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

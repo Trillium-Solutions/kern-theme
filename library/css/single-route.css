@@ -34,7 +34,6 @@
     margin: 0; }
     .route-info-box ul li {
       width: 50%;
-      border-right: 1px solid #c8b29a;
       border-bottom: 1px solid #c8b29a;
       float: left;
       padding: 25px;
@@ -141,16 +140,33 @@ li.minimized i.open-close-icon {
   background-position: -241px -10px; }
 
 #route-page-title {
-  float: left;
-  width: 70%;
-  margin-bottom: 10px; }
+  top: 10px;
+  position: relative; }
 
+@media (max-width: 700px) {
+  #route-page-title {
+    font-size: 1.5em; } }
 #route-select-container {
-  float: right;
-  width: 25%;
-  margin-top: 32px;
-  margin-right: 2%; }
+  padding-right: 30px;
+  margin-top: 32px; }
+  #route-select-container select {
+    display: inline-block;
+    margin: 10px; }
 
+.table-responsive .table, .table-responsive tbody, .table-responsive caption {
+  width: auto; }
+
+@media (max-width: 768px) {
+  .table-responsive .table, .table-responsive tbody, .table-responsive caption {
+    width: 100%;
+    background: white; }
+    .table-responsive .table tr, .table-responsive tbody tr, .table-responsive caption tr {
+      background: white; }
+    .table-responsive .table tr:first-of-type, .table-responsive tbody tr:first-of-type, .table-responsive caption tr:first-of-type {
+      padding-top: 100px; } }
+@media (max-width: 768px) {
+  .timetable-header span {
+    text-align: left !important; } }
 #generic-wide-container {
   clear: both; }
 
