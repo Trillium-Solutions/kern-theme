@@ -20,7 +20,7 @@
 
 					
 					<div id="footer-copyright" class=" col-sm-4 source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>
-					<div id="footer-attributions"><a href="<?php echo get_site_url(); ?>/attributions">Design Attributions</a></div>
+					<div id="footer-attributions"><a href="<?php echo get_site_url(); ?>/attributions">Site Credits</a></div>
 					</div>
 
 									</div><!-- class="row" -->
