@@ -2,7 +2,11 @@
 /*
 Template Name: route_individual_page
 */
- get_header(); ?>
+ get_header(); 
+ 
+ //Used to determine correct fare structure
+ $locals = array("140", "142", "145", "210", "220", "223", "225");
+ ?>
 
 			
 <?php get_template_part( 'route-header'); ?> 
@@ -132,20 +136,65 @@ Template Name: route_individual_page
 											
 												<a href="<?php echo get_site_url()."/wp-content/transit-data/route-pdfs/".$pdfDic[get_field('route_pdf_download_filename')]; ?>"><i></i>Download the <?php the_field('route_pdf_download_filename'); ?> route guide [PDF, 4mb]</a>
 											</div> -->
-										<div id="route-fares-link">
-											<a href="<?php echo get_site_url(); ?>/fares/#<?php the_field('shared_class'); ?>">See fares table for this route >></a>
-											
-											
-											</div>
 											<br style="clear:both;" />
 											<hr />
-											<ul id="route-anchors">
+											<div id="route-nav">
+											<ul id="route-anchors" <?php
+											if (get_field('route_number') == '100') {
+												echo 'class="route-anchors-100"';
+											}
+											?>>
 												<li><a href="#schedules">Schedules</a></li>
 												<li><a href="#maps">Detail Maps</a></li>
 												<li><a href="#connections">Kern Transit Connections</a></li>
 												<li><a href="#external-connections">External Connections</a></li>
-												<br style="clear: both;" />
 											</ul>
+			
+											<div id="route-fares-holder" style="background-color: <?php the_field('hex_route_color'); ?>">
+											<table id="single-route-fares">
+												<?php
+												if (get_field('route_number') == '100'):
+												?>
+												<tr>
+													<th class="mini-label">Fare</th>
+													<th>General</th>
+													<th>Reduced</th>
+												</tr>
+												<tr>
+													<td>Intercommunity</td>
+													<td>$3.00</td>
+													<td>$1.50</td>
+												</tr>
+												<tr>
+													<td>Cross-County</td>
+													<td>$5.00</td>
+													<td>$2.50</td>
+												</tr>
+												<?php
+												else:
+												?>
+												<tr>
+													<th></th>
+													<th>General</th>
+													<th>Reduced</th>
+												</tr>
+												<tr>
+													<td class="mini-label"><a href="<?php echo get_site_url(); ?>/fares">Fare</a></td>
+													<?php
+													if (in_array(get_field('route_number'),  $locals)) :
+													?>
+													<td>$2.00</td>
+													<td>$1.00</td>
+												<?php else: ?>
+													<td>$3.00</td>
+													<td>$1.50</td>
+												<?php endif; ?>
+												</tr>
+											<?php endif; ?>
+											</table>
+										</div>
+											<br style="clear: both;" />
+										</div>
 										<div class="route-info-box timetables">
 											<h2 style="border-left: 13px solid <?php the_field('hex_route_color'); ?>; border-right: 13px solid <?php the_field('hex_route_color'); ?>"> 
 											<a name="schedules"></a>
@@ -186,10 +235,7 @@ Template Name: route_individual_page
 											
 											?>
 											<p>
-											↓ = Bus is not scheduled to stop at these locations. <br />
-											• = Bus may stop at these locations, in addition to the timed stops. <br />
-											REQ = Request stop only. Must coordinate with agency. <br />
-											&raquo; = Discharge only. No boarding at this time.
+											REQ = Request stop only. Must coordinate with agency.
 											</p>
 
 										</div><!-- end #route-info-box -->
@@ -407,7 +453,21 @@ foreach($external_connections as &$connection) {
 	
 			
 <?php get_template_part( 'generic-page-bottom'); ?> 
-			
+
+<script>
+	function doFixedTimetables() {
+	    if (! $('body').hasClass('route-template-default')) {
+	        return;
+	    }
+	   $('.route-table tbody').each(function() {
+	       var $tableClass = $(this);
+	       // Clone the first column, and absolutely position over table.
+	       var $fixedColumn = $tableClass.clone().insertBefore($tableClass).addClass('fixed-column');
+	       $fixedColumn.find('th:not(:first-child),td:not(:first-child)').remove();
+	   });
+   }
+   doFixedTimetables();
+</script>			
 
 
 <?php get_footer(); 
