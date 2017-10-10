@@ -119,6 +119,8 @@
   border-bottom: solid 1px #570961; }
 .single-route ._140-lamont-bakersfield-north .weekend-only {
   background: #E1CAF9; }
+.single-route ._140-lamont-bakersfield-north .all-week {
+  background: #f6effd; }
 .single-route table._142-lamont-bakersfield-weekend-loop .timetable-header .route-name {
   width: 100%;
   background-color: #009ac6;
@@ -141,6 +143,8 @@
   display: block;
   border-top: solid 4px #f37061;
   border-bottom: solid 1px #f37061; }
+.single-route table._145-lamont-bakersfield-south .weekend-only {
+  background: #fac6c0; }
 .single-route table._150-lake-isabella-bakersfield_mon-sat .timetable-header .route-name {
   width: 100%;
   background-color: #ed1846;
@@ -259,3 +263,5 @@
   border-bottom: solid 1px #00529c; }
 .single-route ._250-california-city-lancaster .weekend-only {
   background: #BBDAFF; }
+
+/*# sourceMappingURL=kern-transit.css.map */
