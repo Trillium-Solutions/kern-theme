@@ -1,3 +1,4 @@
+<?php ?>
 <!doctype html>
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -53,7 +54,7 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/sml_interactive-map.css?v=2">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/route-icons.css?v=2">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/single-route.css?v=2">   
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/kern-transit.css?v=2">  
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/kern-transit.css?v=2.1">  
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/dar.css?v=2">  
 		
 

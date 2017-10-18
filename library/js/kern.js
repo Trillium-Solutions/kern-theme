@@ -53,6 +53,8 @@ $(document).ready(function(){
 		$("#map-hovers").removeClass($(this).find('.route-name').attr("alt"));
 	
 	});
+	
+	doFixedTimetables();
 
 
 	$(window).scroll(function(e){ 
@@ -256,4 +258,15 @@ function changeImage(domImg,srcImage)
 		domImg.src = this.src;
 	};
 	img.src = srcImage;
+}
+function doFixedTimetables() {
+    if (! $('body').hasClass('route-template-default')) {
+        return;
+    }
+   $('.route-table').each(function() {
+       var $tableClass = $(this);
+       // Clone the first column, and absolutely position over table.
+       var $fixedColumn = $tableClass.clone().insertBefore($tableClass).addClass('fixed-column');
+       $fixedColumn.find('th:not(:first-child),td:not(:first-child)').remove();
+   });
 }
