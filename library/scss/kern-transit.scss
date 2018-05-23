@@ -2,11 +2,13 @@
 table {background:white; margin: 20px auto;border-spacing:0px 0px;border-collapse:collapse;}
 td,th {text-align:left;padding-left:10px;padding-right:10px;padding-top:3px;padding-bottom:3px;margin-left:0px;margin-right:0px;font-size:13px;}
 .city-name {font-size:14px; font-weight:bold; text-transform:uppercase;padding-top:10px;white-space:nowrap;}
-.stop-name {white-space:nowrap;}
 .timepoint-number {font-weight:bold;vertical-align:top;}
 .stop-time {vertical-align:bottom;text-align:center;white-space:nowrap;}
 .stop_times_row {border-top:1px solid #ccc}
 .days-of-week {text-align:center;}
+.stop-name {
+	border-right: 1px solid #eee;
+}
 
 table .timetable-header .route-name {font-size:18px; font-weight:bold;text-align:center;}
 table .timetable-header .direction-header {font-size:15px; font-weight:bold;text-align:center;}
@@ -138,37 +140,14 @@ table._250-california-city-lancaster .direction-header {display:block; border-to
 
 ._250-california-city-lancaster .weekend-only {background:#BBDAFF}
 
-/* Fixed Column Timetables */
-.table-responsive .fixed-column {
-  position: absolute;
-  width: auto;
-  border-right: 1px solid #ccc;
-  background: #fff;
+.table-responsive {
+	overflow-x: visible;
 }
 
-.days-of-week {
-	white-space: nowrap;
-}
-
-.fixed-column > tr:first-of-type > th {
-	height: 35px;
-	min-height: 35px;
-	
-}
-
-.table > tbody+tbody {
-	border: none;
-}
-
-.table-responsive .table > tbody > tr > th {
-	white-space: nowrap;
-}
-
-@media screen and (max-width: 768px) {
-	
-    .fixed-column {
-    	display: none;
-    }
+@media (max-width: 1020px) {
+	.table-responsive {
+		overflow-x: auto;
+	}
 }
 
 }

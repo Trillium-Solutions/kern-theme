@@ -2,13 +2,8 @@
 /*
 Template Name: Fares Page
 */
-$site_base_dir = '';
-if(strpos($_SERVER['SERVER_NAME'],'localhost' ) !== false) {
-$site_base_dir = 'http://localhost:8888/kern';
-} else {
-	$site_base_dir = '/nas/wp/www/cluster-30005/kerntransit';
-}
- get_header(); ?>
+
+get_header(); ?>
 
 			<?php get_template_part( 'generic-page-top'); ?> 
 			
@@ -20,219 +15,115 @@ $site_base_dir = 'http://localhost:8888/kern';
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-						
-
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
-										// the content (pretty self explanatory huh)
-										if( has_post_thumbnail()) { ?>
-										<div id="featured-image-container">
-											<img class="featured-image" src="
-											<?php
-										
-												$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-												echo $feat_image;	
-										
-											?>
-											">
-										</div><!-- end featured image -->
-										<div id="page-anchor-links"><ul></ul></div>
-										<?php
-										}
-										
-									 the_content(); 
-									 
-									 
-									 ?>
-									 
-									 <h4 class="subtitle">FARE CALCULATOR</h4> 
-									 <div id="fare-form-holder">
-										<form id="fare_zones" method="GET" action="http://applications.trilliumtransit.com/fare_calculator/calculate_fare_result.php">
-										<input type="hidden" name="agency_id" value="194">
-										<div id="fare-calculator-details">
-										<div class="row">
-											<div  class="form-group col-md-6">Start zone: <select class="from" name="origin_id" id="start_zone" onchange="clear_fare_result();"><option>Select start zone</option></select></div>
-											<div  class="form-group col-md-6" >Destination zone: <select class="to" name="destination_id" id="end_zone" onchange="clear_fare_result();"><option>(Select start first)</option></select></div>
-										</div><!-- end row-fluid -->
-										<div class="row-fluid">
-											<div class="form-group" class="col-md-4">
-												<button type="submit" value="Get Regular Cash Fare:" class="btn btn-info"  >Get Regular Cash Fare</button>
-											</div>
-											<div id="get-fares-results" class="form-group col-md-4">
-
-													<div id="regular_fare">$ --</div>
-										
-				
-
-											</div>
-										</div><!-- end row-fluid -->
-											<br style="clear: both;" />
-										</div>
-
-										</form>
-									</div><!-- end #fare-form-holder -->
-									 
+						 	    <section class="fare-tables">
+									<table>
+										<caption>Single Trip Fares</caption>
+										<tr>
+											<th></th>
+											<th>General</th>
+											<th>Reduced</th>
+										</tr>
+										<tr>
+											<td><div class="fare-label">Local Routes</div> <?php 
+												the_route_circle(140,36,0);
+												the_route_circle(142,36,0);
+												the_route_circle(145,36,0);
+												the_route_circle(210,36,0);
+												the_route_circle(220,36,0);
+												the_route_circle(223,36,0);
+												the_route_circle(225,36,0);
+												?> + Dial-a-Ride</td>
+												<td>$2.00</td>
+												<td>$1.00</td>
+										</tr>
+										<tr>
+											<td><div class="fare-label">Intercommunity Routes</div> <?php 
+												the_route_circle(100,36,0);
+												the_route_circle(110,36,0);
+												the_route_circle(115,36,0);
+												the_route_circle(120,36,0);
+												the_route_circle(130,36,0);
+												the_route_circle(150,36,0);
+												the_route_circle(227,36,0);
+												the_route_circle(230,36,0);
+												the_route_circle(240,36,0);
+												the_route_circle(250,36,0);
+												?></td>
+												<td>$3.00</td>
+												<td>$1.50</td>
+										</tr>
+										<tr>
+											<td><div class="fare-label">Cross-County Routes</div> <?php
+												the_route_circle(100,36,0);
+											?> for trips passing through Tehachapi</td>
+											<td>$5.00</td>
+											<td>$2.50</td>
+										</tr>
+									</table>
 									
-									 <script src="<?php echo get_template_directory_uri(); ?>/library/js/fare_calculator.js" type="text/javascript"></script>
-									<hr /><h2>Route Fares Quicklinks</h2>
-									 <?php
-									 
-									 // Organize by area
-									 
-									 $index_out = "";
+									<table>
+										<caption>31-Day Pass</caption>
+										<tr>
+											<th></th>
+											<th>General</th>
+											<th>Reduced</th>
+										</tr>
+										<tr>
+											<td><div class="fare-label">All Routes</div> 
+												+ Dial-a-Ride</td>
+												<td>$65.00</td>
+												<td>$32.50</td>
+										</tr>
+										<tr>
+											<td><div class="fare-label">Local Routes Only</div> 
+												+ Dial-a-Ride
+												</td>
+												<td>$45.00</td>
+												<td>$22.50</td>
+										</tr>
+									</table>
+									<div class="table-bottom-info">
+										The reduced fare is available for youth (5-15) with proper identification, and for seniors (62+) and disabled passengers with a Kern Transit "Reduced Fare Card."
+									</div>
+									</section>
+									<section class="fare-tables">
+										<h2>Get Passes on your Phone</h2>
+										<a href="https://tokentransit.com/app"><img class="alignnone wp-image-13577" src="http://kerntransit.org/wp-content/uploads/2018/04/token_transit_name_logo-1.png" alt="" width="300" height="69" style="max-width:300px;height:auto;"/></a>
+										<ol>
+										 	<li><a href="https://tokentransit.com/app">Download the app</a> or <a href="https://tokentransit.com/send/kerntransit">send a pass</a> to any phone number</li>
+										 	<li>Purchase any single-ride or monthly bus pass</li>
+										 	<li>Show your phone to board</li>
+										</ol>
+									</section>
+									<section class="fare-tables">
+									<h3>How to buy a 31-Day Pass</h3>
+									<div style="float:left; padding-right:40px;">
+									<dl>
+										<dt>By phone:</dt>
+										<dd>(661) 862-8648</dd>
+										<dt>By mail:</dt>
+										<dd>Kern Transit</dd>
+										<dd>2700 "M" Street #400</dd>
+										<dd>Bakersfield CA 93301</dd>
+									</dl>
+								</div>
+								<div style="float:left;">
+									<dl>
+										<dt>In person:</dt>
+										<dd>2700 "M" Street - First floor cashier</dd>
+										<dd>Bakersfield, CA 93301</dd>
+										<br />
+										<dt></dt>
+										<dd>6075 Lake Isabella Blvd</dd>
+										<dd>Lake Isabella, CA 93240</dd>
+									</dl>
+								</div>
+								<br style="clear:both;" />
+									<p>Passes will not be sold on the bus. "31 days" begins the day the pass is purchased.</p>
+									<h3>How to get a Reduced Fare Card</h3>
+									<a href="<?php echo site_url(); ?>/reduced-fare-application/">Download an application online</a> or call (661) 862-5032.
 									
-									
-									
-									
-									$args = array(
-												'posts_per_page' => -1	,
-												'post_type' => 'route',
-												'order_by' => array('route_number'),
- 												'order' => 'ASC'
-												
-											);
- 
-											// get results
-											$the_query = new WP_Query( $args );
- 
-											// The Loop
-											$icon_out = "";
-											?>
-											<?php if( $the_query->have_posts() ):  ?>
-												<ul>
-													<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
-															
-															echo '<li><a href="#'.get_field('shared_class',$post->ID).'">'.get_field( 'route_number', $post->ID ).' - '.get_the_title().'</a></li>';
-														
-												 endwhile; ?>
-												</ul>
-											<?php endif; ?>
- 
-									<?php wp_reset_query(); 
-									 
-									 
-									for ($i = 0; $i<19; $i ++) { 
-										 $faresHTML = file_get_contents($site_base_dir."/wp-content/transit-data/kern-transit-fares/".$timetable);
-									 }
-									
-									 
-									$files = array();
-									$fares_loc = $site_base_dir.'/wp-content/transit-data/kern-transit-fares/';
-									if(strpos($_SERVER[HTTP_HOST],'localhost') !== false) {
-									
-										$fares_loc = '/Applications/MAMP/htdocs/kern/wp-content/transit-data/kern-transit-fares/';
-									
-									}
-								 if ($handle = opendir($fares_loc)) {
-							
-									while (false !== ($entry = readdir($handle))) {
-
-										if ($entry != "." && $entry != "..") {
-
-											$files[] = $entry;
-										}
-									}
-
-									closedir($handle);
-								}
-									
-									$fares_out = '<ul id="fares-list">';
-									$links_out = "";
-									
-									function cmp($a, $b)
-									{
-										$matchesA = array();
-									
-										preg_match_all('!\d+!', $a, $matchesA);
-										//echo $matchesA[0][0];
-										$matchesB = array();
-										preg_match_all('!\d+!', $b, $matchesB);
-										
-										if(sizeof($matchesA) <= 0 ||  sizeof($matchesB) <= 0) {
-											return 0;
-										}
-										
-										return ( intval($matchesA[0][0]) > intval($matchesB[0][0])) ? 1 : -1;
-									}
-									
-									usort($files, "cmp");
-									
-									
-									foreach($files as &$file) {
-										// get the route number
-									
-										$matches = array();
-										preg_match_all('!\d+!', $file, $matches);
-										
-										foreach($matches as &$route_match) {
-										
-										//go through routes
-											$args = array(
-												'numberposts' => -1,
-												'post_type' => 'route',
-												'meta_key' => 'route_number',
-												'meta_value' => $route_match,
-												'order_by' => array('route_number'),
- 												'order' => 'ASC'
-											);
- 
-											// get results
-											$the_query = new WP_Query( $args );
- 
-											// The Loop
-											$icon_out = "";
-											?>
-											<?php if( $the_query->have_posts() ): ?>
-												
-												<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
-														
-														$icon_out .= '<a name="'.get_field('shared_class',$post->ID).'"></a>'; 
-														$icon_out .= '<a href="'.get_the_permalink().'">'.get_route_circle(get_field('route_number'),40,2).'</a>'; 
-													
-												 endwhile; ?>
-												
-											<?php endif; ?>
- 
-											<?php wp_reset_query(); 
-										
-										
-										}
-										$fares_out .= explode('<caption>',file_get_contents($site_base_dir.'/wp-content/transit-data/kern-transit-fares/'.$file))[0];
-										$fares_out .= '<caption>';
-
-										$fares_out .= $icon_out;
-										//$index_out .= explode(explode('<caption>',file_get_contents(get_site_url().'/wp-content/transit-data/kern-transit-fares/'.$file))[1], "</capti
-										$fares_out .= explode('<caption>',file_get_contents($site_base_dir.'/wp-content/transit-data/kern-transit-fares/'.$file))[1];
-										
-										
-										
-									}
-										
-										?> <?php
-										echo $index_out;
-										?><hr /> <?php
-										echo $fares_out;
-
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-									
-									?>
-								</section> <?php // end article section ?>
-
-							
-
-
-
+								</section>
 							</article>
 
 							<?php endwhile; else : ?>

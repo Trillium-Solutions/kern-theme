@@ -53,8 +53,6 @@ $(document).ready(function(){
 		$("#map-hovers").removeClass($(this).find('.route-name').attr("alt"));
 	
 	});
-	
-	doFixedTimetables();
 
 
 	$(window).scroll(function(e){ 
