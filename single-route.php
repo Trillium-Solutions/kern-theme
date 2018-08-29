@@ -294,54 +294,36 @@ $the_query = new WP_Query( $args );
 								<div id="timetable-detail-maps">
 
 								<h2 style="border-left: 13px solid <?php the_field('hex_route_color'); ?>; border-right: 13px solid <?php the_field('hex_route_color'); ?>">
-											<span class"span-title">Route Detail Maps</span> <span class="span-small-title">(Click a map to expand)</span>
+											<span class"span-title">Route Map</span>
 											<a name="maps"></a>
 											<br style="clear: both;" />
 									</h2>
 
 									<?
+                  $routeNumber = get_field('route_number',$post->ID);
+                  $num2ID = array(
+                    '100' => '1166',
+                    '110' => '1161',
+                    '220' => '1374',
+                    '223' => '1372',
+                    '225' => '1369',
+                    '227' => '1173',
+                    '230' => '1367',
+                    '240' => '1175',
+                    '250' => '1167',
+                    '115' => '1168',
+                    '120' => '1162',
+                    '130' => '1164',
+                    '140' => '1163',
+                    '145' => '1366',
+                    '150' => '1368',
+                    '210' => '1171'
+                  );
+                  ?>
+                  <div id="route-map">
+                    <iframe src="https://maps.trilliumtransit.com/map/feed/kerncounty-ca-us/routes/<?php echo $num2ID[$routeNumber]; ?>?noui=true&page_embed=true"></iframe>
+                  </div>
 
-$savedRoute = get_field('route_number',$post->ID);
-$args = array(
-    'post_type' => 'attachment',
-    'post_mime_type' =>'image',
-    'post_status' => 'inherit',
-    'posts_per_page' => -1,
-    'meta_key' => 'route_number',
-	//'meta_value' => get_field('route_number')
-);
-
-// get results
-$the_query = new WP_Query( $args );
-
-// The Loop
-?>
-<?php if( $the_query->have_posts() ): ?>
-	<ul>
-	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-		<?php
-		if (strpos(get_field('route_number'),$savedRoute) !== false) {
-   ?>
-
-<li class="route-detail-holder">
-			<span class="min"></span><a class="minimized" href="<?php echo wp_get_attachment_image_src( $attachment_id, 'large' )[0]; ?>"><img class="sml" src="<?php echo wp_get_attachment_thumb_url( $post->ID ); ?>" /></a>
-			<div class="detail-name"><?php
-				$attachment_meta = wp_prepare_attachment_for_js($post->ID);
-				echo $attachment_meta['title'];
-				?>
-			</div>
-			</li>
-			<?php
-			}?>
-
-	<?php endwhile; ?>
-	</ul>
-	<br style="clear: both;" />
-<?php endif; ?>
-
-<?php wp_reset_query();
-?>
 </div><!-- end #timetable-detail-maps -->
 			<div class="route-info-box">
 
