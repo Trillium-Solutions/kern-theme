@@ -37,30 +37,30 @@
 <script src="http://momentjs.com/downloads/moment.min.js?v=2"></script>
 
 		<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js?v=2"></script>
-	
-		<script src="<?php echo get_template_directory_uri(); ?>/library/bootstrap/js/bootstrap.min.js?v=2"></script>	
+
+		<script src="<?php echo get_template_directory_uri(); ?>/library/bootstrap/js/bootstrap.min.js?v=2"></script>
 		<?php // wordpress head functions ?>
-		
+
 		<?php // end of wordpress head ?>
 
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 		<?php wp_head(); ?>
-		
+
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/library/css/style.css' . '?' . filemtime( get_stylesheet_directory() . '/library/css/style.css'); ?>" type="text/css"  media='all' />
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css?v=2">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/bootstrap/css/bootstrap.min.css?v=2">  
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/bootstrap/css/bootstrap.min.css?v=2">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/interactive-map.css?v=2">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/sml_interactive-map.css?v=2">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/route-icons.css?v=2">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/single-route.css?v=2">   
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/kern-transit.css?v=2.1">  
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/dar.css?v=2">  
-		
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/single-route.css?v=2">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/kern-transit.css?v=2.1">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/dar.css?v=2">
+
 
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' /> 
- 
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
+
 	<script src="<?php echo get_template_directory_uri(); ?>/library/js/kern.js.php?v=2&site_url=<?php echo get_template_directory_uri(); ?>"></script>
 
 		<script>
@@ -80,7 +80,7 @@
 		};
 
 
-		var autocomplete_origin = new google.maps.places.Autocomplete(origin_input, options);    
+		var autocomplete_origin = new google.maps.places.Autocomplete(origin_input, options);
 		var autocomplete_destination = new google.maps.places.Autocomplete(destination_input, options);
 		}
 
@@ -95,11 +95,12 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js?v=2','ga');
 
   ga('create', 'UA-53349417-1', 'auto');
+	ga('set', 'anonymizeIp', true);
   ga('send', 'pageview');
 
 </script>
 <meta name="google-translate-customization" content="f25af25643c7b829-5e44eb73351882d9-gcc7ef8ab8e200b71-13"></meta>
-        
+
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -119,9 +120,9 @@
 								</form>
 							</div>
 							<div id="google_translate_element" class="col-sm-4 col-xs-6"></div>
-						
-							
-							
+
+
+
 						</div><!-- class="row" -->
 					</div> <!-- end #number-and-search-wrap -->
 					</div> <!-- end row -->
@@ -130,7 +131,7 @@
 						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 						<div id="logo-holder" class="col-md-5 col-sm-10" >
 							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" style="max-width: 400px" /></a>
-						</div><!-- end logo-holder -->		
+						</div><!-- end logo-holder -->
 						<nav id="main-nav" class="col-md-7 col-sm-10" style="padding-top: 30px;">
 							<ul>
 								<li id="routes_and_schedules_link" class="<?php if( is_post_type_archive('route')){echo 'current';}else if ( 'route' == get_post_type() ||  'timetable' == get_post_type()) {echo "parent-active"; }?>"><a href="<?php echo get_permalink(17) ?>"><i id="routes-and-schedules-icon" class="main-nav-icon"></i><span>Routes &amp; <br />Schedules</span></a></li>
@@ -161,6 +162,3 @@
 						</nav>
 
 				</div><!-- end class row -->
-
-
-
