@@ -199,7 +199,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-	
+
   wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
   wp_enqueue_style( 'googleFonts');
   wp_register_style('route_icons', get_template_directory_uri().'/library/css/route-icons.css');
@@ -240,26 +240,26 @@ function the_breadcrumb() {
                 echo '</li>';
             }
         } elseif('route' == get_post_type() ) {
-       	
+
                 echo '<li><a href="/routes-and-schedules/">Routes & Schedules</a></li><li class="separator">></li><li><strong> '.get_the_title().'</strong></li>';
-            
-        
+
+
         }
-        
+
         elseif('timetable' == get_post_type() ) {
-        
-        
+
+
         }
-        
+
         elseif('alert' == get_post_type() ) {
-        	
+
         	echo 'alert';
-        
+
         }
-        
+
         elseif('route' == get_post_type() ) {
-        
-        
+
+
         }
         elseif (is_page()) {
             if($post->post_parent){
@@ -273,7 +273,7 @@ function the_breadcrumb() {
             } else {
                 echo '<li><strong> '.get_the_title().'</strong></li>';
             }
-        } 
+        }
     }
     elseif (is_tag()) {single_tag_title();}
     elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
@@ -282,47 +282,47 @@ function the_breadcrumb() {
     elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
     elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
-    
+
     */
-    
+
     if (!is_home()) {
         echo '<li><a href="';
         echo get_option('home');
         echo '">';
         echo 'Home';
         echo '</a></li><li class="separator"> > </li>';
-    	
+
     	if(is_archive()) {
     		$post_type = get_post_type();
-    		
+
 			if ( $post_type )
 			{
-			
+
 				$taxonomy = 'alert-zone';
 				$taxonomy_terms = get_terms( $taxonomy, array(
 					'hide_empty' => 0,
 					'fields' => 'ids'
 				) );
-		
+
 				if(has_term($taxonomy_terms, 'alert-zone')) {
-					
+
 					echo 'Alerts';
-					
+
 				}	else {
-				
+
 					$post_type_data = get_post_type_object( $post_type );
 					$post_type_slug = $post_type_data->rewrite['slug'];
 					echo $post_type_data->label;
 
-				
+
 				}
 			}
     	}
-    	
+
     	elseif (is_single()) {
-    	
+
     		$post_type = get_post_type();
-    		
+
 			if ( $post_type )
 			{
 				$post_type_data = get_post_type_object( $post_type );
@@ -331,60 +331,60 @@ function the_breadcrumb() {
 				 echo $post_type_data->label;
 				echo '</a></li>';
 			}
-    	
-           
-            
+
+
+
             if (is_single()) {
-            
-            
-            
+
+
+
                 echo '</li><li class="separator"> > </li><li>';
                 if( $post_type_data = get_post_type_object( $post_type )->rewrite['slug'] == 'routes-and-schedules') {
-                
+
                 	echo 'Route '.get_field('route_number').'&nbsp; : &nbsp;';
                 }
-				
+
                 the_title();
                 echo '</li>';
             }
         }
-        
+
         elseif (is_page()) {
         	 echo '</li><li>';
                 the_title();
                 echo '</li>';
-        
+
         }
-    
-    
+
+
     echo '</ul>';
-    
+
     }
-    
+
 }
 
 
 function route_inclusive_wp_title	($title) {
-	
-	
+
+
 	//echo $title;
-	
+
 	if( is_single() && get_post_type_object(get_query_var( 'post_type' ))->rewrite[slug] == 'routes-and-schedules') {
-	
+
 		$titlePieces = explode('|', $title);
 		return $titlePieces[0].' | Route '.get_field('route_number').' :'.$titlePieces[1] ;
-	
+
 	} else {
-	
+
 	return $title;
-	
+
 	}
-	
-	
-	
-	
-    		
-			
+
+
+
+
+
+
 
 }
 
@@ -431,12 +431,12 @@ function codex_route_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-	
+
 		'supports'           => array( 'title', 'revisions' )
 	);
 
 	register_post_type( 'route', $args );
-	
+
 	$dar_labels = array(
 		'name'               => _x( 'Dial-A-Ride', 'post type general name' ),
 		'singular_name'      => _x( 'dar', 'post type singular name' ),
@@ -471,7 +471,7 @@ function codex_route_init() {
 	);
 
 	register_post_type( 'dar', $args );
-	
+
 	$labels = array(
 		'name'               => _x( 'Timetables', 'post type general name' ),
 		'singular_name'      => _x( 'timetable', 'post type singular name' ),
@@ -504,12 +504,12 @@ function codex_route_init() {
 		'menu_position'      => null,
 		'exclude_from_search' => true,
 		'supports'           => array( 'title', 'editor', 'revisions','page-attributes' )
-		
+
 	);
 
 	register_post_type( 'timetable', $args );
-	
-	
+
+
 	$labels = array(
 		'name'               => _x( 'Alerts', 'post type general name' ),
 		'singular_name'      => _x( 'alert', 'post type singular name' ),
@@ -544,7 +544,7 @@ function codex_route_init() {
 	);
 
 	register_post_type( 'alert', $args );
-	
+
 	$labels = array(
 		'name'               => _x( 'News', 'post type general name' ),
 		'singular_name'      => _x( 'News', 'post type singular name' ),
@@ -579,7 +579,7 @@ function codex_route_init() {
 	);
 
 	register_post_type( 'news', $args );
-	
+
 	$labels = array(
 		'name'               => _x( 'Contact Profiles', 'post type general name' ),
 		'singular_name'      => _x( 'Staff Contact Profile', 'post type singular name' ),
@@ -621,10 +621,10 @@ add_action( 'init', 'create_area_tax' );
 
 /* Hook meta box to just the 'timetable' post type. */
 
- 
+
 function add_menu_icons_styles(){
 ?>
- 
+
 <style>
 #adminmenu .menu-icon-alert div.wp-menu-image:before {
   content: '\f227';
@@ -646,7 +646,7 @@ content: "\f488";
 content: "\f484";
 }
 </style>
- 
+
 <?php
 }
 add_action( 'admin_head', 'add_menu_icons_styles' );
@@ -655,18 +655,18 @@ add_action( 'admin_head', 'add_menu_icons_styles' );
 
 function namespace_add_custom_types( $query ) {
   if( is_post_type_archive('alert'))  {
-  
+
   $taxonomy = 'alert-zone';
 $taxonomy_terms = get_terms( $taxonomy, array(
     'hide_empty' => 0,
     'fields' => 'ids'
 ) );
-  
-  
+
+
     $query->set( 'post_type', array(
      'alert', 'news'
 		));
-		$query->set( 'tax_query', 
+		$query->set( 'tax_query',
 		array(
 			array(
 				'taxonomy' => 'alert-zone',
@@ -701,9 +701,9 @@ function get_alertCount() {
 									'terms' => $taxonomy_terms,
 								),
 							)
-				
+
 			);
- 
+
 	// get results
 	$the_query = new WP_Query( $args );
 
@@ -726,23 +726,23 @@ function create_area_tax() {
 			'hierarchical' => false,
 		)
 	);
-	
+
 $service_areas = array('East Kern','Tehachapi','Frazier Park','Kern River Valley','Lamont Area','North Kern','Taft');
 $service_areas_safe = array('east_kern','tehachapi','frazier_park','kern_river_valley','lamont_area','north_kern','taft');
 $ind = 0;
 foreach($service_areas as &$service_area) {
 	wp_insert_term(
-	 $service_area, // the term 
+	 $service_area, // the term
 	  'service_area', // the taxonomy
 	  array(
 	  	'description'=> '',
-		'slug' => $service_areas_safe[ind]
+		'slug' => $service_areas_safe[$ind]
 	  )
 	);
 	$ind  += 1;
 }
 
-	
+
 	register_taxonomy(
 		'alert-zone',
 		array( 'alert', 'news' ),
@@ -753,8 +753,8 @@ foreach($service_areas as &$service_area) {
 			'hierarchical' => false,
 		)
 	);
-	
-	
+
+
 	$route_names = array(
 	"100-bakersfield-lancaster",
 	"110-delano-bakersfield",
@@ -788,7 +788,7 @@ foreach($service_areas as &$service_area) {
 	"dial-tehachapi");
 	foreach($route_names as &$route_name) {
 		wp_insert_term(
-		 $route_name, // the term 
+		 $route_name, // the term
 		  'alert-zone', // the taxonomy
 		  array(
 			'description'=> '',
@@ -797,7 +797,7 @@ foreach($service_areas as &$service_area) {
 		);
 	}
 	wp_insert_term(
-		 'All Routes', // the term 
+		 'All Routes', // the term
 		  'alert-zone', // the taxonomy
 		  array(
 			'description'=> '',
@@ -805,15 +805,15 @@ foreach($service_areas as &$service_area) {
 		  )
 		);
 		wp_insert_term(
-		 'All Routes and Dial-A-Ride', // the term 
+		 'All Routes and Dial-A-Ride', // the term
 		  'alert-zone', // the taxonomy
 		  array(
 			'description'=> '',
-			'slug' => 'all' 
+			'slug' => 'all'
 		  )
 		);
 		wp_insert_term(
-		 'All Dial-A-Ride', // the term 
+		 'All Dial-A-Ride', // the term
 		  'alert-zone', // the taxonomy
 		  array(
 			'description'=> '',
@@ -835,7 +835,7 @@ function my_edit_route_columns( $columns ) {
 		'route_number' => __( 'Route Number' ),
 		'title' => __( 'Route Name' ),
 		'schedules' => __( 'Route timetables' ),
-		
+
 	);
 
 	return $columns;
@@ -853,8 +853,8 @@ function my_manage_route_columns( $column, $post_id ) {
 
 			/* Get the post meta. */
 			$route_number = get_field( 'route_number', $post_id );
-			
-			
+
+
 			/* If no duration is found, output a default message. */
 			if ( empty( $route_number ) )
 				echo __( 'Unknown' );
@@ -862,12 +862,12 @@ function my_manage_route_columns( $column, $post_id ) {
 			/* If there is a duration, append 'minutes' to the text string. */
 			else
 				echo  __('<i id="icon-sml-'.get_field( 'shared_class', $post_id ).'" class="route-icon" style="float: left; margin-right: 10px"></i> ' .  (string)$route_number) ;
-				
+
 
 			break;
-			
+
 		case 'schedules' :
-		
+
 			// find schedules
 			get_field( 'shared_class', $post_id );
 			$args = array(
@@ -876,10 +876,10 @@ function my_manage_route_columns( $column, $post_id ) {
 				'meta_key' => 'shared_class',
 				'meta_value' => get_field( 'shared_class', $post_id )
 			);
- 
+
 			// get results
 			$the_query = new WP_Query( $args );
- 
+
 			// The Loop
 			?>
 			<?php if( $the_query->have_posts() ): ?>
@@ -890,13 +890,13 @@ function my_manage_route_columns( $column, $post_id ) {
 					</li>
 				<?php endwhile; ?>
 				</ul>
-			<?php endif; 
-			
+			<?php endif;
+
 			wp_reset_query();
-		
+
 			break;
 
-		
+
 		/* Just break out of the switch statement for everything else. */
 		default :
 			break;
@@ -955,22 +955,22 @@ add_action( 'admin_enqueue_scripts', 'my_admin_enqueue_css' );
 function csv_site_update() {
 
 	echo "<h1>Update site with CSV</h1>If you want to update the site, you need to add &update=true to the end of the url.  <br/><strong>DO NOT DO THIS IF YOU ARE UNSURE YOU?RE DOING THE RIGHT THING!!</strong>";
-	
+
 	if($_GET["update"] == "true") {
 		echo "<br />updating... <br />";
-		
-		
+
+
 		/*
-		
+
 		CSV order:
-		
+
 		0 Trillium route_id
 		1 route number, route_number
 		2 Name, title
 		3 area(s), area
-		4 within-area-display-order, 
+		4 within-area-display-order,
 		5 days of week, days_of_week
-		6 DAR times of day, 
+		6 DAR times of day,
 		7 Locations served
 		8 unique ID
 		9 html color
@@ -982,21 +982,21 @@ function csv_site_update() {
 		15 Route PDF download filename
 		16 "Connections (use the ""shared id"")
 		17 semi colon separated connections
-		18 Website URL 
+		18 Website URL
 		19 external connections
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
 		*/
-		
-		
-		
-		
+
+
+
+
 		// read in the csv
-		
+
 		$existing_routes = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'route',
@@ -1005,60 +1005,60 @@ function csv_site_update() {
 			'numberposts' => -1,
 			'post_type' => 'dar',
 		));
-		
+
 		$existing_timetables = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'timetable',
 		));
-		
+
 		foreach($existing_routes as &$route) {
 			echo "route delete!<br />";
-			 wp_delete_post( $route->ID, true ); 
-			
+			 wp_delete_post( $route->ID, true );
+
 		}
-		
+
 		foreach($existing_dars as &$dar) {
 			echo "dar delete!<br />";
-			 wp_delete_post( $dar->ID, true ); 
-			
+			 wp_delete_post( $dar->ID, true );
+
 		}
-		
+
 		foreach($existing_timetables as &$timetable) {
 			echo "timetable delete!<br />";
-			 wp_delete_post( $timetable->ID, true ); 
-			
+			 wp_delete_post( $timetable->ID, true );
+
 		}
-		
-		
-		
+
+
+
 		$handle = fopen(get_site_url()."/wp-content/transit-data/route_and_dar_data.tsv", "r");
 		if ($handle) {
 		$lineCount = 0;
    		 while (($line = fgets($handle)) !== false) {
-        	
+
         	$existing_routes = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'route',
 		));
-		
+
 		$existing_dars = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'dar',
 		));
-        	
+
         	if($lineCount > 0) {
-        	
+
 				//echo $line;
 				echo "<br/>";
-			
+
 				$splitLine = explode("\t", $line);
 				$tril_route_id = $splitLine[0];
 				$route_number = $splitLine[1];
 				$title = $splitLine[2];
 				$area = $splitLine[3];
 				$area_cities  = $splitLine[4];
-				$area_display_order  = $splitLine[5]; 
-				$days_of_week = $splitLine[6]; 
+				$area_display_order  = $splitLine[5];
+				$days_of_week = $splitLine[6];
 				$DAR_times_of_day  = $splitLine[7];
 				$locations_served = $splitLine[8];
 				$unique_id = $splitLine[9];
@@ -1071,12 +1071,12 @@ function csv_site_update() {
 				$connections = $splitLine[16];
 				$website_url = $splitLine[17];
 				$external_connections = $splitLine[18];
-			
+
 				echo $route_number;
-				
-				
+
+
 				$post_to_update_id = -1;
-			
+
 				// if has route number
 				// 	check if route already exists
 				$found_match = false;
@@ -1085,37 +1085,37 @@ function csv_site_update() {
 						echo "<br />found a match";
 						$found_match = true;
 						$post_to_update_id = $route_post->ID;
-						
+
 					}
-			
+
 				}
-				
+
 				foreach($existing_dars as &$dar_post) {
 					if(get_field('shared_class',$dar_post->ID) == $shared_class) {
 						echo "<br />found a match";
 						$found_match = true;
 						$post_to_update_id = $dar_post->ID;
-						
+
 					}
-			
+
 				}
-				
-				
-				
+
+
+
 				$is_route = ($route_number != 'd');
-				
-				
-				
-				
-				
-				
+
+
+
+
+
+
 				// if doesn't exist
 				// create new route post
-				
+
 				//else update the values of the existing
 				if($is_route) {
-				
-				
+
+
 					if(!$found_match) {
 						// create new post
 						$my_post = array(
@@ -1125,19 +1125,19 @@ function csv_site_update() {
 					  'post_type'      => 'route',
 					  'post_author'   => 1
 						);
-	
+
 						// Insert the post into the database
 						$post_to_update_id = wp_insert_post( $my_post );
-						
+
 						// create schedule pages here
 						$explodedTimetableNames = explode(',',$time_table_files);
 						$schedule_ids = array();
 						foreach($explodedTimetableNames as &$timetable) {
-						
+
 							//$handle = fopen(get_site_url()."/wp-content/transit-data/".$timetable, "r");
 							$timetableHTML = file_get_contents(get_site_url()."/wp-content/transit-data/route-html/".$timetable);
-							
-							
+
+
 							$my_post = array(
 								  'post_title'    =>  str_replace('$', '_', explode('.', $timetable)[0]),
 								  'post_name' =>      str_replace('$', ' ', explode('.', $timetable)[0]),
@@ -1146,35 +1146,35 @@ function csv_site_update() {
 								  'post_author'   => 1,
 								  'post_content' => explode('</html>',explode('<body>',$timetableHTML)[1])[0]
 							);
-	
+
 							// Insert the post into the database
-						
+
 							$schedule_id =  wp_insert_post( $my_post );
 							$schedule_ids[] = $schedule_id;
-							
+
 							update_field('field_53dfc807fcdc7', $shared_class, $schedule_id );
-							
-							
-					
+
+
+
 						}
-						
-						
-					
-				
-					} 
-				
+
+
+
+
+					}
+
 					update_field('field_53da7e29c3396', $route_number, $post_to_update_id );
 					update_field('field_53dacd61b4258', $area_cities, $post_to_update_id );
 					update_field('field_53dacd096d483', $area, $post_to_update_id );
 					update_field('field_53dacd85b425a', $shared_class, $post_to_update_id );
-					update_field('field_53dacc3665aa8', $html_color, $post_to_update_id ); 	
+					update_field('field_53dacc3665aa8', $html_color, $post_to_update_id );
 					update_field('field_53dacd3cb4256', $days_of_week, $post_to_update_id );
 					update_field('field_53dacd8db425b', $pdf_file_name, $post_to_update_id );
 					update_field('field_53dacdccb425c', $connections, $post_to_update_id );
 					update_field('field_53dbda5b89ab9', $area_display_order, $post_to_update_id );
 					update_field('field_53dc1f7e62156', $time_table_files, $post_to_update_id );
 					update_field('field_53dd0fd750be2', $external_connections, $post_to_update_id );
-					
+
 					$schedule_id_string = "";
 					$i = 0;
 					foreach($schedule_ids as &$schedule_id) {
@@ -1184,11 +1184,11 @@ function csv_site_update() {
 						}
 						$i++;
 					}
-					
+
 					update_field('field_53de9b6afb59a', $schedule_id_string, $post_to_update_id );
 
-				
-				
+
+
 					 $my_post = array(
 					  'ID'           => $post_to_update_id,
 					  'post_title' => $title
@@ -1196,10 +1196,10 @@ function csv_site_update() {
 
 					// Update the post into the database
 					  wp_update_post( $my_post );
-				  
-					
+
+
 				} else {  // if is dial-a-ride
-				
+
 					if(!$found_match) {
 						// create new post
 						$my_post = array(
@@ -1209,58 +1209,58 @@ function csv_site_update() {
 					  'post_type'      => 'dar',
 					  'post_author'   => 1
 						);
-	
+
 						// Insert the post into the database
 						$post_to_update_id = wp_insert_post( $my_post );
-					
+
 						update_field('field_53dec7f466c15', $html_color, $post_to_update_id );
 						update_field('field_53dec84a66c18', $DAR_times_of_day, $post_to_update_id );
 						update_field('field_53dec84166c17', $days_of_week, $post_to_update_id );
-						update_field('field_53dec83b66c16', $area_cities, $post_to_update_id ); 
-						update_field('field_53dec979000e3', $shared_class, $post_to_update_id ); 
-					} 
-				
-				
+						update_field('field_53dec83b66c16', $area_cities, $post_to_update_id );
+						update_field('field_53dec979000e3', $shared_class, $post_to_update_id );
+					}
+
+
 				}
-				
+
 				// data for both dial-a-ride and routes
-				
-				
+
+
 				$explodedArea = explode(',', $area);
 					foreach($explodedArea as &$areaVal){
 						$tag = array( slugify($areaVal) ); // Correct. This will add the tag with the id 5.
 						wp_set_post_terms($post_to_update_id, $tag, 'service_area' );
 					}
-				
-			
-			
+
+
+
         	}
         	$lineCount ++;
-        	
-        	
+
+
   		  }
 		} else {
   		  // error opening the file.
-		} 
+		}
 		fclose($handle);
-		
-		
-		
+
+
+
 		// check if routes exist
 			// go through add lines, ch
-		
+
 		// create any routes if doesn not exist
-		
+
 		// update existing routes
-		
+
 		// check if DAR pages exist
-		
+
 		// update DAR pages with data
-		
+
 		//update_field($field_key, $value, $post_id)
-		
+
 		echo "<br>Update complete!";
-	} 
+	}
 
 }
 
@@ -1272,7 +1272,7 @@ function add_data_import_menu() {
 function slugify($text)
 {
     // Swap out Non "Letters" with a -
-    $text = preg_replace('/[^\\pL\d]+/u', '-', $text); 
+    $text = preg_replace('/[^\\pL\d]+/u', '-', $text);
 
     // Trim out extra -'s
     $text = trim($text, '-');
@@ -1291,13 +1291,13 @@ function slugify($text)
 
 
 function remove_menus(){
-  
- 
+
+
   //remove_menu_page( 'edit.php' );                   //Posts
 
 
   remove_menu_page( 'edit-comments.php' );          //Comments
-  //remove_menu_page( 'themes.php' );                 //Appearance  
+  //remove_menu_page( 'themes.php' );                 //Appearance
   remove_menu_page( 'edit.php?post_type=custom_type' );
 
 }
@@ -1310,8 +1310,8 @@ function disable_emojicons_tinymce( $plugins ) {
     return array();
   }
 }
- 
- 
+
+
  function disable_wp_emojicons() {
 
   // all actions related to emojis
@@ -1333,34 +1333,34 @@ function get_route_circle($route_number, $width, $border_width) {
 	if (empty($border_width)) {
         $border_width = 2;
     }
-	
+
 	$args = array(
 		'numberposts'	=> 1,
 		'post_type'		=> 'route',
 		'meta_key'		=> 'route_number',
-		'meta_value'	=> $route_number	
+		'meta_value'	=> $route_number
 	);
 	$out = '';
 	$the_query = new WP_Query( $args );
 	$route_color = "FFF";
 	$text_color = "FFF";
 	if( $the_query->have_posts() ):
-		 while( $the_query->have_posts() ) : $the_query->the_post(); 
+		 while( $the_query->have_posts() ) : $the_query->the_post();
 			$route_color = get_field('hex_route_color');
-			
+
 				$text_color = get_field('route_text_color');
 				if($text_color == '') {
 					$text_color = 'fff';
 				}
-			
-		 
-			//$color = str_replace('#','',$color); 
+
+
+			//$color = str_replace('#','',$color);
 			$text_color = str_replace('#','',$text_color);
-			$radius = $width/2; 
+			$radius = $width/2;
 			$out = '<span href="'.get_permalink().'" class="route-circle" style="letter-spacing: .3px; border: '.$border_width.'px solid white; font-style: normal;font-weight: bold; color: #'.$text_color.'; width:'.$width.'px; height:'.$width.'px; line-height:'.($width - $width*(2.0/30.0)).'px; border-radius:'.($width/2).'px; background-color:'.$route_color.'; display: inline-block; text-align: center; font-size: '.($width/2.5).'px; text-decoration: none; ">'.$route_number.'</span>';
 
-	endwhile; 
-	endif; 	 // Restore global post data stomped by the_post(). 
+	endwhile;
+	endif; 	 // Restore global post data stomped by the_post().
 	return $out;
 }
 
