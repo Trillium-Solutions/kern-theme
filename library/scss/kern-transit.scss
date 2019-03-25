@@ -2,13 +2,11 @@
 table {background:white; margin: 20px auto;border-spacing:0px 0px;border-collapse:collapse;}
 td,th {text-align:left;padding-left:10px;padding-right:10px;padding-top:3px;padding-bottom:3px;margin-left:0px;margin-right:0px;font-size:13px;}
 .city-name {font-size:14px; font-weight:bold; text-transform:uppercase;padding-top:10px;white-space:nowrap;}
+.stop-name {white-space:nowrap;}
 .timepoint-number {font-weight:bold;vertical-align:top;}
 .stop-time {vertical-align:bottom;text-align:center;white-space:nowrap;}
 .stop_times_row {border-top:1px solid #ccc}
 .days-of-week {text-align:center;}
-.stop-name {
-	border-right: 1px solid #eee;
-}
 
 table .timetable-header .route-name {font-size:18px; font-weight:bold;text-align:center;}
 table .timetable-header .direction-header {font-size:15px; font-weight:bold;text-align:center;}
@@ -58,7 +56,6 @@ table._140-lamont-bakersfield-north .direction-header {display:block; border-top
 
 
 ._140-lamont-bakersfield-north .weekend-only {background:#E1CAF9}
-._140-lamont-bakersfield-north .all-week {background: lighten(#E1CAF9, 8%);}
 
 
 table._142-lamont-bakersfield-weekend-loop .timetable-header .route-name {width:100%;background-color:#009ac6;color:white; display:block;}
@@ -71,18 +68,22 @@ table._142-lamont-bakersfield-weekend-loop .direction-header  { display:block; b
 table._145-lamont-bakersfield-south .timetable-header .route-name {width:100%;background-color:#f37061;color:white; display:block;}
 table._145-lamont-bakersfield-south {border-bottom: solid 4px #f37061;}
 table._145-lamont-bakersfield-south .direction-header {display:block; border-top: solid 4px #f37061;border-bottom: solid 1px #f37061;}
-table._145-lamont-bakersfield-south .weekend-only {background: lighten(#f37061,20%);}
+
+
 
 
 table._150-lake-isabella-bakersfield_mon-sat .timetable-header .route-name {width:100%;background-color:#ed1846;color:white; display:block;}
 table._150-lake-isabella-bakersfield_mon-sat {border-bottom: solid 4px #ed1846;}
 table._150-lake-isabella-bakersfield_mon-sat .direction-header {display:block; border-top: solid 4px #ed1846;border-bottom: solid 1px #ed1846;}
-table._150-lake-isabella-bakersfield_mon-sat .weekend-only{background: lighten(#ed1846, 25%);}
+
+
+
+
 
 table._150-lake-isabella-bakersfield_sunday .timetable-header .route-name {width:100%;background-color:#ed1846;color:white; display:block;}
 table._150-lake-isabella-bakersfield_sunday {border-bottom: solid 4px #ed1846;}
 table._150-lake-isabella-bakersfield_sunday .direction-header {display:block; border-top: solid 4px #ed1846;border-bottom: solid 1px #ed1846;}
-table._150-lake-isabella-bakersfield_sunday .weekend-only{background: lighten(#ed1846, 25%);}
+
 
 
 
@@ -139,15 +140,5 @@ table._250-california-city-lancaster .direction-header {display:block; border-to
 
 
 ._250-california-city-lancaster .weekend-only {background:#BBDAFF}
-
-.table-responsive {
-	overflow-x: visible;
-}
-
-@media (max-width: 1020px) {
-	.table-responsive {
-		overflow-x: auto;
-	}
-}
 
 }

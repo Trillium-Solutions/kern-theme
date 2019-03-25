@@ -31,7 +31,7 @@
 									  display: inline-block;
 									  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out;
 									  animation: sk-bouncedelay 1.4s infinite ease-in-out;
-									  /* Prevent first frame from flickering when animation starts */
+									  /* Prevent first frame from flickering when animation starts... */
 									  -webkit-animation-fill-mode: both;
 									  animation-fill-mode: both;
 									}
@@ -211,46 +211,11 @@
 							?>
 							</div><!-- end row -->
 						</div><!-- end #home-route-picker -->
-						<style>
-							#home-banner-row {
-								/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#158ad1+33,074687+99 */
-								background: #158ad1; /* Old browsers */
-								background: -moz-linear-gradient(45deg,  #158ad1 33%, #074687 99%); /* FF3.6-15 */
-								background: -webkit-linear-gradient(45deg,  #158ad1 33%,#074687 99%); /* Chrome10-25,Safari5.1-6 */
-								background: linear-gradient(45deg,  #158ad1 33%,#074687 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#158ad1', endColorstr='#074687',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-							}
-						</style>
-						<div id="home-banner-row" class="row" style="color: white; border: 1px solid white; margin: 0px; margin-bottom: 15px;" >
-							<div class="col-sm-2">
-								<img width="90%" style="margin-top: 50px; margin-left: 10%" src="<?php echo get_site_url(); ?>/wp-content/themes/kern/library/images/council-logo.jpg" />
-							</div><!-- end col-sm-2 -->
-							<div class="home-banner col-sm-10">
-								<h1 style="text-align: center;">
-									Congratulations 
-								</h1>
-								<h3 style="text-align: center;">to our own Bob Neath, 2015 recipient of the Kern Council of Governments' 
-									prestigious <strong> Darell Hildebrand Distinguished Leadership award!<strong>
-								</h3>
-
-								<h4 style="text-align: center; "><a href="http://www.kerncog.org/regional-awards" style="color: white; text-decoration: underline;" >Click here to learn more.</a></h4>
-																<br />
-							</div><!-- end home banner -->
+						<div id="home-banner-row" class="row" style="color: white; margin: 0px; margin-bottom: 15px;" >
+                            <a id="fb-link" href="https://facebook.com/KernTransit"></a>
+                            <a id="twitter-link" href="https://twitter.com/KernTransit"></a>
 						</div><!-- end home banner row -->
-						<div id="home-banner-row" class="row" style="color: white; border: 1px solid white; margin: 0px; margin-bottom: 15px;" >
-							
-							<div class="home-banner col-sm-12">
-								<h1 style="text-align: center;">
-									Public Hearing – Proposed Fare Changes 
-								</h1>
-								<h3 style="text-align: center;">Tuesday, June 7 at 2:00 p.m: Meeting to discuss new fare structure for all fixed routes and Dial-A-Ride services in Kern County<strong>
-								</h3>
-
-								<h4 style="text-align: center; "><a href="http://kerntransit.org/news/public-hearing-proposed-fare-changes/" style="color: white; text-decoration: underline;" >Click here to learn more.</a></h4>
-																<br />
-							</div><!-- end home banner -->
-						</div><!-- end home banner row -->
+						
 						
 						
 						<div id="home-secondary-container" class="row-fluid"  >
@@ -265,7 +230,13 @@
 								<li><a href="<?php echo get_permalink( 9 ); ?>" ><i id="bikes-on-buses-icon"></i>Bikes on Buses</a></li>
 								<li><a href="<?php echo get_permalink(11 ); ?>" ><i id="passenger-conduct-icon"></i>Passenger Conduct</a></li>
 								<li><a href="<?php echo get_permalink( 13 ); ?>" ><i id="mobile-and-desktop-apps-icon"></i>Mobile and Desktop Apps</a></li>
-								<li><a href="<?php echo get_permalink( 15); ?>" ><i id="holidays-icon"></i>Holidays</a></li>
+								<li><a href="<?php echo get_permalink( 15 ); ?>" ><i id="holidays-icon"></i>Holidays</a></li>
+								<li><a href="<?php echo get_permalink( 39 ); ?>" ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 8">
+  <path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" />
+</svg>Lost and Found</a></li>
+								<li><a href="<?php echo get_permalink( 37 ); ?>" ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 8">
+  <path d="M.09 0c-.06 0-.09.04-.09.09v5.81c0 .05.04.09.09.09h5.91l2 2v-7.91c0-.06-.04-.09-.09-.09h-7.81z" />
+</svg>Contact Us</a></li>
 								</ul>
 								
 								
@@ -317,9 +288,7 @@
 					</div> <!-- end #home-news-area -->
 					<div id="right-secondary-links" class="col-sm-4">
 						<div id="left-separator" class="hidden-xs"></div>
-								<?php wp_nav_menu( array( 'theme_location' => 'secondary-link-right-menu' ) ); ?>
-
-
+								<a class="twitter-timeline" data-width="340" data-height="300" data-theme="dark" data-link-color="#e68c2b" href="https://twitter.com/KernTransit">Tweets by KernTransit</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 						</div><!-- end #right-secondary-links -->
 							
 
