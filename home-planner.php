@@ -8,7 +8,6 @@
 <h2>Plan Your Trip</h2>
 
 
-
 <form name="f" action="http://jump.trilliumtransit.com/redirect.php"><input type="hidden" name="ie" value="UTF8"/><input type="hidden" name="f" value="d"/>
     <table>
         <tr class="min-hide">
