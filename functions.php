@@ -1368,5 +1368,18 @@ function the_route_circle($route_number, $width, $border_width) {
 	echo get_route_circle($route_number, $width, $border_width);
 }
 
+function getTextColor($hex){
+    list($red, $green, $blue) = sscanf($hex, "#%02x%02x%02x");
+    print_r($red, $green, $blue);
+    $luma = ($red + $green + $blue)/3;
+
+    if ($luma < 128){
+      $textcolor = "white";
+    }else{
+      $textcolor = "black";
+    }
+    return $textcolor;
+  }
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

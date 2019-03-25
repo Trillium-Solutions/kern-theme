@@ -2478,13 +2478,13 @@ h1#route-page-title i {
         padding: 0;
         width: 90%;
     }
-    .mobile-route-buttons-list__button {
+    
+    .mobile-route-buttons-list__button a {
         padding: 10px 14px;
         margin-bottom: 10px;
         border-radius: 5px;
         font-weight: bold;
-
-       
+        display: block;
     }
     
     .mobile-route-buttons-list__button a:link, 

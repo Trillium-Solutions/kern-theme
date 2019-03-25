@@ -34,14 +34,15 @@ wp_reset_query();
         <?php
             while ( $query->have_posts() ) {
                 $query->the_post();
-                
+                $route_color = get_field('hex_route_color');
                 ?>
                     <li 
                         class='mobile-route-buttons-list__button'
-                        style='background: <?php the_field('hex_route_color'); ?>;
-                        color: <?php the_field('route_text_color'); ?>;'
                     >
-                    <a href=' <?php the_permalink(); ?>'>
+                    <a href=' <?php the_permalink(); ?>'
+                     style='background: <?php echo $route_color; ?>;
+                     color: <?php echo getTextColor($route_color) ?> !important;'
+                    >
                         <?php the_field('route_number'); echo " - "; the_title(); ?>
                     </a>
             </li>
