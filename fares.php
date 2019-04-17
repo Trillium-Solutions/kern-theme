@@ -83,7 +83,7 @@ get_header(); ?>
 										</tr>
 									</table>
 									<div class="table-bottom-info">
-										The reduced fare is available for youth (5-15) with proper identification, and for seniors (62+) and disabled passengers with a Kern Transit "Reduced Fare Card."
+										The reduced fare is available for youth (K-12th) with proper identification, and for seniors (62+) and disabled passengers with a Kern Transit "Reduced Fare Card."
 									</div>
 									</section>
 									<section class="fare-tables">

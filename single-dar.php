@@ -91,11 +91,21 @@ foreach ($dar_areas_array as &$value) {
 <div id="dar-times-of-day">
 		<?php  the_field('times_of_day'); ?>
 </div><!-- end #dar-times-of-day -->
-<?php if(get_field('info_and_fares') != '') { ?>
 <div id="dar-info">
-		<?php  the_field('info_and_fares'); ?>
-</div><!-- end #dar-times-of-day -->
-<?php } ?>
+		<table id="single-route-fares">
+			<tr>
+				<th></th>
+				<th>General</th>
+				<th>Reduced</th>
+			</tr>
+			<tr>
+				<td class="mini-label"><a href="<?php echo get_site_url(); ?>/fares">Fare</a></td>
+				<td>$2.00</td>
+				<td>$1.00</td>
+			</tr>
+		</table>
+</div><!-- end #dar-info -->
+
 
 		 
 		 </div><!-- end #dar-info-container -->

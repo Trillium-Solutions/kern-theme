@@ -83,6 +83,205 @@
 
 }
 
+#home-banner-row {
+    position: relative;
+    background: url('../images/social-banner-lg.jpg');
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding: 12%;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 5px;
+    
+    #fb-link {
+        position: absolute;
+        width: 22%;
+        height: 25%;
+        bottom: 6%;
+        left: 25%;
+    }
+
+    #twitter-link {
+        position: absolute;
+        bottom: 6%;
+        width: 27%;
+        height: 25%;
+        left: 49%;
+    }
+}
+
+
+@media (max-width: 896px) {
+#home-banner-row {
+    background: url('../images/home-banner.png');
+    background-size: cover;
+    padding: 16.5%;
+    
+    #fb-link {
+        
+        width: 25%;
+        height: 25%;
+        bottom: 10%;
+        left: 20%;
+    }
+
+    #twitter-link {
+        
+        bottom: 10%;
+        width: 30%;
+        height: 25%;
+        left: 50%;
+    }
+}
+}
+
+
+
+
+.fare-tables {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+}
+
+.fare-tables table {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	overflow: auto;
+}
+
+.table-bottom-info {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+}
+
+.fare-tables th {
+	border-bottom: 1px solid #999;
+}
+
+.fare-tables td,
+.fare-tables th {
+	padding: 5px 10px;
+	text-align: center;
+}
+
+.fare-tables th:last-child,
+.fare-tables td:last-child {
+	padding-right: 5px;
+	margin-right: 10px;
+}
+
+
+
+.fare-tables td:first-child,
+.fare-tables th:first-child {
+	width: 100%;
+	text-align: left;
+	border-bottom: none;
+}
+
+
+
+.fare-label {
+	font-size: 18px;
+}
+
+@media (max-width: 400px) {
+	.fare-label {
+		font-size: 14px;
+		font-weight: bold;
+	}
+}
+
+#route-nav {
+	position: relative;
+}
+
+#single-route-fares .mini-label {
+font-size: 16px;
+letter-spacing: .1em;
+}
+
+.mini-label a {
+  cursor: pointer;
+  color: #fff;
+}
+
+#route-fares-holder {
+	position: absolute;
+	padding: 5px 15px 5px 10px;
+	border-top-left-radius: 5px;
+	right: 0px;
+	bottom: -53px;
+}
+
+#single-route-fares td {
+  vertical-align: bottom;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  
+} 
+
+#single-route-fares {
+	background-color: transparent;
+	width: 100%;
+max-width: 240px;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+}
+
+.single-dar #single-route-fares {
+  color: #333;
+}
+
+.single-dar .mini-label a {
+  color: #337ab7;
+}
+
+#single-route-fares th {
+	padding-bottom: 0;
+	font-weight: normal;
+	border-bottom: 1px solid #fff;
+}
+
+.single-dar #single-route-fares th {
+  border-bottom: none;
+}
+
+#single-route-fares th:first-child {
+	border-bottom: none;
+}
+
+#single-route-fares > tbody > tr > td,
+#single-route-fares >tbody >tr > th {
+	border-top: none;
+}
+
+@media (max-width: 810px) {
+	#route-fares-holder {
+		right: 0px;
+		bottom: 0px;
+	}
+
+	#route-anchors {
+		padding-bottom: 80px;
+	}
+
+#route-anchors.route-anchors-100 {
+	padding-bottom: 95px;
+}
+}
+
+#how-to-ride-links svg {
+  position: relative;
+  top: 2px;
+  margin-right: 13px;
+  fill: white;
+}
 
 /*  #map-holder svg {
     width: 100%; 

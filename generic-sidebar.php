@@ -22,7 +22,7 @@
 								
 								<hr />
 								
-								<?php wp_nav_menu( array( 'theme_location' => 'secondary-link-right-menu' ) ); ?>
+								<a class="twitter-timeline" data-width="340" data-height="450" data-theme="dark" data-link-color="#e68c2b" href="https://twitter.com/KernTransit">Tweets by KernTransit</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 								</div><!-- end .secondary -->
 								
 								</div><!-- end #how-to-ride-links -->
