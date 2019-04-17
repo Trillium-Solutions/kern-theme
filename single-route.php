@@ -60,11 +60,6 @@ Template Name: route_individual_page
 
 								<div id="route-locations-served">
 									<?php  the_field('locations_served'); ?>
-									<?php if (get_field('schedule_pdf')) : ?>
-										<span class="span-small-title">
-											<a href="<?php the_field('schedule_pdf'); ?>">Download Schedule (PDF)</a>
-										</span>
-									<?php endif; ?>
 								</div><!-- end #route-locations-served -->
 
 
@@ -189,6 +184,11 @@ Template Name: route_individual_page
 
 												</div>
 												<br style="clear:both; margin: 0px;" />
+												<?php if (get_field('schedule_pdf')) : ?>
+													<span class="span-small-title">
+														<a href="<?php the_field('schedule_pdf'); ?>">Download Schedule (PDF)</a>
+													</span>
+													<?php endif; ?>
 											</h2>
 
 											<?php
