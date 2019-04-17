@@ -60,6 +60,11 @@ Template Name: route_individual_page
 
 								<div id="route-locations-served">
 									<?php  the_field('locations_served'); ?>
+									<?php if (get_field('schedule_pdf')) : ?>
+										<span class="span-small-title">
+											<a href="<?php the_field('schedule_pdf'); ?>">Download Schedule (PDF)</a>
+										</span>
+									<?php endif; ?>
 								</div><!-- end #route-locations-served -->
 
 
@@ -115,27 +120,6 @@ Template Name: route_individual_page
 
 							?>
 
-
-
-
-										<!--<div id="pdf-link">
-
-
-											<?php
-												// add different links here.
-
-												$pdfDic = array(
-															'Frazier Park' => 'Kern_Transit_Frazier_Park_Guide.pdf',
-															'Kern River Valley' => 'Kern_Transit_Kern_River_Guide.pdf',
-															'Lamont Area' => 'Kern_Transit_Lamont_Guide.pdf',
-															'North Kern' => 'Kern_Transit_North_Kern_Guide.pdf',
-															'Taft' => 'Kern_Transit_Taft_Guide.pdf',
-															'East Kern' => 'Kern_Transite_East_Kern_Guide.pdf');
-
-											?>
-
-												<a href="<?php echo get_site_url()."/wp-content/transit-data/route-pdfs/".$pdfDic[get_field('route_pdf_download_filename')]; ?>"><i></i>Download the <?php the_field('route_pdf_download_filename'); ?> route guide [PDF, 4mb]</a>
-											</div> -->
 											<br style="clear:both;" />
 											<hr />
 											<div id="route-nav">
