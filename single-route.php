@@ -183,12 +183,12 @@ Template Name: route_individual_page
 														<?php  the_field('days_of_week'); ?>
 
 												</div>
-												<br style="clear:both; margin: 0px;" />
 												<?php if (get_field('schedule_pdf')) : ?>
 													<span class="span-small-title">
 														<a href="<?php the_field('schedule_pdf'); ?>">Download Schedule (PDF)</a>
 													</span>
 													<?php endif; ?>
+												<br style="clear:both; margin: 0px;" />
 											</h2>
 
 											<?php
