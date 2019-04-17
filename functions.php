@@ -369,7 +369,7 @@ function route_inclusive_wp_title	($title) {
 
 	//echo $title;
 
-	if( is_single() && get_post_type_object(get_query_var( 'post_type' ))->rewrite[slug] == 'routes-and-schedules') {
+	if( is_single() && get_post_type_object(get_query_var( 'post_type' ))->rewrite['slug'] == 'routes-and-schedules') {
 
 		$titlePieces = explode('|', $title);
 		return $titlePieces[0].' | Route '.get_field('route_number').' :'.$titlePieces[1] ;
@@ -423,7 +423,7 @@ function codex_route_init() {
 		'labels'             => $labels,
 		'public'             => true,
 		'publicly_queryable' => true,
-		'show_ui'            => false,
+		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'routes-and-schedules' ),
