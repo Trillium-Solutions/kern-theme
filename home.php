@@ -75,7 +75,7 @@
 					<script>
 
 						$('#map-holder').load
-								("<?php echo get_site_url(); ?>/wp-content/themes/kern/library/svg/home_map-01.svg?v2", function(data){
+								("<?php echo get_site_url(); ?>/wp-content/themes/kern/library/svg/home_map-01.svg?v3", function(data){
 									
 												$('#mobile-map-holder .inner').html(data);
 												$(this).css('top','0px');
@@ -103,7 +103,6 @@
 								 				$('#hovers').find('polygon, path, circle, g ').on('mouseenter click', function() {
 														var routeNameSplit = $(this).attr('id').replace('_x3','').split('_');
 														var routeName = routeNameSplit[0]+'_'+routeNameSplit[1];
-														console.log(routeName);
 														showHighlight(routeName);
 													
 		
