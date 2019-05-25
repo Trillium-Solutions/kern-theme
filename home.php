@@ -81,23 +81,23 @@
 												$(this).css('top','0px');
 
 												// fixes map width for IE.
-								 				$.browser={ msie: ( navigator.appName == 'Microsoft Internet Explorer') ? true : false };
+								 				// $.browser={ msie: ( navigator.appName == 'Microsoft Internet Explorer') ? true : false };
 
-												$.browser={ msie: function(){
-								 							return ( navigator.appName == 'Microsoft Internet Explorer' || 
-								 								navigator.userAgent.test(/Trident.*rv[ :]*11\./));
-								 						 }
-								 						 };
+												// $.browser={ msie: function(){
+								 				// 			return ( navigator.appName == 'Microsoft Internet Explorer' || 
+								 				// 				navigator.userAgent.test(/Trident.*rv[ :]*11\./));
+								 				// 		 }
+								 				// 		 };
 
-												if ($.browser.msie) {
+												// if ($.browser.msie()) {
 
-													var $mapHolder = $('#map-holder');
-													var svg = document.getElementById('home-map');
-													var $ratio = svg.getBBox().height/svg.getBBox().width;
-													var newHeight = $ratio*$mapHolder.width();
+												// 	var $mapHolder = $('#map-holder');
+												// 	var svg = document.getElementById('home-map');
+												// 	var $ratio = svg.getBBox().height/svg.getBBox().width;
+												// 	var newHeight = $ratio*$mapHolder.width();
 													
-													$('#map-holder svg').height(newHeight);
-												}
+												// 	$('#map-holder svg').height(newHeight);
+												// }
 								 				
 								 			
 								 				$('#hovers').find('polygon, path, circle, g ').on('mouseenter click', function() {
