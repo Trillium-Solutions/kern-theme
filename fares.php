@@ -59,6 +59,13 @@ get_header(); ?>
 											<td>$5.00</td>
 											<td>$2.50</td>
 										</tr>
+										<tr>
+											<td> <?php
+												the_route_circle(130,36,0);
+											?> 130 for trips passing through Frazier Park</td>
+											<td>$5.00</td>
+											<td>$2.50</td>
+										</tr>
 									</table>
 									
 									<table>
