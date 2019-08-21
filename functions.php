@@ -170,7 +170,7 @@ function bones_comments( $comment, $args, $depth ) {
           // create variable
           $bgauthemail = get_comment_author_email();
         ?>
-        <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
+        <img data-gravatar="https://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
         <?php // end custom gravatar call ?>
         <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'bonestheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ) ?>
         <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
@@ -200,7 +200,7 @@ and be up and running in seconds.
 */
 function bones_fonts() {
 
-  wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+  wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
   wp_enqueue_style( 'googleFonts');
   wp_register_style('route_icons', get_template_directory_uri().'/library/css/route-icons.css');
   wp_enqueue_style( 'route_icons');
@@ -398,7 +398,7 @@ add_action( 'init', 'codex_route_init' );
 /**
  * Register a route post type.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ * @link https://codex.wordpress.org/Function_Reference/register_post_type
  */
 function codex_route_init() {
 	$labels = array(
@@ -945,7 +945,7 @@ function my_sort_route( $vars ) {
 
 
 function my_admin_enqueue_css() {
-	echo '<link rel="stylesheet" id="route_icons-css"  href="http://kerntransit.org/wp-content/themes/kern/library/css/route-icons.css" type="text/css" media="all" />';
+	echo '<link rel="stylesheet" id="route_icons-css"  href="https://kerntransit.org/wp-content/themes/kern/library/css/route-icons.css" type="text/css" media="all" />';
 }
 
 add_action( 'admin_enqueue_scripts', 'my_admin_enqueue_css' );

@@ -230,10 +230,10 @@
 								<li><a href="<?php echo get_permalink(11 ); ?>" ><i id="passenger-conduct-icon"></i>Passenger Conduct</a></li>
 								<li><a href="<?php echo get_permalink( 13 ); ?>" ><i id="mobile-and-desktop-apps-icon"></i>Mobile and Desktop Apps</a></li>
 								<li><a href="<?php echo get_permalink( 15 ); ?>" ><i id="holidays-icon"></i>Holidays</a></li>
-								<li><a href="<?php echo get_permalink( 39 ); ?>" ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 8">
+								<li><a href="<?php echo get_permalink( 39 ); ?>" ><svg xmlns="https://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 8">
   <path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" />
 </svg>Lost and Found</a></li>
-								<li><a href="<?php echo get_permalink( 37 ); ?>" ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 8">
+								<li><a href="<?php echo get_permalink( 37 ); ?>" ><svg xmlns="https://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 8">
   <path d="M.09 0c-.06 0-.09.04-.09.09v5.81c0 .05.04.09.09.09h5.91l2 2v-7.91c0-.06-.04-.09-.09-.09h-7.81z" />
 </svg>Contact Us</a></li>
 								</ul>

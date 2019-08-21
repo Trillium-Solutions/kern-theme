@@ -13,7 +13,7 @@ get_header(); ?>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="https://schema.org/BlogPosting">
 
 						 	    <section class="fare-tables">
 									<table>
@@ -95,7 +95,7 @@ get_header(); ?>
 									</section>
 									<section class="fare-tables">
 										<h2>Get Passes on your Phone</h2>
-										<a href="https://tokentransit.com/app"><img class="alignnone wp-image-13577" src="http://kerntransit.org/wp-content/uploads/2018/04/token_transit_name_logo-1.png" alt="" width="300" height="69" style="max-width:300px;height:auto;"/></a>
+										<a href="https://tokentransit.com/app"><img class="alignnone wp-image-13577" src="https://kerntransit.org/wp-content/uploads/2018/04/token_transit_name_logo-1.png" alt="" width="300" height="69" style="max-width:300px;height:auto;"/></a>
 										<ol>
 										 	<li><a href="https://tokentransit.com/app">Download the app</a> or <a href="https://tokentransit.com/send/kerntransit">send a pass</a> to any phone number</li>
 										 	<li>Purchase any single-ride or monthly bus pass</li>

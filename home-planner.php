@@ -8,7 +8,7 @@
 <h2>Plan Your Trip</h2>
 
 
-<form name="f" action="http://jump.trilliumtransit.com/redirect.php"><input type="hidden" name="ie" value="UTF8"/><input type="hidden" name="f" value="d"/>
+<form name="f" action="https://jump.trilliumtransit.com/redirect.php"><input type="hidden" name="ie" value="UTF8"/><input type="hidden" name="f" value="d"/>
     <table>
         <tr class="min-hide">
             <td style="font-size:14px;" class="planner-title" ><strong>Start</strong></td>
@@ -37,7 +37,7 @@
 <tr >
 <td>
 <span style="font-size:10px;" class="min-hide">
-Read <a href="trip_planner.html">info and terms &amp; conditions</a>.  Trip planning is provided using <a href="http://www.google.com/transit">Google Maps</a>.
+Read <a href="trip_planner.html">info and terms &amp; conditions</a>.  Trip planning is provided using <a href="https://www.google.com/transit">Google Maps</a>.
 </span>
 </td>
 </tr>
@@ -75,7 +75,7 @@ document.getElementById('ftime').value=formatDate(thisdate);
 
 document.getElementById('fdate').value = moment().format("ddd, MMM D");
 
-// borrowed from http://stackoverflow.com/a/14787410
+// borrowed from https://stackoverflow.com/a/14787410
 
 var format = 'g:ia';
 var step = 1;

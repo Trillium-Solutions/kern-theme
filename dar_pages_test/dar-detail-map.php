@@ -1,7 +1,7 @@
 <html>
 
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+<script src='https://code.jquery.com/jquery-1.11.1.min.js'></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.css' rel='stylesheet' />
 <style>
@@ -30,12 +30,12 @@ var map = L.mapbox.map('map', 'trilliumtransit.j3p18nh0', {touchZoom:false, scro
 			// dashArray: dashes
 			};
 
-		
+
 		// is this necessary
 		map._layersMinZoom=map.getZoom();
 
-		
-		
+
+
 		// set up load data function
 		// borrowed from stackoverflow.com/questions/2177548/load-json-into-variable
 		function load_data(url, dataType, async) {
@@ -54,12 +54,12 @@ var map = L.mapbox.map('map', 'trilliumtransit.j3p18nh0', {touchZoom:false, scro
 			});
 			return returned_data;
 		}
-		
+
 
 var base_json_url = 'dar-json/';
 
 
-<?php 
+<?php
 
 $dar_areas_array = array (
 
@@ -96,21 +96,21 @@ var dar_areas_group = new L.FeatureGroup();
 
 var dar_areas_arrayLength = dar_areas_array.length;
 for (var i = 0; i < dar_areas_arrayLength; i++) {
-	 
+
 	 dar_styles[i] = $.extend({}, default_style); // Make a simple clone (jQuery)
 	 dar_styles[i].color = '#'+dar_areas_array[i][5];
 	 dar_styles[i].fillColor = '#'+dar_areas_array[i][5];
-	 
+
 	 dar_geojson[i] = L.geoJson(load_data(base_json_url + dar_areas_array[i][6]), {style: dar_styles[i]}).addTo(map);
 	 dar_areas_group.addLayer(dar_geojson[i]);
 
-		
+
 }
-		
+
 	map.fitBounds(dar_areas_group.getBounds());
 
 	function highlight_dar(dar_id) {
-	
+
 	var highlight_style = {
 		color: '#'+dar_areas_array[dar_id][5],
 		fillColor: '#'+dar_areas_array[dar_id][5],
@@ -118,12 +118,12 @@ for (var i = 0; i < dar_areas_arrayLength; i++) {
 		fillOpacity: 0.7,
 		weight:20
 		};
-	
+
 	dar_geojson[dar_id].setStyle(highlight_style);
 	}
-	
+
 	function unhighlight_dar(dar_id) {
-	
+
 	dar_geojson[dar_id].setStyle(dar_styles[dar_id]);
 	}
 

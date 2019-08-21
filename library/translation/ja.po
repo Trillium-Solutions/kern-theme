@@ -322,12 +322,12 @@ msgstr "Thembleの最新ニュース (admin.php のカスタム)"
 
 #: ../../library/admin.php:125
 msgid ""
-"<span id=\"footer-thankyou\">Developed by <a href=\"http://yoursite.com\" "
-"target=\"_blank\">Your Site Name</a></span>. Built using <a href=\"http://"
+"<span id=\"footer-thankyou\">Developed by <a href=\"https://yoursite.com\" "
+"target=\"_blank\">Your Site Name</a></span>. Built using <a href=\"https://"
 "themble.com/bones\" target=\"_blank\">Bones</a>."
 msgstr ""
-"<span id=\"footer-thankyou\">開発者: <a href=\"http://yoursite.com\" target="
-"\"_blank\">Your Site Name</a></span>。 <a href=\"http://themble.com/bones\" "
+"<span id=\"footer-thankyou\">開発者: <a href=\"https://yoursite.com\" target="
+"\"_blank\">Your Site Name</a></span>。 <a href=\"https://themble.com/bones\" "
 "target=\"_blank\">Bones</a> を使用。"
 
 #: ../../library/bones.php:213 ../../library/bones.php:230

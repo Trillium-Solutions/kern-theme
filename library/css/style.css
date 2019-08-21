@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! Made with Bones: http://themble.com/bones :) */
+/*! Made with Bones: https://themble.com/bones :) */
 /******************************************************************
 Site Name:
 Author:
@@ -12,7 +12,7 @@ and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 
 Helpful articles on Sass file organization:
-http://thesassway.com/advanced/modular-css-naming-conventions
+https://thesassway.com/advanced/modular-css-naming-conventions
 
 ******************************************************************/
 /*********************
@@ -21,7 +21,7 @@ These files are needed at the beginning so that we establish all
 our mixins, functions, and variables that we'll be using across
 the whole project.
 *********************/
-/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* normalize.css 2012-07-07T09:50 UTC - https://github.com/necolas/normalize.css */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -152,7 +152,7 @@ hr {
   height: 0; }
 
 /*
- * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
+ * proper formatting (https://blog.fontdeck.com/post/9037028497/hyphens)
 */
 p {
   -webkit-hyphens: auto;
@@ -432,7 +432,7 @@ table {
 
 /*
 use the best ampersand
-http://simplebits.com/notebook/2008/08/14/ampersands-2/
+https://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
@@ -453,12 +453,12 @@ No one likes a mess.
 /*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
+https://0to255.com/
 *********************/
 /*
 Here's a great tutorial on how to
 use color variables properly:
-http://sachagreif.com/sass-color-variables/
+https://sachagreif.com/sass-color-variables/
 */
 /******************************************************************
 Site Name:
@@ -471,9 +471,9 @@ here or just use this to establish your typographical grid. Or not.
 Do whatever you want to...GOSH!
 
 Helpful Articles:
-http://trentwalton.com/2012/06/19/fluid-type/
-http://ia.net/blog/responsive-typography-the-basics/
-http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+https://trentwalton.com/2012/06/19/fluid-type/
+https://ia.net/blog/responsive-typography-the-basics/
+https://alistapart.com/column/responsive-typography-is-a-physical-discipline
 
 ******************************************************************/
 /*********************
@@ -483,7 +483,7 @@ FONT FACE (IN YOUR FACE)
   and place your fonts inside the
   library/fonts folder. For more information
   on embedding fonts, go to:
-  http://www.fontsquirrel.com/
+  https://www.fontsquirrel.com/
   Be sure to remove the comment brackets.
 */
 /*  @font-face {
@@ -508,7 +508,7 @@ I've edited it a bit, but it's a nice starting point.
 */
 /*
 some nice typographical defaults
-more here: http://www.newnet-soft.com/blog/csstypography
+more here: https://www.newnet-soft.com/blog/csstypography
 */
 p {
   -ms-word-break: break-all;
@@ -541,7 +541,7 @@ Anyway, keep them all in here so it's easier to find when you're
 looking for one.
 
 For more info on functions, go here:
-http://sass-lang.com/documentation/Sass/Script/Functions.html
+https://sass-lang.com/documentation/Sass/Script/Functions.html
 
 ******************************************************************/
 /*********************
@@ -559,7 +559,7 @@ box-shadow: 0 0 4px rgba(0,0,0,0.3);
 RESPONSIVE HELPER FUNCTION
 If you're creating a responsive site, then
 you've probably already read
-Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+Responsive Web Design: https://www.abookapart.com/products/responsive-web-design
 
 Here's a nice little helper function for calculating
 target / context
@@ -588,9 +588,9 @@ A WORD OF WARNING: It's very easy to overdo it here. Be careful and
 remember less is more.
 
 Helpful:
-http://sachagreif.com/useful-sass-mixins/
-http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
-http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+https://sachagreif.com/useful-sass-mixins/
+https://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+https://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
 
 ******************************************************************/
 /*********************
@@ -626,9 +626,9 @@ called at the top the style.scss stylesheet.
 There are a ton of grid solutions out there. You should definitely
 experiment with your own. Here are some recommendations:
 
-http://gridsetapp.com - Love this site. Responsive Grids made easy.
-http://susy.oddbird.net/ - Grids using Compass. Very elegant.
-http://gridpak.com/ - Create your own responsive grid.
+https://gridsetapp.com - Love this site. Responsive Grids made easy.
+https://susy.oddbird.net/ - Grids using Compass. Very elegant.
+https://gridpak.com/ - Create your own responsive grid.
 https://github.com/dope/lemonade - Neat lightweight grid.
 
 
@@ -893,7 +893,7 @@ important to have a consistent baseline for them. Use this stylesheet
 to create all kinds of buttons.
 
 Helpful Links:
-http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+https://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
 
 ******************************************************************/
 /*********************
@@ -903,7 +903,7 @@ so we can use common styles. We then use this
 to load up the defaults in all our buttons.
 
 Here's a quick video to show how it works:
-http://www.youtube.com/watch?v=hwdVpKiJzac
+https://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
 .blue-btn, .comment-reply-link, #submit {
@@ -952,9 +952,9 @@ stylesheets and just override them. Easy Peasy.
 
 You're gonna see a few data-uri thingies down there. If you're not
 sure what they are, check this link out:
-http://css-tricks.com/data-uris/
+https://css-tricks.com/data-uris/
 If you want to create your own, use this helpful link:
-http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+https://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 
 ******************************************************************/
 /*********************
@@ -1327,7 +1327,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-weight: 500;
   /*
   if you're going to use webfonts, be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
+  https://css-tricks.com/watch-your-font-weight/
   */
   /* removing text decoration from all headline links */ }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
@@ -1385,7 +1385,7 @@ and more scalable.
     you don't want to have it expand too much because the
     screen is so small. How you manage your menu should
     depend on the project. Here's some great info on it:
-    http://www.alistapart.com/articles/organizing-mobile/
+    https://www.alistapart.com/articles/organizing-mobile/
     */ }
     .nav li a {
       display: block;
@@ -1742,7 +1742,7 @@ FOOTER STYLES
 
 /*
 if you checked out the link above:
-http://www.alistapart.com/articles/organizing-mobile/
+https://www.alistapart.com/articles/organizing-mobile/
 you'll want to style the footer nav
 a bit more in-depth. Remember to keep
 it simple because you'll have to
@@ -1874,7 +1874,7 @@ body {
   border-top-left-radius: 10px;
   margin-bottom: 20px;
   position: relative;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
   background: #8ab489;
   /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
@@ -1936,7 +1936,7 @@ body {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6); }
 
 #map-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
   background: #8ab489;
   /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
@@ -2313,7 +2313,7 @@ i.route-icon {
   background: #ceecbf;
   border-top-right-radius: 10px;
   background-repeat: no-repeat;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8f5e5+0,ceecbf+8,ceecbf+77,ceecbf+77,f8f5e5+95 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f8f5e5+0,ceecbf+8,ceecbf+77,ceecbf+77,f8f5e5+95 */
   background: #f8f5e5;
   /* Old browsers */
   background: -moz-linear-gradient(top, #f8f5e5 0%, #ceecbf 8%, #ceecbf 77%, #ceecbf 77%, #f8f5e5 95%);

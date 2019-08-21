@@ -32,12 +32,12 @@ No one likes a mess.
 /*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
-http://0to255.com/
+https://0to255.com/
 *********************/
 /*
 Here's a great tutorial on how to
 use color variables properly:
-http://sachagreif.com/sass-color-variables/
+https://sachagreif.com/sass-color-variables/
 */
 /******************************************************************
 Site Name:
@@ -55,9 +55,9 @@ A WORD OF WARNING: It's very easy to overdo it here. Be careful and
 remember less is more.
 
 Helpful:
-http://sachagreif.com/useful-sass-mixins/
-http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
-http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+https://sachagreif.com/useful-sass-mixins/
+https://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+https://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
 
 ******************************************************************/
 /*********************
@@ -322,7 +322,7 @@ ADDITIONAL IE FIXES
 These fixes are now ONLY seen by IE, so you don't have to worry
 about using prefixes, although it's best practice. For more info
 on using Modernizr classes, check out this link:
-http://www.modernizr.com/docs/
+https://www.modernizr.com/docs/
 ******************************************************************/
 /*
 For example, you can use something like:

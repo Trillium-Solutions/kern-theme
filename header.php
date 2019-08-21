@@ -19,10 +19,10 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
+		<?php // icons & favicons (for more: https://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
 		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png?v2">
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
@@ -33,10 +33,10 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgfsid1_jCd-BSTDqugAFgqDnJHywObXA&libraries=places"></script>
 
-<script src="http://code.jquery.com/jquery-1.11.1.min.js?v=2"></script>
-<script src="http://momentjs.com/downloads/moment.min.js?v=2"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js?v=2"></script>
+<script src="https://momentjs.com/downloads/moment.min.js?v=2"></script>
 
-		<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.min.js?v=2"></script>
+		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js?v=2"></script>
 
 		<script src="<?php echo get_template_directory_uri(); ?>/library/bootstrap/js/bootstrap.min.js?v=2"></script>
 		<?php // wordpress head functions ?>
@@ -48,7 +48,7 @@
 		<?php wp_head(); ?>
 
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/library/css/style.css' . '?' . filemtime( get_stylesheet_directory() . '/library/css/style.css'); ?>" type="text/css"  media='all' />
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css?v=2">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css?v=2">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/bootstrap/css/bootstrap.min.css?v=2">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/interactive-map.css?v=2">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/sml_interactive-map.css?v=2">

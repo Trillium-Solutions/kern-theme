@@ -6,7 +6,7 @@ any custom functions, it's best to put them
 in the functions.php file.
 
 Developed by: Eddie Machado
-URL: http://themble.com/bones/
+URL: https://themble.com/bones/
 
   - head cleanup (remove rsd, uri links, junk css, ect)
   - enqueueing scripts & styles
@@ -56,7 +56,7 @@ function bones_head_cleanup() {
 } /* end bones head cleanup */
 
 // A better title
-// http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
+// https://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
 function rw_title( $title, $sep, $seplocation ) {
   global $page, $paged;
 
@@ -190,7 +190,7 @@ function bones_theme_support() {
 	// rss thingy
 	add_theme_support('automatic-feed-links');
 
-	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
+	// to add header image support go here: https://themble.com/support/adding-header-background-image-support/
 
 	// adding post format support
 	add_theme_support( 'post-formats',
@@ -280,7 +280,7 @@ function bones_page_navi() {
 RANDOM CLEANUP ITEMS
 *********************/
 
-// remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
+// remove the p from around imgs (https://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 function bones_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }

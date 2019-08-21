@@ -1,14 +1,14 @@
 /******************************************************************
 Theme Name: Bones (Rename Me!)
-Theme URI: http://www.themble.com/bones
+Theme URI: https://www.themble.com/bones
 Description: This site was built using the Bones Development Theme. For more information about Bones or to view documentation, you can visit the <a href="https://github.com/eddiemachado/bones/issues" title="Bones Issues">Bones Issues</a> page on Github. You'll want to customize this for your clients with your own information.
 Author: Your Name Here
-Author URI: http://www.yoururlhere.com
+Author URI: https://www.yoururlhere.com
 Version: 1.7
 Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
 
 License: WTFPL
-License URI: http://sam.zoy.org/wtfpl/
+License URI: https://sam.zoy.org/wtfpl/
 Are You Serious? Yes.
 
 
@@ -30,12 +30,12 @@ DON'T DISMISS IT JUST YET THOUGH, USING Sass ISN'T AS COMPLICATED AS YOU THINK.
 It does take a few minutes to wrap your head around, but it will all
 be worth it. Need a quick intro? Here are a few quick reads:
 
-http://simplebits.com/notebook/2013/11/13/sass-book/ (BUY THIS)
-http://cognition.happycog.com/article/preprocess-this
-http://viget.com/inspire/sass-a-designers-perspective
-http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
-http://css-tricks.com/sass-style-guide/
-http://net.tutsplus.com/tutorials/html-css-techniques/developing-with-sass-and-chrome-devtools/
+https://simplebits.com/notebook/2013/11/13/sass-book/ (BUY THIS)
+https://cognition.happycog.com/article/preprocess-this
+https://viget.com/inspire/sass-a-designers-perspective
+https://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
+https://css-tricks.com/sass-style-guide/
+https://net.tutsplus.com/tutorials/html-css-techniques/developing-with-sass-and-chrome-devtools/
 
 I would HIGHLY RECOMMEND, if you are going to be working with Sass, that you work locally.
 The browsers don't understand Sass and compiling it on the server takes a bit
@@ -45,10 +45,10 @@ That being said, here are a few MUST HAVE TOOLS for working with a
 pre-processor: (You really only need one of them)
 
 CodeKit: (Highly Recommended)
-http://incident57.com/codekit/
+https://incident57.com/codekit/
 
 Compass App: (Windows / Mac Users)
-http://compass.handlino.com/
+https://compass.handlino.com/
 
 These applications compile Sass into valid CSS. This
 way you can keep your production files easy to read and your
@@ -78,8 +78,8 @@ whatever, I never liked you anyway. Here are some other alternatives
 if you're looking for a blank starter theme. I'll just be here waiting
 by the window, in case you ever decide to come back.
 
-http://roots.io/starter-theme (way more complex but has a ton of cool features)
-http://html5reset.org (super clean and great markup)
+https://roots.io/starter-theme (way more complex but has a ton of cool features)
+https://html5reset.org (super clean and great markup)
 https://github.com/viewportindustries/starkers (not sure if it's still active, but still good)
 
 That's it. It's time to jump in and get your hands dirty.
@@ -96,7 +96,7 @@ passing it along to your client.)
 
 /*
 WordPress Probz
-So Theme Check (http://wordpress.org/plugins/theme-check/)
+So Theme Check (https://wordpress.org/plugins/theme-check/)
 is constantly telling me that it needs these classes in the CSS even
 though they are in the REAL stylesheet in library/css/style.css.
 So we're gonna drop these here to keep it happy.

@@ -9,7 +9,7 @@
  * When you create your page, you can just select the template and viola, you have
  * a custom page template to call your very own. Your mother would be so proud.
  *
- * For more info: http://codex.wordpress.org/Page_Templates
+ * For more info: https://codex.wordpress.org/Page_Templates
 */
 ?>
 
@@ -23,7 +23,7 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="https://schema.org/BlogPosting">
 
 								<header class="article-header">
 
@@ -50,7 +50,7 @@
 										 * mostly used for people to get more ad views. It's up to you but if you want
 										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
 										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
+										 * https://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
 										 *
 										*/
 										wp_link_pages( array(

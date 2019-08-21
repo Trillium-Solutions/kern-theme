@@ -30,7 +30,7 @@ function setup_fare_zones(select_menu,start_zone) {
 	
 	if (start_zone !== null) {var origin_id = '&origin_id=' + start_zone; } else {var origin_id = '';}
 	
-	zones = load_data("http://applications.trilliumtransit.com/fare_calculator/json_zones.php?agency_id="+agency_id+origin_id);
+	zones = load_data("https://applications.trilliumtransit.com/fare_calculator/json_zones.php?agency_id="+agency_id+origin_id);
 
 	var optionsHtml = new Array();
 

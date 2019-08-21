@@ -51,10 +51,10 @@ It's constantly growing so be sure to check back often if you are a
 frequent user. I'm always open to contribution. :)
 
 Designed by Eddie Machado
-http://themble.com/bones
+https://themble.com/bones
 
 License: WTFPL
-License URI: http://sam.zoy.org/wtfpl/
+License URI: https://sam.zoy.org/wtfpl/
 Are You Serious? Yes.
 
 #### Special Thanks to:

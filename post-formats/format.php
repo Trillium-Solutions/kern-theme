@@ -14,7 +14,7 @@
                 */
               ?>
 
-              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemtype="https://schema.org/BlogPosting">
 
                 <header class="article-header">
 
@@ -40,7 +40,7 @@
                      * mostly used for people to get more ad views. It's up to you but if you want
                      * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
                      *
-                     * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
+                     * https://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
                      *
                     */
                     wp_link_pages( array(
