@@ -108,6 +108,7 @@ get_header(); ?>
 									<dl>
 										<dt>By phone:</dt>
 										<dd>(661) 862-8648</dd>
+										<br />
 										<dt>By mail:</dt>
 										<dd>Kern Transit</dd>
 										<dd>2700 "M" Street #400</dd>
@@ -119,10 +120,6 @@ get_header(); ?>
 										<dt>In person:</dt>
 										<dd>2700 "M" Street - First floor cashier</dd>
 										<dd>Bakersfield, CA 93301</dd>
-										<br />
-										<dt></dt>
-										<dd>6075 Lake Isabella Blvd</dd>
-										<dd>Lake Isabella, CA 93240</dd>
 									</dl>
 								</div>
 								<br style="clear:both;" />
