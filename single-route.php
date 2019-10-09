@@ -132,7 +132,7 @@ Template Name: route_individual_page
 											<div id="route-fares-holder" style="background-color: <?php the_field('hex_route_color'); ?>">
 											<table id="single-route-fares">
 												<?php
-												if (get_field('route_number') == '100'):
+												if (get_field('route_number') == '100' or '130'):
 												?>
 												<tr>
 													<th class="mini-label">Fare</th>
