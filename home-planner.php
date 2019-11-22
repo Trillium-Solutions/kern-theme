@@ -37,7 +37,7 @@
 <tr >
 <td>
 <span style="font-size:10px;" class="min-hide">
-Read <a href="trip_planner.html">info and terms &amp; conditions</a>.  Trip planning is provided using <a href="https://www.google.com/transit">Google Maps</a>.
+Read <a href="https://kerntransit.org/trip_planner/">info and terms &amp; conditions</a>.  Trip planning is provided using <a href="https://www.google.com/transit">Google Maps</a>.
 </span>
 </td>
 </tr>
