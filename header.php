@@ -115,6 +115,7 @@
 							</div><!-- end #kern-phone -->
 							<div id="search-wrap" class="form-inline col-sm-4 col-xs-6" >
 								<form action="/" method="get">
+  										<label class="sr-only" for="search">Search</label>
 										<input type="text" name="s" id="search" placeholder="Search" value="<?php the_search_query(); ?>" />
 										<input type="image" alt="Search" src="<?php echo get_template_directory_uri(); ?>/library/images/clear.png" id="header-search-icon-submit" />
 								</form>
@@ -130,7 +131,7 @@
 						<div class="col-sm-1 visible-sm visible-xs"></div>
 						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 						<div id="logo-holder" class="col-md-5 col-sm-10" >
-							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" style="max-width: 400px" /></a>
+							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" style="max-width: 400px" /></a>
 						</div><!-- end logo-holder -->
 						<nav id="main-nav" class="col-md-7 col-sm-10" style="padding-top: 30px;">
 							<ul>

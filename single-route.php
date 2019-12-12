@@ -32,6 +32,7 @@ Template Name: route_individual_page
 
 								if ( $query->have_posts() ) {
 									?>
+									<label class="sr-only" for="routes-dropdown">View a different route</label>
 									<select id="routes-dropdown" onchange="location = this.options[this.selectedIndex].value;">
 									<option value="#">View a different route</option>
 									<?php
@@ -123,10 +124,10 @@ Template Name: route_individual_page
 												echo 'class="route-anchors-100"';
 											}
 											?>>
-												<li><a href="#schedules">Schedules</a></li>
-												<li><a href="#maps">Detail Maps</a></li>
-												<li><a href="#connections">Kern Transit Connections</a></li>
-												<li><a href="#external-connections">External Connections</a></li>
+												<li><a style="color:#fff;" href="#schedules">Schedules</a></li>
+												<li><a style="color:#fff;" href="#maps">Detail Maps</a></li>
+												<li><a style="color:#fff;" href="#connections">Kern Transit Connections</a></li>
+												<li><a style="color:#fff;" href="#external-connections">External Connections</a></li>
 											</ul>
 
 											<div id="route-fares-holder" style="background-color: <?php the_field('hex_route_color'); ?>">
