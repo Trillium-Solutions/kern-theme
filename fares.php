@@ -106,11 +106,13 @@ get_header(); ?>
 									<h3>How to buy a 31-Day Pass</h3>
 									<div style="float:left; padding-right:40px;">
 									<dl>
-										<br>
-										<br>
 										<dt>By phone:</dt>
 										<dd>(661) 862-8648</dd>
 										<br />
+										<br>
+										<br>
+										<br>
+										<br>
 										<dt>By mail:</dt>
 										<dd>Kern Transit</dd>
 										<dd>2700 "M" Street #400</dd>
