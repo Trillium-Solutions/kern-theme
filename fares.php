@@ -90,7 +90,7 @@ get_header(); ?>
 										</tr>
 									</table>
 									<div class="table-bottom-info">
-										The reduced fare is available for youth (K-12th) with proper identification, and for seniors (62+) and disabled passengers with a Kern Transit "Reduced Fare Card."
+										The reduced fare is available for youth (K-12th) with proper identification, and for seniors (62+) and disabled passengers with a Kern Transit "Reduced Fare Card." "Up to two (2) pre-K children may ride for free with each paying adult."
 									</div>
 									</section>
 									<section class="fare-tables">
@@ -120,10 +120,14 @@ get_header(); ?>
 										<dt>In person:</dt>
 										<dd>2700 "M" Street - First floor cashier</dd>
 										<dd>Bakersfield, CA 93301</dd>
+										<br>
+										<dd>Bakersfield</dd>
+										<dd>Downtown Transit Center</dd>
+										<dd>Golden Empire Transit ticket window</dd>
 									</dl>
 								</div>
 								<br style="clear:both;" />
-									<p>Passes will not be sold on the bus. "31 days" begins the day the pass is purchased.</p>
+									<p>Passes will not be sold on the bus. "31 days" begins the day the pass is first used.</p>
 									<h3>How to get a Reduced Fare Card</h3>
 									<a href="<?php echo site_url(); ?>/reduced-fare-application/">Download an application online</a> or call (661) 862-5032.
 									

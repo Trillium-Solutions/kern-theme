@@ -727,8 +727,8 @@ function create_area_tax() {
 		)
 	);
 
-$service_areas = array('East Kern','Tehachapi','Frazier Park','Kern River Valley','Lamont Area','North Kern','Taft');
-$service_areas_safe = array('east_kern','tehachapi','frazier_park','kern_river_valley','lamont_area','north_kern','taft');
+$service_areas = array('East Kern','Tehachapi','Frazier Park','Kern River Valley','Lamont Area','North Kern');
+$service_areas_safe = array('east_kern','tehachapi','frazier_park','kern_river_valley','lamont_area','north_kern');
 $ind = 0;
 foreach($service_areas as &$service_area) {
 	wp_insert_term(
