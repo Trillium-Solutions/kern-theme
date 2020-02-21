@@ -90,7 +90,7 @@ get_header(); ?>
 										</tr>
 									</table>
 									<div class="table-bottom-info">
-										The reduced fare is available for youth (K-12th) with proper identification, and for seniors (62+) and disabled passengers with a Kern Transit "Reduced Fare Card." "Up to two (2) pre-K children may ride for free with each paying adult."
+										The reduced fare is available for youth (K-12th) with proper identification, and for seniors (62+) and disabled passengers with a Kern Transit "Reduced Fare Card." Up to two (2) pre-K children may ride for free with each paying adult.
 									</div>
 									</section>
 									<section class="fare-tables">
