@@ -306,7 +306,7 @@ $the_query = new WP_Query( $args );
                   );
                   ?>
                   <div id="route-map">
-                    <iframe src="https://maps.trilliumtransit.com/map/feed/kerncounty-ca-us/routes/<?php echo $num2ID[$routeNumber]; ?>?noui=true&page_embed=true"></iframe>
+                    <iframe src="https://new-maps.trilliumtransit.com/map/feed/kerncounty-ca-us/routes/<?php echo $num2ID[$routeNumber]; ?>?noui=true&page_embed=true"></iframe>
                   </div>
 
 </div><!-- end #timetable-detail-maps -->

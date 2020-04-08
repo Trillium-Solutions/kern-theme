@@ -11,7 +11,7 @@ Template Name: Routes and Schedules
 
 <div id="generic-wide-container">
 <div id="route-map">
-<iframe src="https://maps.trilliumtransit.com/map/feed/kerncounty-ca-us/"></iframe>
+<iframe src="https://new-maps.trilliumtransit.com/map/feed/kerncounty-ca-us/"></iframe>
 </div>
 
 </div><!-- end #generic-wide-container -->
