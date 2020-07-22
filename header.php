@@ -108,7 +108,7 @@
 	
 	<?php
 	$system_alert = new WP_Query( array(
-		'post_type' 		=> 'alert',
+		'post_type' 		=> 'news',
 		'posts_per_page' 	=> 1,
 		'meta_key'			=> 'system_alert',
 		'meta_value'		=> 1,
