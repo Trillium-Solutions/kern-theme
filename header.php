@@ -99,11 +99,27 @@
   ga('send', 'pageview');
 
 </script>
+<script src="https://kit.fontawesome.com/a1f5cfbb67.js"></script>
 <meta name="google-translate-customization" content="f25af25643c7b829-5e44eb73351882d9-gcc7ef8ab8e200b71-13"></meta>
 
 	</head>
 
 	<body <?php body_class(); ?>>
+	
+	<?php
+	$system_alert = new WP_Query( array(
+		'post_type' 		=> 'post',
+		'posts_per_page' 	=> 1,
+		'meta_key'			=> 'system_alert',
+		'meta_value'		=> 1,
+	));
+	if ( $system_alert->have_posts() ) : while ( $system_alert->have_posts() ) :
+		$system_alert->the_post();
+		?>
+		<div id="system-alert-bar" style="text-align: center; border: 2px solid #ff6; background-color: #fef200; padding: 2px 11.424px 11.424px 11.424px; margin-top: 1px;">
+			<?php echo '<i class="fas fa-exclamation-triangle"></i>' ?> System Alert: <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		</div>
+	<?php endwhile; wp_reset_postdata(); endif; ?>
 
 
 		<div class="container-fluid" style="max-width: 1151px;">
