@@ -10,18 +10,6 @@ Template Name: route_individual_page
   #map { width:100%; height: 450px;}
 </style>
 
-
-
-
-
-<script>
-
-
-
-
-
-
-</script>
 			
 <?php get_template_part( 'route-header'); ?> 
 			
@@ -85,6 +73,13 @@ Template Name: route_individual_page
 						
 						
 							</div> <!-- #end left col -->
+
+
+									 <!-- For mapbox styles : fixes missing styles error -->
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+
 								<div id="map-floaty-box" class="col-sm-8 hidden-xs" style="padding: 0;">
 									<div id='map'></div>
 									<div id="map-floaty-bottom-gradient">
@@ -92,14 +87,9 @@ Template Name: route_individual_page
 								</div> <!-- #map-floaty-box -->
 								
 								<script>
-
-
-
-	
-	
-
 L.mapbox.accessToken = 'pk.eyJ1IjoidHJpbGxpdW10cmFuc2l0IiwiYSI6ImVUQ2x0blUifQ.2-Z9TGHmyjRzy5GC1J9BTw';
-var map = L.mapbox.map('map', 'trilliumtransit.j3p18nh0', {touchZoom:false, scrollWheelZoom:false});
+var map = L.mapbox.map('map', 'trilliumtransit.j3p18nh0', {touchZoom:false, scrollWheelZoom:false})
+.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11')); // New line that fixes the missing styles 5.4.2021
 
 
 		// set map styles
