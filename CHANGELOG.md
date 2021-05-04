@@ -4,7 +4,7 @@ This theme is meant to make development easier & take
 advantage of modern web development & design techniques.
 For more information, please visit:
 
-http://themble.com/bones/
+https://themble.com/bones/
 
 Author: Eddie Machado
 
@@ -51,11 +51,11 @@ Author: Eddie Machado
 - removed version number from scripts & styles (thanks James)
 - removed LESS (it's over Johnny, It's OVER!)
 - changed post-content to entry-content
-- added other changes to better align with Readability standards: http://www.readability.com/developers/guidelines (thanks @ChrisSki)
+- added other changes to better align with Readability standards: https://www.readability.com/developers/guidelines (thanks @ChrisSki)
 - added comment gravatar variable
 - added fix for author name not showing in archive.php
 - removed unused css files (that were mistakingly compiled)
-- BORDER BOX ALL THE THINGS (http://paulirish.com/2012/box-sizing-border-box-ftw/)
+- BORDER BOX ALL THE THINGS (https://paulirish.com/2012/box-sizing-border-box-ftw/)
 
 **v1.25 update**
 - updated custom post type page for translation
@@ -110,7 +110,7 @@ Author: Eddie Machado
 - custom login logo included
 
 **v1.09 updates**
-- added snippet to remove < p > from imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
+- added snippet to remove < p > from imgs (https://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 - added custom admin functions file
 - updated normalize
 - added site description < p > to the header
@@ -152,7 +152,7 @@ Author: Eddie Machado
 - removing useless wordpress dashboard widgets
 - organizing bones & functions for simplicity
 - removed analytics
-- added auto hyphens to normalize.css (http://blog.fontdeck.com/post/9037028497/hyphens)
+- added auto hyphens to normalize.css (https://blog.fontdeck.com/post/9037028497/hyphens)
 - removed the custom header image support
 - removed all the favicons & icons
 - added proper title tag

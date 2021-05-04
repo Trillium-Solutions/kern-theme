@@ -321,14 +321,14 @@ msgstr "Najnovije sa Themble (Prilagodi u admin.php)"
 
 #: library/admin.php:123
 msgid ""
-"<span id=\"footer-thankyou\">Developed by <a href=\"http://yoursite.com\" "
-"target=\"_blank\">Your Site Name</a></span>. Built using <a href=\"http://"
+"<span id=\"footer-thankyou\">Developed by <a href=\"https://yoursite.com\" "
+"target=\"_blank\">Your Site Name</a></span>. Built using <a href=\"https://"
 "themble.com/bones\" target=\"_blank\">Bones</a>."
 msgstr ""
-"<span id=\"footer-thankyou\">Razvio <a href=\"http://jurica-zuanovic.from.hr"
+"<span id=\"footer-thankyou\">Razvio <a href=\"https://jurica-zuanovic.from.hr"
 "\" target=\"_blank\">juricazuanovic</a></span>. Izgrađeno koristeći <a href="
-"\"http://hr.wordpress.org\" target=\"_blank\">WordPress</a> i <a href="
-"\"http://themble.com/bones\" target=\"_blank\">Bones</a>."
+"\"https://hr.wordpress.org\" target=\"_blank\">WordPress</a> i <a href="
+"\"https://themble.com/bones\" target=\"_blank\">Bones</a>."
 
 #: library/bones.php:217 library/bones.php:234
 msgid "The Main Menu"

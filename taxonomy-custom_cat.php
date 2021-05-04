@@ -8,7 +8,7 @@
  * For Example, if your custom taxonomy is called "register_taxonomy('shoes')",
  * then your template name should be taxonomy-shoes.php
  *
- * For more info: http://codex.wordpress.org/Post_Type_Templates#Displaying_Custom_Taxonomies
+ * For more info: https://codex.wordpress.org/Post_Type_Templates#Displaying_Custom_Taxonomies
 */
 ?>
 

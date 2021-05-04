@@ -8,23 +8,22 @@
 <h2>Plan Your Trip</h2>
 
 
-
-<form name="f" action="http://www.trilliumtransit.com/redirect/google_redirect.php"><input type="hidden" name="ie" value="UTF8"/><input type="hidden" name="f" value="d"/>
+<form name="f" action="https://jump.trilliumtransit.com/redirect.php"><input type="hidden" name="ie" value="UTF8"/><input type="hidden" name="f" value="d"/>
     <table>
         <tr class="min-hide">
             <td style="font-size:14px;" class="planner-title" ><strong>Start</strong></td>
  </tr>
  
  <tr class="minimized-visible">
-            <td valign="top"><input  type="text" alt="Start address"  name="saddr" tabindex="1" maxlength="2048" id="saddr"/>
+            <td valign="top"><input  type="text" alt="Start address"  name="saddr" tabindex="1" maxlength="2048" id="saddr" placeholder="Enter your start location"/>
             <span class="min-hide"><font size="-2">e.g. 1801 Panorama Dr, Bakersfield, CA</font></td></span>
 </tr>
 
 <tr class="min-hide">
 <td style="font-size:14px;" class="planner-title" ><strong>End</strong>&nbsp;&nbsp;</td></tr>
 <tr class="min-hide">
-<td><input  type="text" alt="Destination address" name="daddr" id="daddr" tabindex="1" maxlength="2048"/><input type="hidden" name="sll" value="35.372915,-119.018819"/>
-<font size="-2">e.g. Lake Isabella Public Library</font></td></tr>
+<td><input  type="text" alt="Destination address" placeholder="Enter your destination" name="daddr" id="daddr" tabindex="1" maxlength="2048"/><input type="hidden" name="sll" value="35.372915,-119.018819" />
+<font size="-2">e.g. Lake Isabella Public Library</font></td></tr> 
 
 
 <tr class="min-hide">
@@ -38,7 +37,7 @@
 <tr >
 <td>
 <span style="font-size:10px;" class="min-hide">
-Read <a href="trip_planner.html">info and terms &amp; conditions</a>.  Trip planning is provided using <a href="http://www.google.com/transit">Google Maps</a>.
+Read <a href="https://kerntransit.org/trip_planner/">info and terms &amp; conditions</a>.  Trip planning is provided using <a href="https://www.google.com/transit">Google Maps</a>.
 </span>
 </td>
 </tr>
@@ -76,7 +75,7 @@ document.getElementById('ftime').value=formatDate(thisdate);
 
 document.getElementById('fdate').value = moment().format("ddd, MMM D");
 
-// borrowed from http://stackoverflow.com/a/14787410
+// borrowed from https://stackoverflow.com/a/14787410
 
 var format = 'g:ia';
 var step = 1;

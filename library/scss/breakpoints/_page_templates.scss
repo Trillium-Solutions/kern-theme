@@ -1,0 +1,175 @@
+#main {
+ 	background-color:#faf8f1;
+ 	border-top-left-radius: 10px;
+ 	min-height: 500px;
+ 	
+ 	padding-top: 15px;
+ 	padding-bottom: 15px;
+
+ 	article {
+ 		background: none;
+ 		border: 0;
+
+ 	}
+ 	
+ 	img {
+ 		width: 100%;
+ 	}
+ 	
+ 	
+}
+
+#featured-image-container {
+
+}
+
+.d-5of7 {
+	padding-right: 0px !important;
+}
+
+#page-holder {
+	background: #0072bc;
+	overflow: hidden;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-top: 20px;
+}
+
+#sidebar1 {
+
+background-color: #0072bc;
+border-top-right-radius: 10px;
+
+ 		 	padding:  20px 25px 10px 10px; 
+color: white;
+}
+
+
+#generic-wide-container {
+
+}
+
+#generic-wide-container {
+	margin-top: 20px;
+	width: 100%; 
+	min-height: 400px;
+ 	background-color:#f9f5e5;
+ 	background-image: url(../images/grain-manilla.jpg);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	position: relative; 
+	hr {
+	  margin-top: 0px;
+	  margin-bottom: 20px;
+	  /* border: 0; */
+	  border-top: 1px solid grey;
+	}
+}
+
+#blue-top-divider {
+	width: 100%;
+	background-color: #0072bc;
+	height: 10px;
+}
+
+
+h1#page-title {
+
+	margin: 10px 0 10px 0; 
+}
+
+#breadcrumbs{
+	font-size: 12px;
+    list-style:none;
+    margin:10px 0;
+    overflow:hidden;
+     color: #c6e9ff;
+       margin-top: 26px;
+    
+    a:link, a:active, a:visited {
+    color: #c6e9ff;
+    
+    }
+    a:hover {
+    	color: white;
+    }
+}
+ 
+#breadcrumbs li{
+    float:left;
+    margin-right:15px;
+}
+ 
+#breadcrumbs .separator{
+    font-weight:700;
+
+    color:#999;
+}
+
+#page-anchor-links {
+	border-top: 1px solid #b1aba6;
+	border-bottom: 1px solid #b1aba6;
+	padding: 10px;
+	margin: 0px 0 10px 0;
+}
+
+.page-template-fares-php {
+
+	
+
+	table {
+		caption {
+			color: black;
+		
+			
+		}
+		color: black;
+		background: #f1f1f1;
+	}
+
+}
+
+
+.page-template-fares-php {
+
+	table {
+	background: white;
+	margin-bottom: 0;
+	margin-top: 15px;
+	
+	 		 
+-moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+-webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+	
+	td {
+		background: white;
+	}
+	
+		caption {
+			 		 
+-moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+-webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+			background: #80A9BD;
+			color: white;
+			font-size: 1.1em;
+			font-weight: bold;
+			padding: 5px;
+			border-top-right-radius: 3px;
+			border-top-left-radius: 3px;
+			margin-bottom: 0;
+			text-transform: none;
+			
+			.small_header {
+				font-size: .8em;
+			}
+			
+		}
+	
+	}
+	
+	.discount-text {
+		font-size: 12px;
+	}
+}

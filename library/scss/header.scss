@@ -1,0 +1,139 @@
+//header.scss
+
+#logo-holder {
+	text-align: center;
+	
+	img {
+		width: 100%;
+	}
+}
+
+#main-nav {
+
+/*	float: left;
+	margin: 74px 0 10px 41px;
+*/	
+
+	ul {
+		li {
+			cursor: pointer;
+		
+			text-align: center;
+			float: left;
+			margin: 0 20px;	
+			height: 57px;
+			
+			a:link, a:active, a:visited, a:hover  {
+			color: white; 
+			text-decoration: none;
+			font-family: 'Lato', sans-serif;
+			font-size: 1.05em;
+			text-transform: uppercase;
+			display: block;
+			overflow: hidden;
+			} 
+			
+			a:hover{
+				
+				
+			
+			}
+			
+			
+			.main-nav-icon {
+				height: 25px;
+				width: 25px;
+				margin-right: 8px;
+				float: left;
+				background-image: url(../images/kern-sprites.png);
+			
+			}
+			
+			$main-nav-y: -7px;
+			
+			#routes-and-schedules-icon {
+				margin-top: 10px;
+				background-position: -10px $main-nav-y;
+			}
+			#dial-a-ride-icon {
+				background-position: -39px $main-nav-y;
+				top: -2px;
+			}
+			#fares-icon {
+				background-position: -69px $main-nav-y;
+			}
+			
+			#how-to-ride-icon {
+				background-position: -100px $main-nav-y;
+			}
+			
+			
+			span {
+			float: right;
+			}
+			
+		}
+		li:hover, li.current {
+		border-bottom: 2px solid white;
+		
+		
+		$main-nav-y: -37px;
+			
+			#routes-and-schedules-icon {
+				background-position: -10px $main-nav-y;
+			}
+			#dial-a-ride-icon {
+				background-position: -39px $main-nav-y;
+				top: -2px;
+			}
+			#fares-icon {
+				background-position: -69px $main-nav-y;
+			}
+			
+			#how-to-ride-icon {
+				background-position: -100px $main-nav-y;
+			}
+			
+		
+		}
+		li#dial-a-ride-link, li#fares-link, li#how-to-ride-link {
+			padding-top: 10px;
+		}
+		
+		li.parent-active {
+			border-bottom: 2px dotted #67a2bb;
+		}
+	
+	}
+}
+
+@media (max-width: 1150px) {
+	#main-nav {
+		font-size: .78em;
+		
+		ul {
+			li {
+			
+				span {
+					position: relative;
+					top: 4px;
+				}
+			
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	#main-nav {
+		font-size: .8em;
+		width: 100%;
+		text-align: center;
+		
+		ul {
+			display: inline-block;
+		}
+		
+	}
+}
+

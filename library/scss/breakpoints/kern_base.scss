@@ -1,13 +1,22 @@
 
+i {
+	font-style: normal;
+}
+
+.center-block { float: none; }
+
 h1, h2, h3, h4 , h5, h6 {
 	font-family: 'Lato', sans-serif;
 	letter-spacing: .1em;
 
 }
-
+.over-blue {
+color: white;
+}
 
 body {
-	background-color: #01587e;
+	color: black;
+	background-color: #01587e !important;
 	background-image:url(../images/home-page-bg.jpg);
 	background-position: top center;
 	background-repeat: no-repeat;
@@ -27,35 +36,70 @@ body {
 
 
 #number-and-search-wrap {
-	position: absolute;
+	/*position: absolute;
 	top: 10px;
 	right: 20px;
-	width: 45%;
+	width: 65%;*/    
+}
+
+#google_translate_element {
+/*float: right;
+margin-left: 15px;
+margin-top: 11px;*/
+
+}
+
+.goog-te-gadget-simple {
+border: solid 1px #a1a1a1 !important;
+background-color: #3c759c !important;
+color: white !important;
+height: 30px;
+	span {
+		line-height: 27px;
+	}
+
+	a {
+	color: white !important;
+	}
+}
+.goog-te-gadget {
+
+	float: right;
+
 }
 
 
 #kern-phone {
-	color: #84a990;
-	float: right;
-	width: 130px;
+	
+	text-align: center;
+	height: 30px;
 	text-weight: 600;
-	font-size: 1.1em;
-	margin-top: 13px;
+	font-size: 1.3em;
+	top: 2px;
+	
+	
+	a:link, a:visited, a:active {
+		color: #84a990;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	
 
 }
 
 
 #search-wrap {
 
-	position: relative;
-	float: right;
+	//position: relative;
+	//float: right;
 	input#search {
 		height: 30px;
-		width: 178px;
+		//width: 178px;
 		background: none;
 		border: solid 1px #a1a1a1;
 		border-radius: 0;
-		margin-top: 11px;
 		padding-left: 30px;
 		padding-top: 3px;
 		color: white;
@@ -82,7 +126,7 @@ body {
 	
 	#header-search-icon-submit {
 		position: absolute;
-		top: 12px;
+		top: 2px;
 		background-image: url(../images/kern-sprites.png);
 		background-position: -128px -2px;
 		width: 23px;
@@ -110,13 +154,22 @@ body {
 
 
 #home-desktop-map-container {
-	background: #8bb58a;
-	height: 695px;
+	margin-top: 20px;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	margin-bottom: 20px;
 	position: relative;
-	background-image: url(../images/map-top-rim.jpg);
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
+background: #8ab489; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #8ab489 13%, #758874 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(13%,#8ab489), color-stop(100%,#758874)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #8ab489 13%,#758874 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #8ab489 13%,#758874 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #8ab489 13%,#758874 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #8ab489 13%,#758874 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ab489', endColorstr='#758874',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
 	-webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
 	-moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.5);
 	box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.5);
@@ -133,8 +186,16 @@ body {
 	z-index: 999;
 	color: white;
 	text-decoration: underline;
-	font-size: 1.1em; 
+	font-size: 1.8em; 
 	font-weight: 500;
+	
+	a:link, a:active, a:visited {
+		color: white;
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.67);
+	}
+	a:hover {
+		color: yellow;
+	}
 	
 	i {
 		background-image: url(../images/kern-sprites.png);
@@ -143,8 +204,19 @@ body {
 		float: left;
 		background-position: -187px -8px;
 		margin-right: 4px;
+		position: relative;
+		top: 9px;
 	}
+	
+	
 
+}
+
+#map-alerts-wrap.no-alerts {
+	font-size: 1.1em; 
+	font-weight: 300;
+	text-decoration: none;
+	color: #dcdcdc;
 }
 
 #drop-down-info-text-wrap {
@@ -156,23 +228,49 @@ body {
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-#map-background {
-	position: absolute;
-	top: 10px;
-	z-index: 1;
-	background-repeat: no-repeat;
-	
-	
-}
+#map-background {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
+background: #8ab489; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(13%,#8ab489), color-stop(100%,#758874)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover, #8ab489 13%,#758874 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover, #8ab489 13%,#758874 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover, #8ab489 13%,#758874 100%); /* IE10+ */
+background: radial-gradient(ellipse at center, #8ab489 13%,#758874 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ab489', endColorstr='#758874',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
 
 #planner-wrap {
 
-	width: 233px;
-	margin: 8px 0 0 18px;
-	z-index: 999;
-	position: absolute;
-	top: 10px;
+		
+position: relative;
+		z-index: 999;
+		
+		top: 0px;
+		
+	input[type="text"] {
+		max-width: 100%;
+	}
 
+	}
+	#map-alerts-wrap {
+		display: none;
+	}
+@media (min-width: 700px) {
+	#planner-wrap {
+		
+		margin: 8px 0 0 18px;
+		z-index: 999;
+		position: absolute;
+		top: 10px;
+	}
+	#map-alerts-wrap {
+		display: inherit;
+	}
+	
+}
+@media (max-width: 699px) {
+	#map-holder {
+		display: none;
+	}
 }
 
 #planner-expand-contract-tab {
@@ -225,7 +323,7 @@ body {
 	background-color: #f5e5d0;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 4px;
-	float: left;
+
 	-webkit-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.25);
 	-moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.25);
 	box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.25);
@@ -303,103 +401,19 @@ body {
 }
 
 
-	
-
-
-#home-secondary-container {
-
-	margin-bottom: 20px;
-	color: white;
-	border: 1px solid #8d9790; 
-	padding: 10px;
-	background: #3c759c; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover,  #3c759c 0%, #28516e 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3c759c), color-stop(100%,#28516e)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center,  #3c759c 0%,#28516e 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c759c', endColorstr='#28516e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 
 
 
-	h1, h2 {
-		font-style:italic;
-		font-size: 1.3em;
-		color: #ffc57f;
-		text-transform: uppercase;
-		margin-top: 0;
-		padding-top: 0;
-		position:relative;
-		top: -5px;
-	}
 
-	#secondard-links-row {
-		margin-top: 35px;
-	
-	}
-	
-	.secondary-col {
-		height: 260px;
-		
-		li {
-			font-size: .9em;
-		}
-	}
-
-
-    #home-news-area{
-    	
-    	border-right: 1px solid #5e8aa9;
-    	margin-left: 43px;
-    	width: 40%;
-    	
-    	 h2 {
-    	 	margin-right: 43px;
-    	 	padding-bottom: 19px;
-    	 	margin-bottom: 10px;
-    		border-bottom: 1px dashed #a5bfd1;
-    	}
-    }
-    
-    
-	a:link, a:active, a:visited {
-		color: white;
-		text-decoration: none;
-	} a:hover {
-		text-decoration: underline;
-	}
-
+#sidebar1 {
 	#how-to-ride-links {
-		float: left;
-		width: 25%;
-		margin-left: 43px;
-		border-right: 1px solid #5e8aa9;
-		
-		
-		li {
-			margin-bottom: 7px;
-			font-size: .9em;
-		}
-		
-		#connections-icon,
-		#accessibility-icon,
-#dial-a-ride-icon,
-#bikes-on-buses-icon,
-#passenger-conduct-icon,
-#mobile-and-desktop-apps-icon,
-#holidays-icon {
-	background-image: url(../images/kern-sprites.png);
-	width: 22px; 
-	height: 20px;
-	float: left;
-	position: relative;
-	top: 2px;
-	margin-right: 5px;
-
+	margin-left: 0px;
+	
+	}
 }
-
+	
+	
 		#connections-icon {
 			background-position: -160px -75px;
 		}
@@ -408,7 +422,8 @@ body {
 		}
 		#dial-a-ride-icon {
 			background-position: -35px -75px;
-			left: -3px;
+			//left: -3px;
+			  top: -4px;
 		}
 		#bikes-on-buses-icon {
 			background-position: -60px -75px;
@@ -428,7 +443,75 @@ body {
 
 
 
+#home-secondary-container {
+
+	margin-bottom: 20px;
+	color: white;
+	border: 1px solid #8d9790; 
+
+	background: #3c759c; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #3c759c 0%, #28516e 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3c759c), color-stop(100%,#28516e)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #3c759c 0%,#28516e 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #3c759c 0%,#28516e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c759c', endColorstr='#28516e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+
+
+
+#how-to-ride-links {
+
+
+
+
+		
+
+
+
+		}
+
+	h1, h2 {
+		font-style:italic;
+		font-size: 1.3em;
+		color: #ffc57f;
+		text-transform: uppercase;
+		
+		position:relative;
+
 	}
+
+	#secondard-links-row {
+
+	
+	}
+	
+	.secondary-col {
+
+		
+		li {
+			font-size: .9em;
+		}
+	}
+
+
+    
+    
+	a:link, a:active, a:visited {
+		color: white;
+		text-decoration: none;
+	} a:hover {
+		text-decoration: underline;
+	}
+
+	
+
+	
+
+
+	
 
 	#home-description-of-services {
 
@@ -443,16 +526,14 @@ body {
 	}
 	
 	.menu-secondary-links-home-right-container {
-		float: left;
-		margin-left: 43px;
+
 	}
 	
 	ul#menu-secondary-links-home-right {
 	
 		
     list-style: none;
-    padding:0;
-  margin-top: 0;
+    
 
 
 	li { 
@@ -473,7 +554,7 @@ body {
 	
 	
 	#home-news-area {
-		float: left;
+
 		
 		ul {
 		
@@ -506,101 +587,15 @@ body {
 
 }
 
-#main-nav {
 
-	float: left;
-	margin: 74px 0 10px 41px;
-	
-
-	ul {
-		li {
-			cursor: pointer;
-		
-			text-align: center;
-			float: left;
-			margin: 0 20px;	
-			height: 57px;
-			
-			a:link, a:active, a:visited, a:hover  {
-			color: white; 
-			text-decoration: none;
-			font-family: 'Lato', sans-serif;
-			font-size: 1.05em;
-			text-transform: uppercase;
-			} 
-			
-			a:hover{
-				
-				
-			
-			}
-			
-			
-			.main-nav-icon {
-				height: 25px;
-				width: 25px;
-				margin-right: 8px;
-				float: left;
-				background-image: url(../images/kern-sprites.png);
-			
-			}
-			
-			$main-nav-y: -7px;
-			
-			#routes-and-schedules-icon {
-				margin-top: 10px;
-				background-position: -10px $main-nav-y;
-			}
-			#dial-a-ride-icon {
-				background-position: -39px $main-nav-y;
-			}
-			#fares-icon {
-				background-position: -69px $main-nav-y;
-			}
-			
-			#how-to-ride-icon {
-				background-position: -100px $main-nav-y;
-			}
-			
-			
-			span {
-			float: right;
-			}
-			
-		}
-		li:hover {
-		border-bottom: 2px solid white;
-		
-		
-		$main-nav-y: -37px;
-			
-			#routes-and-schedules-icon {
-				background-position: -10px $main-nav-y;
-			}
-			#dial-a-ride-icon {
-				background-position: -39px $main-nav-y;
-			}
-			#fares-icon {
-				background-position: -69px $main-nav-y;
-			}
-			
-			#how-to-ride-icon {
-				background-position: -100px $main-nav-y;
-			}
-			
-		
-		}
-		li#dial-a-ride-link, li#fares-link, li#how-to-ride-link {
-			padding-top: 10px;
-		}
-	
-	}
-
-}
 
 
 
 .footer {
+
+
+    box-shadow: 0px 500px 0px 500px #000;
+
 
 	a:link, a:visited, a:active {
 	color: white;
@@ -647,12 +642,169 @@ display: none;
 }
 
 #trip_planner {
-width: 233px;
+
  	h2 {
  		border-top-left-radius: 10px;
  		border-top-right-radius: 4px;
  		margin-top: 0;
  		font-size: 1.35em;
+ 		padding: 1vw;
 
  	}
+}  
+ #planner-wrap {
+
+ }
+ 
+ #fare-form-holder {
+  border-right: 1px solid white;
+ border-bottom: 1px solid white;
+ border-left: 1px solid white;
+ border-bottom-right-radius: 5px;
+ border-bottom-left-radius: 5px;
+ background-color: #e9e6d8;
+ margin: 0;
+ padding: 10px;
+ margin-bottom: 20px;
+ 
+-moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+-webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+
+	select {
+		background-color: white;
+	}
+
+ }
+ 
+  .page-template-fares-php h4 {
+ 
+  		color: white;
+  		background-color: #80A9BD;
+  		padding: 10px;
+  		margin-bottom: 0;
+  		margin-top: 0;
+  		border-top-left-radius: 5px;
+  		border-top-right-radius: 5px;
+  		border: 0;
+  		
+  		 
+-moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+-webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+  }
+  
+ 
+ #fare-start {
+ 	float: left;
+ 	width: 48%;
+ }
+#fare-end {
+float: left;
+ 	width: 48%;
+ 	margin-left: 1%;
+}
+ 
+ #get-fares {
+ float: left;
+ 	width: 30%;
+ 	padding: 13px;
+ }
+
+#regular_fare {
+	float: left;
+	clear: both;
+}
+
+#get-fares-results.fare-calculated {
+	background: #4dbe6e;
+	color: white;
+}
+
+#get-fares-results {
+	float: left;
+
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,1,.3);
+	min-width: 50px;
+	text-align: center;
+	padding: 10px;
+}
+ 
+ 
+ // ARCHIVES
+ 
+ .archive, .search {
+ 
+ .archive-title {
+ 	margin: 20px;
+ 	color: #343c5a;
+ }
+ 
+ h3 a:link { 
+ 	color: #354787;
+ }
+ 
+ 
+ .article-date {
+ 	color:#595959;
+ }
+ 
+ 
+ .article-header {
+ 
+ 	border-bottom: 1px solid #c2c7d8;
+
+ 	padding-bottom:10px;
+ 	padding-top:10px;
+ }
+ 
+ 
+ #main article {
+ 	
+  		background-color: white;
+  		padding: 10px;
+  		margin: 10px;
+  		border: 1px solid #d8e0ff;
+  		border-top-left-radius: 5px;
+  		border-top-right-radius: 5px;
+  		margin-bottom: 20px;
+  		border-bottom: 12px solid #eee; 
+  		
+  		
+  		 
+-moz-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+-webkit-box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+box-shadow: 0 2px 2px 1px rgba(0,0,0,.4);
+ }
+ 
+ }
+ 
+ #main ol { 
+   list-style-type: decimal; 
+   list-style-position: inside; 
+margin: 1em 0;
+}
+
+ #main ul { 
+ list-style-type: disc; 
+   list-style-position: inside; 
+margin: 1em 0;
+}
+
+
+#route-fares-link {
+float: right;
+padding: 15px;}
+
+#pdf-link {
+float: left;
+}
+
+#route_days_of_week {
+float: left;
+}
+
+#h2-inner {
+float: left;
 }

@@ -11,7 +11,7 @@
  * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
  * category and taxonomy slugs, or this template will not finish to load properly.
  *
- * For more info: http://codex.wordpress.org/Post_Type_Templates
+ * For more info: https://codex.wordpress.org/Post_Type_Templates
 */
 ?>
 
@@ -50,7 +50,7 @@
 										 * mostly used for people to get more ad views. It's up to you but if you want
 										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
 										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
+										 * https://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
 										 *
 										*/
 										wp_link_pages( array(

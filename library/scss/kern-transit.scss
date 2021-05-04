@@ -1,0 +1,144 @@
+.single-route {
+table {background:white; margin: 20px auto;border-spacing:0px 0px;border-collapse:collapse;}
+td,th {text-align:left;padding-left:10px;padding-right:10px;padding-top:3px;padding-bottom:3px;margin-left:0px;margin-right:0px;font-size:13px;}
+.city-name {font-size:14px; font-weight:bold; text-transform:uppercase;padding-top:10px;white-space:nowrap;}
+.stop-name {white-space:nowrap;}
+.timepoint-number {font-weight:bold;vertical-align:top;}
+.stop-time {vertical-align:bottom;text-align:center;white-space:nowrap;}
+.stop_times_row {border-top:1px solid #ccc}
+.days-of-week {text-align:center;}
+
+table .timetable-header .route-name {font-size:18px; font-weight:bold;text-align:center;}
+table .timetable-header .direction-header {font-size:15px; font-weight:bold;text-align:center;}
+
+
+table._100-bakersfield-lancaster .timetable-header .route-name {width:100%;background-color:#e0871b;color:white; display:block; }
+table._100-bakersfield-lancaster .direction-header {display:block; border-top: solid 4px #e0871b;border-bottom: solid 1px #e0871b;}
+table._100-bakersfield-lancaster {border-bottom: solid 4px #e0871b;}
+
+._100-bakersfield-lancaster .weekend-only {background:#FADFBF}
+._100-bakersfield-lancaster .all-week {background:#F3C590}
+
+
+table._110-delano-bakersfield .timetable-header .route-name {width:100%;background-color:#1fa345;color:white; display:block;}
+table._110-delano-bakersfield {border-bottom: solid 4px #1fa345;}
+table._110-delano-bakersfield .direction-header {display:block; border-top: solid 4px #1fa345;border-bottom: solid 1px #1fa345;}
+
+._110-delano-bakersfield .weekend-only {background:#D2FFC4}
+
+
+table._115-lost-hills-bakersfield .timetable-header .route-name {width:100%;background-color:#7c51a1;color:white; display:block;}
+table._115-lost-hills-bakersfield {border-bottom: solid 4px #7c51a1;}
+table._115-lost-hills-bakersfield .direction-header {display:block; border-top: solid 4px #7c51a1;border-bottom: solid 1px #7c51a1;}
+
+._115-lost-hills-bakersfield .weekend-only {background:#DFB0FF}
+
+
+table._120-taft-bakersfield .timetable-header .route-name {width:100%;background-color:#ffc220;color:black; display:block;}
+table._120-taft-bakersfield {border-bottom: solid 4px #ffc220;}
+table._120-taft-bakersfield .direction-header {display:block; border-top: solid 4px #ffc220;border-bottom: solid 1px #ffc220;}
+
+
+._120-taft-bakersfield .weekend-only {background:#FFEAB7}
+
+
+table._130-frazier-park-bakersfield .timetable-header .route-name {width:100%;background-color:#25639e;color:black; display:block;}
+table._130-frazier-park-bakersfield {border-bottom: solid 4px #25639e;}
+table._130-frazier-park-bakersfield .direction-header {display:block; border-top: solid 4px #25639e;border-bottom: solid 1px #25639e;}
+
+
+._130-frazier-park-bakersfield .weekend-only {background:#D0E6FF}
+
+
+table._140-lamont-bakersfield-north .timetable-header .route-name {width:100%;background-color:#570961;color:white; display:block;}
+table._140-lamont-bakersfield-north {border-bottom: solid 4px #570961;}
+table._140-lamont-bakersfield-north .direction-header {display:block; border-top: solid 4px #570961;border-bottom: solid 1px #570961;}
+
+
+._140-lamont-bakersfield-north .weekend-only {background:#E1CAF9}
+
+
+table._142-lamont-bakersfield-weekend-loop .timetable-header .route-name {width:100%;background-color:#009ac6;color:white; display:block;}
+table._142-lamont-bakersfield-weekend-loop {border-bottom: solid 4px #009ac6;}
+table._142-lamont-bakersfield-weekend-loop .direction-header  { display:block; border-top: solid 4px #009ac6;border-bottom: solid 1px #009ac6;}
+
+
+
+
+table._145-lamont-bakersfield-south .timetable-header .route-name {width:100%;background-color:#f37061;color:white; display:block;}
+table._145-lamont-bakersfield-south {border-bottom: solid 4px #f37061;}
+table._145-lamont-bakersfield-south .direction-header {display:block; border-top: solid 4px #f37061;border-bottom: solid 1px #f37061;}
+
+
+
+
+table._150-lake-isabella-bakersfield_mon-sat .timetable-header .route-name {width:100%;background-color:#ed1846;color:white; display:block;}
+table._150-lake-isabella-bakersfield_mon-sat {border-bottom: solid 4px #ed1846;}
+table._150-lake-isabella-bakersfield_mon-sat .direction-header {display:block; border-top: solid 4px #ed1846;border-bottom: solid 1px #ed1846;}
+
+
+
+
+
+table._150-lake-isabella-bakersfield_sunday .timetable-header .route-name {width:100%;background-color:#ed1846;color:white; display:block;}
+table._150-lake-isabella-bakersfield_sunday {border-bottom: solid 4px #ed1846;}
+table._150-lake-isabella-bakersfield_sunday .direction-header {display:block; border-top: solid 4px #ed1846;border-bottom: solid 1px #ed1846;}
+
+
+
+
+table._210-frazier-park-local .timetable-header .route-name {width:100%;background-color:#ffd64f;color:black; display:block;}
+table._210-frazier-park-local {border-bottom: solid 4px #ffd64f;}
+table._210-frazier-park-local .direction-header {display:block; border-top: solid 4px #ffd64f;border-bottom: solid 1px #ffd64f;}
+
+
+
+
+table._220-lake-isabella-kernville .timetable-header .route-name {width:100%;background-color:#fed755;color:black; display:block;}
+table._220-lake-isabella-kernville {border-bottom: solid 4px #fed755;}
+table._220-lake-isabella-kernville .direction-header {display:block; border-top: solid 4px #fed755;border-bottom: solid 1px #fed755;}
+
+
+._220-lake-isabella-kernville .weekend-only {background:#C9DECB}
+
+
+table._223-lake-isabella-bodfish .timetable-header .route-name {width:100%;background-color:#a76b17;color:black; display:block;}
+table._223-lake-isabella-bodfish {border-bottom: solid 4px #a76b17;}
+table._223-lake-isabella-bodfish .direction-header {display:block; border-top: solid 4px #a76b17;border-bottom: solid 1px #a76b17;}
+
+
+._223-lake-isabella-bodfish .weekend-only {background:#C9DECB;}
+
+
+table._225-lake-isabella-onyx .timetable-header .route-name {width:100%;background-color:#0095da;color:black; display:block;}
+table._225-lake-isabella-onyx {border-bottom: solid 4px #0095da;}
+table._225-lake-isabella-onyx .direction-header {display:block; border-top: solid 4px #0095da;border-bottom: solid 1px #0095da;}
+
+
+
+
+table._227-lake-isabella-ridgecrest .timetable-header .route-name {width:100%;background-color:#007360;color:black; display:block;}
+table._227-lake-isabella-ridgecrest {border-bottom: solid 4px #007360;}
+table._227-lake-isabella-ridgecrest .direction-header {display:block; border-top: solid 4px #007360;border-bottom: solid 1px #007360;}
+
+
+table._230-mojave-ridgecrest .timetable-header .route-name {width:100%;background-color:#a41681;color:black; display:block;}
+table._230-mojave-ridgecrest {border-bottom: solid 4px #a41681;}
+table._230-mojave-ridgecrest .direction-header {display:block; border-top: solid 4px #a41681;border-bottom: solid 1px #a41681;}
+
+
+._230-mojave-ridgecrest .weekend-only {background:#EEBBEE}
+
+table._240-boron-majave .timetable-header .route-name {width:100%;background-color:#009c9e;color:black; display:block;}
+table._240-boron-majave {border-bottom: solid 4px #009c9e;}
+table._240-boron-majave .direction-header {display:block; border-top: solid 4px #009c9e;border-bottom: solid 1px #009c9e;}
+
+
+table._250-california-city-lancaster .timetable-header .route-name {width:100%;background-color:#00529c;color:black; display:block;}
+table._250-california-city-lancaster {border-bottom: solid 4px #00529c;}
+table._250-california-city-lancaster .direction-header {display:block; border-top: solid 4px #00529c;border-bottom: solid 1px #00529c;}
+
+
+._250-california-city-lancaster .weekend-only {background:#BBDAFF}
+
+}

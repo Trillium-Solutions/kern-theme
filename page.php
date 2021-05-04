@@ -1,29 +1,36 @@
 <?php get_header(); ?>
 
-			<div id="content">
-
-				<div id="inner-content" class="wrap cf">
-
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+			<?php get_template_part( 'generic-page-top'); ?> 
+			
+<div class="row-fluid" id="page-holder">
+						<div id="main" class="col-sm-9" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<div id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="https://schema.org/BlogPosting">
 
-								<header class="article-header">
+						
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-								</header> <?php // end article header ?>
-
-								<section class="entry-content cf" itemprop="articleBody">
 									<?php
 										// the content (pretty self explanatory huh)
-										the_content();
+										if( has_post_thumbnail()) { ?>
+										<div id="featured-image-container">
+											<img class="featured-image" src="
+											<?php
+										
+												$thumb_id = get_post_thumbnail_id();
+												$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
+												echo $thumb_url_array[0];
+										
+											?>
+											">
+										</div><!-- end featured image -->
+										<div id="page-anchor-links"><ul></ul></div>
+										<?php
+										}
+										
+									 the_content(); 
 
 										/*
 										 * Link Pages is used in case you have posts that are set to break into
@@ -34,25 +41,18 @@
 										 * mostly used for people to get more ad views. It's up to you but if you want
 										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
 										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
+										 * https://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
 										 *
 										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
+									
 									?>
-								</section> <?php // end article section ?>
 
-								<footer class="article-footer cf">
 
-								</footer>
+							
 
-								<?php comments_template(); ?>
 
-							</article>
+
+							</div>
 
 							<?php endwhile; else : ?>
 
@@ -72,10 +72,13 @@
 
 						</div>
 
-						<?php get_sidebar(); ?>
+						<div id="sidebar1" class="sidebar col-sm-3" role="complementary">
 
+						<?php get_template_part( 'generic-sidebar'); ?> 
 				</div>
+				</div> <!-- end row -->
 
-			</div>
+		<?php get_template_part( 'generic-page-bottom'); ?> 
+			
 
 <?php get_footer(); ?>
