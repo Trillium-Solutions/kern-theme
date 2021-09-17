@@ -28,21 +28,21 @@ function custom_post_example() {
 	register_post_type( 'custom_type', /* (https://codex.wordpress.org/Function_Reference/register_post_type) */
 		// let's now add all the options for this post type
 		array( 'labels' => array(
-			'name' => __( 'Custom Types', 'bonestheme' ), /* This is the Title of the Group */
-			'singular_name' => __( 'Custom Post', 'bonestheme' ), /* This is the individual type */
-			'all_items' => __( 'All Custom Posts', 'bonestheme' ), /* the all items menu item */
-			'add_new' => __( 'Add New', 'bonestheme' ), /* The add new menu item */
-			'add_new_item' => __( 'Add New Custom Type', 'bonestheme' ), /* Add New Display Title */
-			'edit' => __( 'Edit', 'bonestheme' ), /* Edit Dialog */
-			'edit_item' => __( 'Edit Post Types', 'bonestheme' ), /* Edit Display Title */
-			'new_item' => __( 'New Post Type', 'bonestheme' ), /* New Display Title */
-			'view_item' => __( 'View Post Type', 'bonestheme' ), /* View Display Title */
-			'search_items' => __( 'Search Post Type', 'bonestheme' ), /* Search Custom Type Title */ 
-			'not_found' =>  __( 'Nothing found in the Database.', 'bonestheme' ), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __( 'Nothing found in Trash', 'bonestheme' ), /* This displays if there is nothing in the trash */
+			'name' => __( 'Custom Types', 'kerntheme' ), /* This is the Title of the Group */
+			'singular_name' => __( 'Custom Post', 'kerntheme' ), /* This is the individual type */
+			'all_items' => __( 'All Custom Posts', 'kerntheme' ), /* the all items menu item */
+			'add_new' => __( 'Add New', 'kerntheme' ), /* The add new menu item */
+			'add_new_item' => __( 'Add New Custom Type', 'kerntheme' ), /* Add New Display Title */
+			'edit' => __( 'Edit', 'kerntheme' ), /* Edit Dialog */
+			'edit_item' => __( 'Edit Post Types', 'kerntheme' ), /* Edit Display Title */
+			'new_item' => __( 'New Post Type', 'kerntheme' ), /* New Display Title */
+			'view_item' => __( 'View Post Type', 'kerntheme' ), /* View Display Title */
+			'search_items' => __( 'Search Post Type', 'kerntheme' ), /* Search Custom Type Title */ 
+			'not_found' =>  __( 'Nothing found in the Database.', 'kerntheme' ), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __( 'Nothing found in Trash', 'kerntheme' ), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is the example custom post type', 'bonestheme' ), /* Custom Type Description */
+			'description' => __( 'This is the example custom post type', 'kerntheme' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -79,16 +79,16 @@ function custom_post_example() {
 		array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => true,     /* if this is true, it acts like categories */
 			'labels' => array(
-				'name' => __( 'Custom Categories', 'bonestheme' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Custom Category', 'bonestheme' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Custom Categories', 'bonestheme' ), /* search title for taxomony */
-				'all_items' => __( 'All Custom Categories', 'bonestheme' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Custom Category', 'bonestheme' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Custom Category:', 'bonestheme' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Custom Category', 'bonestheme' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Custom Category', 'bonestheme' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Custom Category', 'bonestheme' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Custom Category Name', 'bonestheme' ) /* name title for taxonomy */
+				'name' => __( 'Custom Categories', 'kerntheme' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Custom Category', 'kerntheme' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Custom Categories', 'kerntheme' ), /* search title for taxomony */
+				'all_items' => __( 'All Custom Categories', 'kerntheme' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Custom Category', 'kerntheme' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Custom Category:', 'kerntheme' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Custom Category', 'kerntheme' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Custom Category', 'kerntheme' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Custom Category', 'kerntheme' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Custom Category Name', 'kerntheme' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true, 
 			'show_ui' => true,
@@ -102,16 +102,16 @@ function custom_post_example() {
 		array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 		array('hierarchical' => false,    /* if this is false, it acts like tags */
 			'labels' => array(
-				'name' => __( 'Custom Tags', 'bonestheme' ), /* name of the custom taxonomy */
-				'singular_name' => __( 'Custom Tag', 'bonestheme' ), /* single taxonomy name */
-				'search_items' =>  __( 'Search Custom Tags', 'bonestheme' ), /* search title for taxomony */
-				'all_items' => __( 'All Custom Tags', 'bonestheme' ), /* all title for taxonomies */
-				'parent_item' => __( 'Parent Custom Tag', 'bonestheme' ), /* parent title for taxonomy */
-				'parent_item_colon' => __( 'Parent Custom Tag:', 'bonestheme' ), /* parent taxonomy title */
-				'edit_item' => __( 'Edit Custom Tag', 'bonestheme' ), /* edit custom taxonomy title */
-				'update_item' => __( 'Update Custom Tag', 'bonestheme' ), /* update title for taxonomy */
-				'add_new_item' => __( 'Add New Custom Tag', 'bonestheme' ), /* add new title for taxonomy */
-				'new_item_name' => __( 'New Custom Tag Name', 'bonestheme' ) /* name title for taxonomy */
+				'name' => __( 'Custom Tags', 'kerntheme' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Custom Tag', 'kerntheme' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Custom Tags', 'kerntheme' ), /* search title for taxomony */
+				'all_items' => __( 'All Custom Tags', 'kerntheme' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Custom Tag', 'kerntheme' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Custom Tag:', 'kerntheme' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Custom Tag', 'kerntheme' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Custom Tag', 'kerntheme' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Custom Tag', 'kerntheme' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Custom Tag Name', 'kerntheme' ) /* name title for taxonomy */
 			),
 			'show_admin_column' => true,
 			'show_ui' => true,

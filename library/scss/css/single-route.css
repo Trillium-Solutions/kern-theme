@@ -140,7 +140,7 @@ li.minimized i.open-close-icon {
   background-image: url(../images/kern-sprites.png);
   background-position: -241px -10px; }
 
-#route-page-title {
+#route-page-title, .route-title{
   float: left;
   width: 70%;
   margin-bottom: 10px; }

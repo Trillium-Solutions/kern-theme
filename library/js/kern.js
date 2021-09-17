@@ -228,8 +228,8 @@ $(window).load( function() {
     
     if (L.Browser.retina) {
     
-   		 changeImage($('#logo-image')[0],
-    }
+   		 changeImage($('#logo-image')[0])
+	}
 });
 
 function highlightAnchorH2(name) {

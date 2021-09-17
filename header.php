@@ -19,10 +19,7 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<?php // icons & favicons (for more: https://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png?v2">
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
@@ -31,14 +28,13 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgfsid1_jCd-BSTDqugAFgqDnJHywObXA&libraries=places"></script>
-
-<script src="https://code.jquery.com/jquery-1.11.1.min.js?v=2"></script>
-<script src="https://momentjs.com/downloads/moment.min.js?v=2"></script>
+		
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js?v=2"></script>
+		<script src="https://momentjs.com/downloads/moment.min.js?v=2"></script>
 
 		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js?v=2"></script>
 
-		<script src="<?php echo get_template_directory_uri(); ?>/library/bootstrap/js/bootstrap.min.js?v=2"></script>
+		
 		<?php // wordpress head functions ?>
 
 		<?php // end of wordpress head ?>
@@ -46,22 +42,12 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 		<?php wp_head(); ?>
+	
+	
+		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
 
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/library/css/style.css' . '?' . filemtime( get_stylesheet_directory() . '/library/css/style.css'); ?>" type="text/css"  media='all' />
-		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css?v=2">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/bootstrap/css/bootstrap.min.css?v=2">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/interactive-map.css?v=2">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/sml_interactive-map.css?v=2">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/route-icons.css?v=2">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/single-route.css?v=2">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/kern-transit.css?v=2.1">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/dar.css?v=2">
-
-
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
-
-	<script src="<?php echo get_template_directory_uri(); ?>/library/js/kern.js.php?v=2&site_url=<?php echo get_template_directory_uri(); ?>"></script>
+		
 
 		<script>
 
@@ -88,19 +74,19 @@
 
 
 		</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js?v=2','ga');
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js?v=2','ga');
 
-  ga('create', 'UA-53349417-1', 'auto');
-	ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
+		ga('create', 'UA-53349417-1', 'auto');
+			ga('set', 'anonymizeIp', true);
+		ga('send', 'pageview');
 
-</script>
-<script src="https://kit.fontawesome.com/a1f5cfbb67.js"></script>
-<meta name="google-translate-customization" content="f25af25643c7b829-5e44eb73351882d9-gcc7ef8ab8e200b71-13"></meta>
+		</script>
+		<script src="https://kit.fontawesome.com/a1f5cfbb67.js"></script>
+		<meta name="google-translate-customization" content="f25af25643c7b829-5e44eb73351882d9-gcc7ef8ab8e200b71-13"></meta>
 
 	</head>
 
@@ -108,7 +94,7 @@
 	
 	<?php
 	$system_alert = new WP_Query( array(
-		'post_type' 		=> 'news',
+		'post_type' 		=> 'alert',
 		'posts_per_page' 	=> 1,
 		'meta_key'			=> 'system_alert',
 		'meta_value'		=> 1,
@@ -172,7 +158,7 @@
 						'after' => '',                                  // after the menu
 						'link_before' => '',                            // before each link
 						'link_after' => '',                             // after each link
-						'depth' => 0,                                   // limit the depth of the nav
+						'depth' => 1,                                   // limit the depth of the nav
 							'fallback_cb' => ''                             // fallback function (if there is one)
 							)); ?>
 

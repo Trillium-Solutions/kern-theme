@@ -25,43 +25,43 @@ get_header(); ?>
 										</tr>
 										<tr>
 											<td><div class="fare-label">Local Routes</div> <?php 
-												the_route_circle(140,36,0);
-												the_route_circle(142,36,0);
-												the_route_circle(145,36,0);
-												the_route_circle(210,36,0);
-												the_route_circle(220,36,0);
-												the_route_circle(223,36,0);
-												the_route_circle(225,36,0);
+												get_route_circle(140,36,0);
+												get_route_circle(142,36,0);
+												get_route_circle(145,36,0);
+												get_route_circle(210,36,0);
+												get_route_circle(220,36,0);
+												get_route_circle(223,36,0);
+												get_route_circle(225,36,0);
 												?> + Dial-a-Ride</td>
 												<td>$2.00</td>
 												<td>$1.00</td>
 										</tr>
 										<tr>
 											<td><div class="fare-label">Intercommunity Routes</div> <?php 
-												the_route_circle(100,36,0);
-												the_route_circle(110,36,0);
-												the_route_circle(115,36,0);
-												the_route_circle(120,36,0);
-												the_route_circle(130,36,0);
-												the_route_circle(150,36,0);
-												the_route_circle(227,36,0);
-												the_route_circle(230,36,0);
-												the_route_circle(240,36,0);
-												the_route_circle(250,36,0);
+												get_route_circle(100,36,0);
+												get_route_circle(110,36,0);
+												get_route_circle(115,36,0);
+												get_route_circle(120,36,0);
+												get_route_circle(130,36,0);
+												get_route_circle(150,36,0);
+												get_route_circle(227,36,0);
+												get_route_circle(230,36,0);
+												get_route_circle(240,36,0);
+												get_route_circle(250,36,0);
 												?></td>
 												<td>$3.00</td>
 												<td>$1.50</td>
 										</tr>
 										<tr>
 											<td><div class="fare-label">Cross-County Routes</div> <?php
-												the_route_circle(100,36,0);
+												get_route_circle(100,36,0);
 											?> for trips passing through Tehachapi</td>
 											<td>$5.00</td>
 											<td>$2.50</td>
 										</tr>
 										<tr>
 											<td> <?php
-												the_route_circle(130,36,0);
+												get_route_circle(130,36,0);
 											?> for trips passing through Frazier Park</td>
 											<td>$5.00</td>
 											<td>$2.50</td>

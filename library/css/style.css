@@ -1773,7 +1773,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
   letter-spacing: .1em; }
 
-.over-blue {
+.over-blue, .page-title {
   color: white; }
 
 body {
@@ -1868,91 +1868,9 @@ body {
 #inner-content {
   width: 1151px; }
 
-#home-desktop-map-container {
-  margin-top: 20px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  margin-bottom: 20px;
-  position: relative;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
-  background: #8ab489;
-  /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(13%, #8ab489), color-stop(100%, #758874));
-  /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
-  /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
-  /* IE10+ */
-  background: radial-gradient(ellipse at center, #8ab489 13%, #758874 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ab489', endColorstr='#758874',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
-  box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5); }
-  #home-desktop-map-container img {
-    height: 680px !important; }
 
-#map-alerts-wrap {
-  position: absolute;
-  left: 23px;
-  bottom: 24px;
-  z-index: 999;
-  color: white;
-  text-decoration: underline;
-  font-size: 1.8em;
-  font-weight: 500; }
-  #map-alerts-wrap a:link, #map-alerts-wrap a:active, #map-alerts-wrap a:visited {
-    color: white;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.67); }
-  #map-alerts-wrap a:hover {
-    color: yellow; }
-  #map-alerts-wrap i {
-    background-image: url(../images/kern-sprites.png);
-    width: 30px;
-    height: 25px;
-    float: left;
-    background-position: -187px -8px;
-    margin-right: 4px;
-    position: relative;
-    top: 9px; }
 
-#map-alerts-wrap.no-alerts {
-  font-size: 1.1em;
-  font-weight: 300;
-  text-decoration: none;
-  color: #dcdcdc; }
 
-#drop-down-info-text-wrap {
-  z-index: 99;
-  position: absolute;
-  top: 21px;
-  right: 50px;
-  color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6); }
-
-#map-background {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
-  background: #8ab489;
-  /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(13%, #8ab489), color-stop(100%, #758874));
-  /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
-  /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
-  /* IE10+ */
-  background: radial-gradient(ellipse at center, #8ab489 13%, #758874 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ab489', endColorstr='#758874',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
 
 #planner-wrap {
   position: relative;
@@ -2457,20 +2375,28 @@ h1#route-page-title i {
   .single-timetable #generic-wide-container table {
     margin: 0 auto; }
 
-#route-map {
+
+.route-map iframe{
   height: 90vh;
   min-height: 450px;
-  margin-bottom: 20px; }
+  /*margin-bottom: 20px;*/
+ }
 
-#route-map .mobile-route-buttons { display: none }
+ #route-map  { 
+  height: 90vh;
+  min-height: 450px;
+  margin-bottom: 20px;
+ }
+
+.route-map .mobile-route-buttons { display: none }
 
 @media only screen and (max-width: 600px) {
-    #route-map {
-        height: auto;
+    .route-map {
+        height: 80vh;
         min-height: 0;
     }
-    #route-map iframe { display: none }
-    #route-map .mobile-route-buttons { display: block }
+    /*#route-map iframe { display: none }*/
+    .route-map .mobile-route-buttons { display: block }
 
     .mobile-route-buttons-list {
         margin: 20px 5%;

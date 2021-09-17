@@ -1,3 +1,149 @@
+
+//AI MAP
+
+/*.spinner {
+	margin-top: 200px;
+	margin: 100px auto 0;
+	width: 70px;
+	text-align: center;
+  }
+  
+  .spinner > div {
+	width: 18px;
+	height: 18px;
+	background-color: #333;
+  
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out;
+	/* Prevent first frame from flickering when animation starts..... 
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+  }
+  
+  .spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+	0%, 80%, 100% { -webkit-transform: scale(0.0) }
+	40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+	0%, 80%, 100% { 
+	transform: scale(0.0);
+	-webkit-transform: scale(0.0);
+	} 40% { 
+	transform: scale(1.0);
+	-webkit-transform: scale(1.0);
+	}
+  }*/
+  
+  #map-holder #hovers g, #hovers path,#hovers polygon  {
+	  cursor: pointer;
+  }
+  #map-holder {
+	  position: relative;
+	  /*top: 200px;*/
+	  min-height: 400px;
+  }
+
+  #home-desktop-map-container {
+	margin-top: 20px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	margin-bottom: 20px;
+	position: relative;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
+	background: #8ab489;
+	/* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(13%, #8ab489), color-stop(100%, #758874));
+	/* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
+	/* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
+	/* IE10+ */
+	background: radial-gradient(ellipse at center, #8ab489 13%, #758874 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ab489', endColorstr='#758874',GradientType=1 );
+	/* IE6-9 fallback on horizontal gradient */
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5);
+	box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.5); }
+	#home-desktop-map-container img {
+	  height: 680px !important; }
+  
+  #map-alerts-wrap {
+	position: absolute;
+	left: 23px;
+	bottom: 24px;
+	z-index: 999;
+	color: white;
+	text-decoration: underline;
+	font-size: 1.8em;
+	font-weight: 500; }
+	#map-alerts-wrap a:link, #map-alerts-wrap a:active, #map-alerts-wrap a:visited {
+	  color: white;
+	  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.67); }
+	#map-alerts-wrap a:hover {
+	  color: yellow; }
+	#map-alerts-wrap i {
+	  background-image: url(../images/kern-sprites.png);
+	  width: 30px;
+	  height: 25px;
+	  float: left;
+	  background-position: -187px -8px;
+	  margin-right: 4px;
+	  position: relative;
+	  top: 9px; }
+  
+  #map-alerts-wrap.no-alerts {
+	font-size: 1.1em;
+	font-weight: 300;
+	text-decoration: none;
+	color: #dcdcdc; }
+  
+  #drop-down-info-text-wrap {
+	z-index: 99;
+	position: absolute;
+	top: 21px;
+	right: 50px;
+	color: white;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6); }
+  
+  #map-background {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8ab489+13,758874+100 */
+	background: #8ab489;
+	/* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(13%, #8ab489), color-stop(100%, #758874));
+	/* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
+	/* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #8ab489 13%, #758874 100%);
+	/* IE10+ */
+	background: radial-gradient(ellipse at center, #8ab489 13%, #758874 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ab489', endColorstr='#758874',GradientType=1 );
+	/* IE6-9 fallback on horizontal gradient */ }
+  
+  
+
 #how-to-ride-links {
 
 	a:link, a:active, a:visited {
@@ -83,7 +229,7 @@
 
 }
 
-#home-banner-row {
+/*#home-banner-row {
     position: relative;
     background: url('../images/social-banner-lg.jpg');
     background-size: cover;
@@ -109,8 +255,7 @@
         height: 25%;
         left: 49%;
     }
-}
-
+}*/
 
 @media (max-width: 896px) {
 #home-banner-row {
@@ -195,6 +340,7 @@
 		font-weight: bold;
 	}
 }
+//Single Routes
 
 #route-nav {
 	position: relative;
@@ -202,7 +348,7 @@
 
 #single-route-fares .mini-label {
 font-size: 16px;
-letter-spacing: .1em;
+//letter-spacing: .1em;
 }
 
 .mini-label a {
@@ -211,9 +357,9 @@ letter-spacing: .1em;
 }
 
 #route-fares-holder {
-	position: absolute;
-	padding: 5px 15px 5px 10px;
-	border-top-left-radius: 5px;
+	//position: absolute;
+	//padding: 5px 15px 5px 10px;
+	//border-top-left-radius: 5px;
 	right: 0px;
 	bottom: -53px;
 }
@@ -226,12 +372,12 @@ letter-spacing: .1em;
 } 
 
 #single-route-fares {
-	background-color: transparent;
+	background-color: #ffff;
 	width: 100%;
-max-width: 240px;
+	max-width: 100%;
 	padding: 0;
 	margin: 0;
-	color: #fff;
+	
 }
 
 .single-dar #single-route-fares {
@@ -245,7 +391,7 @@ max-width: 240px;
 #single-route-fares th {
 	padding-bottom: 0;
 	font-weight: normal;
-	border-bottom: 1px solid #fff;
+	//border-bottom: 1px solid #fff;
 }
 
 .single-dar #single-route-fares th {
@@ -256,9 +402,24 @@ max-width: 240px;
 	border-bottom: none;
 }
 
+#single-route-fares tr {
+	border-bottom: 1px solid #000000;
+}
+
+#single-route-fares th {
+	font-weight: bold;
+	
+}
+
 #single-route-fares > tbody > tr > td,
 #single-route-fares >tbody >tr > th {
 	border-top: none;
+	//padding: 8px;
+	padding-left: 30px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+    //line-height: 1.42857143;
+    vertical-align: top;
 }
 
 @media (max-width: 810px) {
@@ -288,3 +449,11 @@ max-width: 240px;
   }
 */
 
+//Bootstrap
+
+ .table>tbody>tr>th,  .table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
