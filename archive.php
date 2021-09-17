@@ -67,7 +67,8 @@
 
 						<div id="sidebar1" class="sidebar col-sm-3" role="complementary">
 
-						<?php get_sidebar(); ?>
+						<?php get_template_part( 'generic-sidebar'); ?> 
+
 						</div>
 
 				</div>

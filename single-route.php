@@ -31,10 +31,13 @@ Template Name: route_individual_page
 
 
                                 <div id="route-alerts"> 
-                                <?php get_svg_icon('alert');?>
+                                <?php //get_svg_icon('alert');?>
 									<!-- Route Alerts -->
 									
-									<?php tcp_do_alerts( array('collapse' => true, 'route-circles' => false, 'use_button' => true ) ); ?>
+									<?php 
+                                        //get_svg_icon('alert');
+                                        tcp_do_alerts( array('collapse' => true, 'route-circles' => false, 'use_button' => true ) ); 
+                                        ?>
 
                                 </div><!--route-alerts -->
                                     
