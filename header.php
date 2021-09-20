@@ -47,6 +47,7 @@
 		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
 		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
 
+	
 		
 
 		<script>
