@@ -427,7 +427,7 @@ folder to use with the following custom post types.
  */
 
 require get_template_directory() . '/inc/dar.php';
-require get_template_directory() . '/inc/staff-contacts.php';
+//require get_template_directory() . '/inc/staff-contacts.php';
 require get_template_directory() . '/inc/news.php';
 
 
@@ -507,7 +507,43 @@ function routeSelect() {
 	wp_reset_postdata();
 		}
 	
+/*Dial-A-Ride Select */
+add_action('dar_select', 'darSelect');
+function darSelect() {
 
+	wp_reset_query();
+
+	$query = new WP_Query(array(
+	'posts_per_page' => -1,
+	"post_type"     =>"dial-a-ride",
+	'meta_key'      => 'custom_id',
+	'orderby'       => 'meta_value',
+	'order'         => 'ASC'
+
+
+	));
+
+		if ( $query->have_posts() ) {
+			?>
+			<label class="sr-only" for="routes-dropdown">View a different route</label>
+			<select id="routes-dropdown" onchange="location = this.options[this.selectedIndex].value;">
+			<option value="#">View a different route</option>
+			<?php
+				while ( $query->have_posts() ) {
+					$query->the_post();
+
+					?>
+						<option value="<?php echo esc_url( get_permalink($post->ID)) ?>"><?php the_field('custom_id'); echo " - "; the_title(); ?></option>
+
+
+				<?php
+				}
+				?>
+				</select>
+				<?php
+			}
+	wp_reset_postdata();
+		}
 
 
 /*Interactive map */

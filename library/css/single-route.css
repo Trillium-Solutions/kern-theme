@@ -69,12 +69,16 @@
         justify-content: center; 
     }
 
+    #timetable-nav input[aria-selected="true"] + label, #timetable-nav input:checked + label {
+      background: #0072bc !important;
+      color: white;
+  }
     #timetable-nav legend {
 		border-bottom: none !important;
 	}
 
   #timetable-nav input {
-    width: auto !important;
+    /*width: auto !important;*/
   }
 
   #timetable-nav label {

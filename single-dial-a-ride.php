@@ -40,41 +40,8 @@ foreach ($dar_areas_array as &$value) {
 		
 			<div id="route-select-container" class="col-sm-3">
 		
-				
-			<?php
-			wp_reset_query(); 
+			<?php darSelect(); ?>
 			
-			$query = new WP_Query(array(
-			'posts_per_page' => -1,
-			"post_type"=> "dar", 
-			'orderby'		=> 'title',
-			'order'			=> 'ASC'
-			
-
-			));
-
-	
-	
-				if ( $query->have_posts() ) {
-					?>
-					<select id="routes-dropdown" onchange="location = this.options[this.selectedIndex].value;">
-					<option value="#">View a different service</option>
-					<?php
-						while ( $query->have_posts() ) {
-							$query->the_post();
-						
-							?>
-								<option value="<?php echo get_field('shared_class'); ?>"><?php echo the_title(); ?></option>
-								
-						
-						<?php
-						}
-						?>
-						</select>
-						<?php
-					}  
-			wp_reset_postdata();
-			?>
 		
 		</div><!-- end #route-select-container -->
 </div><!-- class="row" -->
