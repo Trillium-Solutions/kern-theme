@@ -525,15 +525,15 @@ function darSelect() {
 
 		if ( $query->have_posts() ) {
 			?>
-			<label class="sr-only" for="routes-dropdown">View a different route</label>
+			<label class="sr-only" for="routes-dropdown">View a different service</label>
 			<select id="routes-dropdown" onchange="location = this.options[this.selectedIndex].value;">
-			<option value="#">View a different route</option>
+			<option value="#">View a different service</option>
 			<?php
 				while ( $query->have_posts() ) {
 					$query->the_post();
 
 					?>
-						<option value="<?php echo esc_url( get_permalink($post->ID)) ?>"><?php the_field('custom_id'); echo " - "; the_title(); ?></option>
+						<option value="<?php echo esc_url( get_permalink($post->ID)) ?>"><?php the_title(); ?></option>
 
 
 				<?php

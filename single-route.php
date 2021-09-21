@@ -13,10 +13,10 @@ Template Name: route_individual_page
 
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                    <div class="row">
-                        <?php the_route_title('class="col-sm-9"'); ?>
-                        <!--<h1 id="route-page-title" class="over-blue col-sm-9"><?php //get_route_circle(get_field('route_number'),70,3); ?> <?php //the_title() ?></h1>-->
-                            <div id="route-select-container" class="col-sm-3">
+                        <div class="header-container">
+                            <?php the_route_title('class="col-sm-9"'); ?>
+                       
+                            <div id="route-select-container">
                             
 								<?php routeSelect(); ?>
 
@@ -244,7 +244,7 @@ Template Name: route_individual_page
 
 
 
-<br style="clear: both;">
+
 
 <?php endwhile; ?>
 

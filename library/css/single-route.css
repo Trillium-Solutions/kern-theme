@@ -208,10 +208,10 @@ li.minimized i.open-close-icon {
   background-position: -241px -10px; }
 
 #route-page-title,.route-title  {
-  top: 10px;
+  /*top: 10px;*/
   position: relative; 
-  margin-top: 20px;
-  margin-bottom: 10px;
+  /*margin-top: 20px;*/
+  /*margin-bottom: 10px;*/
 }
 
 .route-circle {
@@ -236,6 +236,9 @@ li.minimized i.open-close-icon {
     } 
   }
 
+  .single-route #route-select-container{
+    margin-top: 10px;
+  }
 #route-select-container {
   padding-right: 30px;
   margin-top: 20px; 
@@ -243,7 +246,7 @@ li.minimized i.open-close-icon {
 
   #route-select-container select {
     display: inline-block;
-    margin: 10px; 
+    /*margin: 10px; */
   }
 
 .table-responsive .table, .table-responsive tbody, .table-responsive caption {
@@ -265,8 +268,11 @@ li.minimized i.open-close-icon {
 
   @media (min-width: 768px) {
     #route-page-title,.route-title{
-        float: left; 
+        /*float: left; */
         width: 75%;
+    }
+    #route-select-container {
+      float: none !important;
     }
   }
 
