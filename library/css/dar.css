@@ -16,3 +16,29 @@
 
 #route-page-connections h2 {
   margin-top: .375em; }
+
+/*Dial - A - Ride */
+
+#dar-info .fare-header a {
+  color: #337ab7;
+  font-size: 16px; 
+  text-decoration: underline;
+}
+
+
+.page-template-page-dar #route-map {
+  margin-bottom: 0;
+}
+#dar-info-container {
+  padding: 0;
+}
+#dar-map {
+  height: 450px;
+  width: 100%;
+
+}
+
+
+  .single-dial-a-ride #single-route-fares th {
+  padding-left: 25px;
+}

@@ -7,12 +7,14 @@ Template Name: Routes and Schedules
 
     <?php get_template_part( 'generic-page-top'); ?>
 
-
-        <div id="route-select-container" class="col-sm-3">
+        <div class="header-container">
+            <div id="route-select-container">
                             
-            <?php routeSelect(); ?>
-
-        </div><!-- end #route-select-container -->
+                <?php routeSelect(); ?>
+                
+            </div><!-- end #route-select-container -->
+        </div>
+        
         <div id="generic-wide-container">
             <div id="route-map">
                 <iframe src="https://new-maps.trilliumtransit.com/map/feed/demo-map/"></iframe>

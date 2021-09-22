@@ -2,25 +2,23 @@
 /*
 Template Name: route_individual_page
 */
- 			get_header(); ?>
+	get_header(); ?>
 
-			
-					<?php get_template_part( 'route-header'); ?> 
-			
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					 
+	
+			<?php get_template_part( 'route-header'); ?> 
+	
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				
 				<div class="header-container">	
 					<h1 id="route-page-title" class="over-blue col-sm-9" >
 						<?php the_title() ?>
 					</h1>
-					
-					
-						<div id="route-select-container" class="col-sm-3">
-					
-							<?php darSelect(); ?>
-						
-					
-						</div><!-- end #route-select-container -->
+			
+					<div id="route-select-container" class="col-sm-3">
+				
+						<?php darSelect(); ?>
+				
+					</div><!-- end #route-select-container -->
 				</div><!-- class="header-container" -->
 				<div id="generic-wide-container" class="row-fluid">
 					<div id="dar-info-container" class="col-sm-4" >
@@ -35,22 +33,7 @@ Template Name: route_individual_page
 							</div><!-- end #dar-times-of-day -->
 							<div id="dar-info">
 								<div class="fare-header"><a href="<?php echo get_site_url(); ?>/fares">Fares</a></div>
-								<?php if (have_rows('fares')): ?>
-									<table id="single-route-fares">
-										<tbody>
-										<?php
-											while (have_rows('fares')): the_row(); ?>
-											<tr>
-												<th><?php the_sub_field('fare_type')?></th>
-												<td><?php the_sub_field('fare_price'); ?></td>
-												
-											</tr>
-										</tbody>
-										<?php endwhile; ?>
-									</table>
-									<?php else :
-										printf('No Fares');
-									endif; ?>
+									<?php fare_table(); ?>
 							</div><!-- end #dar-info -->
 					</div><!-- end #dar-info-container -->
 

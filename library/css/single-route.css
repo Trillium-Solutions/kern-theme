@@ -1,4 +1,11 @@
 @charset "UTF-8";
+
+
+#single-route-fares th {
+  padding-left: 26px !important;
+  padding-top: 10px;
+}
+
 #route-side-col {
   background-color: #0072bc;
   min-height: 400px;
@@ -236,7 +243,7 @@ li.minimized i.open-close-icon {
     } 
   }
 
-  .single-route #route-select-container{
+  .single-route #route-select-container, .page-template-template-routes-and-schedules #route-select-container {
     margin-top: 10px;
   }
 #route-select-container {

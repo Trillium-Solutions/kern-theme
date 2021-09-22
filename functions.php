@@ -344,7 +344,59 @@ function the_breadcrumb() {
 
 }
 
+function fare_table() {
+	$table = get_field( 'fares' );
 
+		if ( ! empty ( $table ) ) {
+
+		echo '<table id="single-route-fares">';
+
+			if ( ! empty( $table['caption'] ) ) {
+
+				echo '<caption>' . $table['caption'] . '</caption>';
+			}
+
+			if ( ! empty( $table['header'] ) ) {
+
+				echo '<thead>';
+
+					echo '<tr>';
+
+						foreach ( $table['header'] as $th ) {
+
+							echo '<th>';
+								echo $th['c'];
+							echo '</th>';
+						}
+
+					echo '</tr>';
+
+				echo '</thead>';
+			}
+
+			echo '<tbody>';
+
+				foreach ( $table['body'] as $tr ) {
+
+					echo '<tr>';
+
+						foreach ( $tr as $td ) {
+
+							echo '<td>';
+								echo $td['c'];
+							echo '</td>';
+						}
+
+					echo '</tr>';
+				}
+
+			echo '</tbody>';
+
+		echo '</table>';
+	}
+}
+	
+	
 /*function route_inclusive_wp_title	($title) {
 
 

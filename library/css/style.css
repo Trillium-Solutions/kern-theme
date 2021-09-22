@@ -1869,26 +1869,6 @@ body {
   width: 1151px; }
 
 
-/*Dial - A - Ride */
-
-#dar-info .fare-header a {
-  color: #337ab7;
-  font-size: 16px; 
-  text-decoration: underline;
-}
-
-
-.page-template-page-dar #route-map {
-  margin-bottom: 0;
-}
-#dar-info-container {
-  padding: 0;
-}
-#dar-map {
-  height: 450px;
-  width: 100%;
-
-}
 
 
 #planner-wrap {
