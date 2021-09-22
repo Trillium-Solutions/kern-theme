@@ -6,6 +6,13 @@
   padding-top: 10px;
 }
 
+.single-route .route-map {
+  height: 70vh;
+  min-height: 500px;
+  max-height: 100%;
+  margin-bottom: 0;
+}
+
 #route-side-col {
   background-color: #0072bc;
   min-height: 400px;
@@ -44,7 +51,8 @@
       border-bottom: 1px solid #c8b29a;
       float: left;
       padding: 25px;
-      text-align: center; }
+      text-align: center; 
+    }
       .route-info-box ul li i {
         background-image: url(../images/kern-sprites.png);
         width: 23px;
@@ -68,12 +76,11 @@
 
     /*Timetables*/
 
-
-  
     #timetable-nav {
         overflow: hidden; 
         display: flex; 
         justify-content: center; 
+        margin-top: 20px;
     }
 
     #timetable-nav input[aria-selected="true"] + label, #timetable-nav input:checked + label {
@@ -109,7 +116,9 @@
   margin-bottom: 0px;
   background: #e6ddce;
   padding: 5px 0 0 0;
-  padding-left: 19px; }
+  padding-left: 19px; 
+  padding-bottom: 5px;
+}
   #timetable-detail-maps h2 span {
     float: left; }
   #timetable-detail-maps h2 span.span-small-title {
@@ -349,12 +358,33 @@ li.minimized i.open-close-icon {
 .route-info-box.timetables {
   text-align: center; }
 
+  .route-info-box {
+    font-size: 15px;
+  }
+
 .route-info-box ul#internal-connections li {
   float: none;
   width: 100%;
-  text-align: left; }
+  text-align: left; 
+ 
+}
   .route-info-box ul#internal-connections li i {
     top: -7px; }
+    
+    .route-info-box ul#external-connections li {
+      float: none;
+      width: 100%;
+      text-align: left; 
+     
+    }
+    .route-info-box ul#external-connections li i {
+        top: -7px; 
+      }
+
+    #external-connections a {
+      font-weight: bold;
+    }
+        
 
 ul#route-anchors {
   margin: 10px 0px 10px 10px;

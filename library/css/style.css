@@ -2381,11 +2381,7 @@ h1#route-page-title i {
     margin: 0 auto; }
 
 
-.route-map iframe{
-  height: 90vh;
-  min-height: 450px;
-  /*margin-bottom: 20px;*/
- }
+
 
  #route-map  { 
   height: 90vh;
