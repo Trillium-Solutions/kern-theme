@@ -1,7 +1,7 @@
 <?php 
 
 /*
-Template Name: Reports
+Template Name: RFPS
 */
 
 
@@ -35,14 +35,14 @@ Template Name: Reports
                                     }
                                     ?>
                                 </select>
-                            <input type="submit" value="Get Reports">
+                            <input type="submit" value="Get Bids and Proposals">
                             </form>
 
                             <?php
                             $start = $archive_year . '0101';
                             $end = $archive_year . '1231';
                             $args = array(
-                                'post_type' => 'reports',
+                                'post_type' => 'rfp',
                                 'meta_key' => 'posted_on',
                                 'order' => 'DESC',
                                 'orderby' => 'meta_value_num',
@@ -66,7 +66,7 @@ Template Name: Reports
                             $q = new WP_Query($args);
                             if ( $q->have_posts() ) : ?>
 
-                                <h2><?php echo $archive_year; ?> Reports</h2>
+                                <h2><?php echo $archive_year; ?> Bids and Proposals</h2>
 
                                 <?php while ($q->have_posts() ) : $q->the_post(); ?>
 
@@ -74,9 +74,11 @@ Template Name: Reports
                                 <table class="table">
                                     <thead>
                                     <tr>
-                                        <th>Date</th>
+                                        <th>Posted</th>
                                         <th>Title</th>
-                                        <th>PDF</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>Documents</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -84,14 +86,22 @@ Template Name: Reports
                                             <td>
                                                 <?php the_field('posted_on'); ?>
                                             </td>
-                                            <?php if (have_rows('report_items')) : while (have_rows('report_items')) : the_row(); ?>
-                                        
                                             <td>
-                                                <?php the_sub_field('title'); ?>
+                                                <?php the_title(); ?>
                                             </td>
                                             <td>
+                                                <?php the_field('type'); ?>    
+                                            </td>
+                                            <td>
+                                                <?php the_field('status'); ?>    
+                                            </td>
+                                            <?php if (have_rows('documents')) : while (have_rows('documents')) : the_row(); ?>
+                                        
+                                           
+                                            <td>
                                                 <a href="<?php the_sub_field('file'); ?>" target="_blank">
-                                                View Report
+                                                    <?php the_sub_field('title'); ?>
+                                                </a>
                                             </td>
                                         </tr>
                                         <?php endwhile; endif; ?>
@@ -102,7 +112,7 @@ Template Name: Reports
 
                             <?php else: ?>
 
-                                <p>No reports are available from <?php echo $archive_year; ?></p>
+                                <p>No bids or proposals available from <?php echo $archive_year; ?></p>
 
                             <?php endif; ?>
 
@@ -118,8 +128,8 @@ Template Name: Reports
 
 						<div id="sidebar1" class="sidebar col-sm-3" role="complementary">
 
-						<?php get_template_part( 'generic-sidebar'); ?> 
-				</div>
+						    <?php get_template_part( 'generic-sidebar'); ?> 
+				        </div>
 			</div> <!-- end row -->
 
 		<?php get_template_part( 'generic-page-bottom'); ?> 

@@ -12,17 +12,14 @@
 									
 								<hr />
 								<div class="secondary">
-								<ul>
-									<li><a href="<?php echo get_site_url(); ?>/news">News</a></li>
-									<?php  //$count_posts = //get_alertCount(); 
-									 //if($count_posts > 0) { ?>
-										<li> <a href="<?php //echo get_site_url(); ?>/alerts">Alerts<? //echo '('.$count_posts.')';  ?></a> </li>
-									<?php //} ?>
-								</ul>
+									<ul>
+										<li><a href="<?php echo get_site_url(); ?>/news">News</a></li>
+										<li> <a href="<?php echo get_site_url(); ?>/alerts">Alerts</a> </li>
+									</ul>
 								
 								<hr />
 								
-								<a class="twitter-timeline" data-width="340" data-height="450" data-theme="dark" data-link-color="#e68c2b" href="https://twitter.com/KernTransit">Tweets by KernTransit</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+								<a class="twitter-timeline" data-width="340" data-height="auto" data-theme="dark" data-link-color="#e68c2b" href="https://twitter.com/KernTransit">Tweets by KernTransit</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 								</div><!-- end .secondary -->
 								
-								</div><!-- end #how-to-ride-links -->
+							</div><!-- end #how-to-ride-links -->

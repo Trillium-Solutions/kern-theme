@@ -2742,19 +2742,29 @@ be set to display none.
 
 /* Reports */
 
-.page-template-page-report form {
+.page-template-page-report form, .page-template-page-rfps form {
   display: flex;
   align-items: center;
 }
-.page-template-page-report label[for=archiveyear] {
+.page-template-page-report label[for=archiveyear], .page-template-page-rfps label[for=archiveyear] {
   margin-bottom: 0px;
   padding-right: 8px;
 }
-.page-template-page-report select[name=archiveyear] {
+.page-template-page-report select[name=archiveyear], .page-template-page-rfps select[name=archiveyear]  {
   height: 35px;
   max-width: 150px;
   margin-right: 8px;
 }
-.page-template-page-report p {
+.page-template-page-report p, .page-template-page-rfps p {
   margin-top: 20px;
 }
+
+/*sidebar */
+
+#sidebar1 {
+  height: auto !important;
+}
+#twitter-widget-0 {
+  height: 400px !important;
+}
+
