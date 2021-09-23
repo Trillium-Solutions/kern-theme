@@ -3,11 +3,7 @@
 Template Name: Dial-A-Ride
 */
  get_header(); ?>
-
-			
-
-
-			
+		
 	<?php get_template_part( 'route-header'); ?> 
 			<div class="header-container">
 				<h1 id="route-page-title" class="over-blue">Dial-A-Ride Services</h1>

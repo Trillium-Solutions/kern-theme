@@ -2738,3 +2738,23 @@ be set to display none.
 *********************/
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* Reports */
+
+.page-template-page-report form {
+  display: flex;
+  align-items: center;
+}
+.page-template-page-report label[for=archiveyear] {
+  margin-bottom: 0px;
+  padding-right: 8px;
+}
+.page-template-page-report select[name=archiveyear] {
+  height: 35px;
+  max-width: 150px;
+  margin-right: 8px;
+}
+.page-template-page-report p {
+  margin-top: 20px;
+}

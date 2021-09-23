@@ -397,27 +397,6 @@ function fare_table() {
 }
 	
 	
-/*function route_inclusive_wp_title	($title) {
-
-
-	//echo $title;
-
-	if( is_single() && get_post_type_object(get_query_var( 'post_type' ))->rewrite['slug'] == 'routes-and-schedules') {
-
-		$titlePieces = explode('|', $title);
-		return $titlePieces[0].' | Route '.get_field('route_number').' :'.$titlePieces[1] ;
-
-	} else {
-
-	return $title;
-
-	}
-
-}
-
-add_filter( 'wp_title', 'route_inclusive_wp_title' );
-*/
-
 //Remove the comments column from Posts
 add_action( 'admin_init', 'fb_deactivate_support' );
 function fb_deactivate_support() {
@@ -486,6 +465,8 @@ folder to use with the following custom post types.
 require get_template_directory() . '/inc/dar.php';
 //require get_template_directory() . '/inc/staff-contacts.php';
 require get_template_directory() . '/inc/news.php';
+require get_template_directory() . '/inc/reports.php';
+
 
 
 
@@ -546,7 +527,7 @@ function routeSelect() {
 			?>
 			<label class="sr-only" for="routes-dropdown">View a different route</label>
 			<select id="routes-dropdown" onchange="location = this.options[this.selectedIndex].value;">
-			<option value="#">View a different route</option>
+			<option value="#">Select a Route</option>
 			<?php
 				while ( $query->have_posts() ) {
 					$query->the_post();

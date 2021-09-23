@@ -1,7 +1,0 @@
-{
-"type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "Name": "Lamont Dial-A-Ride", "Description": "" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -118.860247135162396, 35.223447984586898, 0.0 ], [ -118.860719203949003, 35.28178092005232, 0.0 ], [ -118.932130336761503, 35.281500657891208, 0.0 ], [ -118.932151794433594, 35.223255165754551, 0.0 ], [ -118.860247135162396, 35.223447984586898, 0.0 ] ] ] } }
-]
-}

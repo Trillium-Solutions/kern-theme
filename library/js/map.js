@@ -1,8 +1,11 @@
 
 (function($) {
 
+   
+	
+							 				
         var $highlights = $('#highlights');
-        console.log($highlights);
+    
         $('#hovers > *').on('mouseenter', function() {
             var target = this.dataset.name;
             $highlights.find('[data-name="' + target + '"] > *').css('opacity', '1.0');
