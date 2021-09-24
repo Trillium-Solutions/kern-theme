@@ -124,10 +124,7 @@
 								</form>
 							</div>
 							<div id="google_translate_element" class="col-sm-4 col-xs-6"></div>
-
-
-
-						</div><!-- class="row" -->
+					</div><!-- class="row" -->
 					</div> <!-- end #number-and-search-wrap -->
 					</div> <!-- end row -->
 					<div class="row">
@@ -138,31 +135,36 @@
 						</div><!-- end logo-holder -->
 						<nav id="main-nav" class="col-md-7 col-sm-10" style="padding-top: 30px;">
 							<ul>
-								<li id="routes_and_schedules_link" class="<?php if( is_post_type_archive('route')){echo 'current';}else if ( 'route' == get_post_type() ||  'timetable' == get_post_type()) {echo "parent-active"; }?>"><a href="<?php echo get_permalink(17) ?>"><i id="routes-and-schedules-icon" class="main-nav-icon"></i><span>Routes &amp; <br />Schedules</span></a></li>
-								<li id="dial-a-ride-link" class="<?php if( is_post_type_archive('dar')){echo 'current';}else if ( 'dar' == get_post_type()) {echo "parent-active"; }?>"><a href="<?php echo get_site_url(); ?>/dial-a-ride"><i id="dial-a-ride-icon" class="main-nav-icon"></i><span>Dial-A-Ride</span></a></li>
-								<li id="fares-link"><a href="<?php echo get_permalink(23) ?>"><i id="fares-icon" class="main-nav-icon"></i><span>Fares</span></a></li>
-								<li id="how-to-ride-link"><a href="<?php echo get_permalink(19) ?>" ><i id="how-to-ride-icon" class="main-nav-icon"></i><span>How &nbsp; to &nbsp; Ride</span></a></li>
+								<li id="routes_and_schedules_link">
+									<a href="/routes-and-schedules">
+										<i id="routes-and-schedules-icon" class="main-nav-icon"></i>
+										<span>Routes &amp; <br />Schedules</span>
+									</a>
+								</li>
+								<li id="dial-a-ride-link">
+									<a href="/dial-a-ride">
+										<i id="dial-a-ride-icon" class="main-nav-icon"></i>
+										<span>Dial-A-Ride</span>
+									</a>
+								</li>
+								<li id="fares-link">
+									<a href="/fares">
+										<i id="fares-icon" class="main-nav-icon"></i>
+										<span>Fares</span>
+									</a>
+								</li>
+								<li id="how-to-ride-link">
+									<a href="/how-to-ride">
+										<i id="how-to-ride-icon" class="main-nav-icon"></i>
+										<span>How &nbsp; to &nbsp; Ride</span>
+									</a>
+								</li>
 							</ul>
 						</nav>
 						<?php // if you'd like to use the site description you can un-comment it below ?>
 						<?php // bloginfo('description'); ?>
 
 
-						<nav role="navigation">
-							<?php wp_nav_menu(array(
-							'container' => false,                           // remove nav container
-							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-							'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-							'menu_class' => 'nav top-nav cf',               // adding custom nav class
-							'theme_location' => 'main-nav',                 // where it's located in the theme
-							'before' => '',                                 // before the menu
-						'after' => '',                                  // after the menu
-						'link_before' => '',                            // before each link
-						'link_after' => '',                             // after each link
-						'depth' => 1,                                   // limit the depth of the nav
-							'fallback_cb' => ''                             // fallback function (if there is one)
-							)); ?>
-
-						</nav>
+						
 
 				</div><!-- end class row -->
