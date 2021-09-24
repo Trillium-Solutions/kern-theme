@@ -149,6 +149,8 @@ function kern_scripts() {
 	wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=AIzaSyCgfsid1_jCd-BSTDqugAFgqDnJHywObXA&libraries=places", array(), false, true );
 
 	wp_enqueue_script( 'map', get_template_directory_uri() . '/library/js/map.js', array('jquery'), '20210915', true );
+
+	wp_enqueue_script( 'kern-planner', get_template_directory_uri() . '/library/js/planner.js', array('jquery'), '20210915', true );
 	
 
 
