@@ -5,8 +5,9 @@ Template Name:
 	get_header(); ?>
 
 	
-			<?php get_template_part( 'route-header'); ?> 
-	
+		<?php the_breadcrumb() ?> 
+			<div id="blue-top-divider"></div>
+				
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				
 				<div class="header-container">	
@@ -14,11 +15,11 @@ Template Name:
 						<?php the_title() ?>
 					</h1>
 			
-					<div id="route-select-container" class="col-sm-3">
+					<div class="route-select-container" class="col-sm-3">
 				
 						<?php darSelect(); ?>
 				
-					</div><!-- end #route-select-container -->
+					</div><!-- end .route-select-container -->
 				</div><!-- class="header-container" -->
 				<div id="generic-wide-container" class="row-fluid">
 					<div id="dar-info-container" class="col-sm-4" >
@@ -38,7 +39,6 @@ Template Name:
 					</div><!-- end #dar-info-container -->
 
 		 
-
 					<div id="dar-map-container" class="col-sm-8" style="padding: 0;" >
 						<div id='dar-map'>
 							<?php if (get_field('custom_imap_url')) : ?>
@@ -66,14 +66,6 @@ Template Name:
 						<?php endif; ?>
 				</div><!-- end #generic-wide-container -->
 					
-	
-			
-	<?php get_template_part( 'generic-page-bottom'); ?> 
-			
-
 	<?php get_footer(); 
-
-
-
 
 	?>

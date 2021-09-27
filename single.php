@@ -4,7 +4,6 @@
 The template for displaying all single posts
 */
 
-
 get_header(); ?>
 
 			<?php get_template_part( 'generic-page-top'); ?> 
@@ -32,8 +31,5 @@ get_header(); ?>
 						<?php get_template_part( 'generic-sidebar'); ?> 
 				</div>
 			</div> <!-- end row -->
-
-		<?php get_template_part( 'generic-page-bottom'); ?> 
-			
 
 <?php get_footer(); ?>

@@ -122,7 +122,4 @@ Template Name: Reports
 				</div>
 			</div> <!-- end row -->
 
-		<?php get_template_part( 'generic-page-bottom'); ?> 
-			
-
 <?php get_footer(); ?>

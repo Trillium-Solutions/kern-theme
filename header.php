@@ -47,34 +47,6 @@
 		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
 		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
 
-	
-		
-
-		<script>
-
-		function initialize() {
-
-		var defaultBounds = new google.maps.LatLngBounds(
-		 new google.maps.LatLng(35.372915,-119.018819));
-
-		var origin_input = document.getElementById('saddr');
-		var destination_input = document.getElementById('daddr');
-
-
-		var options = {
-		 bounds: defaultBounds,
-		 componentRestrictions: {country: 'us'}
-		};
-
-
-		var autocomplete_origin = new google.maps.places.Autocomplete(origin_input, options);
-		var autocomplete_destination = new google.maps.places.Autocomplete(destination_input, options);
-		}
-
-		google.maps.event.addDomListener(window, 'load', initialize);
-
-
-		</script>
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -108,27 +80,28 @@
 		</div>
 	<?php endwhile; wp_reset_postdata(); endif; ?>
 
-
+	
 		<div class="container-fluid" style="max-width: 1151px;">
-				<div  class="row">
+			<header>
+				<div class="row">
 					<div id="number-and-search-wrap" class="col-md-6 col-md-push-6 col-xs-10 col-xs-push-1">
 						<div class="row" style="margin-top: 10px">
-						<div id="kern-phone" class="col-sm-4">
+							<div id="kern-phone" class="col-sm-4">
 								<a href="tel:8003232396">800-323-2396</a>
 							</div><!-- end #kern-phone -->
 							<div id="search-wrap" class="form-inline col-sm-4 col-xs-6" >
 								<form action="/" method="get">
-  										<label class="sr-only" for="search">Search</label>
-										<input type="text" name="s" id="search" placeholder="Search" value="<?php the_search_query(); ?>" />
-										<input type="image" alt="Search" src="<?php echo get_template_directory_uri(); ?>/library/images/clear.png" id="header-search-icon-submit" />
+									<label class="sr-only" for="search">Search</label>
+									<input type="text" name="s" id="search" placeholder="Search" value="<?php the_search_query(); ?>" />
+									<input type="image" alt="Search" src="<?php echo get_template_directory_uri(); ?>/library/images/clear.png" id="header-search-icon-submit" />
 								</form>
 							</div>
 							<div id="google_translate_element" class="col-sm-4 col-xs-6"></div>
-					</div><!-- class="row" -->
+						</div><!-- class="row" -->
 					</div> <!-- end #number-and-search-wrap -->
-					</div> <!-- end row -->
-					<div class="row">
-						<div class="col-sm-1 visible-sm visible-xs"></div>
+				</div> <!-- end row -->
+				<div class="row">
+					<div class="col-sm-1 visible-sm visible-xs"></div>
 						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
 						<div id="logo-holder" class="col-md-5 col-sm-10" >
 							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" style="max-width: 400px" /></a>
@@ -164,7 +137,8 @@
 						<?php // if you'd like to use the site description you can un-comment it below ?>
 						<?php // bloginfo('description'); ?>
 
-
-						
-
 				</div><!-- end class row -->
+			</header>
+				
+	
+	

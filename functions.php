@@ -117,21 +117,16 @@ new image size.
 function kern_scripts() {
 	
 	//CSS
-
 	
 	wp_enqueue_style( 'kern-style', get_stylesheet_uri(), array() );
 	wp_enqueue_style( 'main-style', get_theme_file_uri('/library/css/style.css'), array( ), );
-	//wp_enqueue_style('main-style', get_theme_file_uri() . '/library/css/style.css', array(), filemtime(get_template_directory() . '/library/css/style.css'), false);
 	wp_enqueue_style('interactive-map', get_theme_file_uri('/library/css/interactive-map.css?v=2'), true);
-	wp_enqueue_style('route-icons', get_theme_file_uri('/library/css/route-icons.css?v=2'), true);
 	wp_enqueue_style('bootstrap-css', get_theme_file_uri('/library/bootstrap/css/bootstrap.min.css?v=3'), true);
 	wp_enqueue_style('single-route', get_theme_file_uri('/library/css/single-route.css?v=3'), true);
-	//wp_enqueue_style('kern-style', get_theme_file_uri('/library/css/kern-transit.css?v=2.1'), true);
 	wp_enqueue_style('dar-style', get_theme_file_uri('/library/css/dar.css?v=2'), true);
 	wp_enqueue_style('apple-touch-icon', get_theme_file_uri('/library/images/apple-icon-touch.png'), true);
 	wp_enqueue_style('icon', get_theme_file_uri('/favicon.png?v2'), true);
 	wp_enqueue_style('icon', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', true);
-
 
 	//JS
 
@@ -158,8 +153,6 @@ function kern_scripts() {
 
 		wp_enqueue_script( 'kern-planner', get_template_directory_uri() . '/library/js/planner.js', array('jquery', 'flatpickr'), '20210920', true );
 	
-		//wp_enqueue_style('jquery-ui-css', "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css");
-
 	}	
 
 	if (is_page_template('page-dar.php')) {
@@ -201,9 +194,6 @@ function bones_register_sidebars() {
 	));
 	
 } // don't remove this bracket!
-
-
-
 
 
 /*
@@ -577,9 +567,5 @@ function the_interactive_map($feedname, $route_ids = array() ) {
 			$feedname, implode(',', $route_ids));
 	}
 }
-
-
-
-
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

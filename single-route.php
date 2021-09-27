@@ -4,23 +4,20 @@ Template Name: route_individual_page
 */
  get_header();
 
- //Used to determine correct fare structure
- $locals = array("140", "142", "145", "210", "220", "223", "225");
  ?>
-
-
-                <?php get_template_part( 'route-header'); ?>
-
+            <?php the_breadcrumb() ?> 
+				<div id="blue-top-divider"></div>
+				
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                         <div class="header-container">
                             <?php the_route_title('class="col-sm-9"'); ?>
                        
-                            <div id="route-select-container">
+                            <div class="route-select-container">
                             
 								<?php routeSelect(); ?>
 
-                            </div><!-- end #route-select-container -->
+                            </div><!-- end .route-select-container -->
                         </div><!-- class="row" -->
 
                         <div id="generic-wide-container" style="margin-top: 20px">

@@ -1,31 +1,24 @@
 
-
-
 <?php
-
-
-
-
-		 	 wp_reset_query(); 
+	wp_reset_query(); 
 							 	
-					$service_areas = get_terms("service_area");
+		$service_areas = get_terms("service_area");
 
-					//You can use print_r to see the values in the array
-					
+		//You can use print_r to see the values in the array
+		
 
-					//Loop through each service_area
-					$count = 0;
-					foreach($service_areas as $service_area){
+		//Loop through each service_area
+		$count = 0;
+		foreach($service_areas as $service_area){
 
-							//Search posts with the service_area name
-							?> 
-							<div class="area-box minimized" id="">
+				//Search posts with the service_area name
+	?> 
+	<div class="area-box minimized" id="">
 
+		<h2><?php echo $service_area->name; ?></h2>
+			<ul>
 
-<h2><?php echo $service_area->name; ?></h2>
-<ul >
-
-<?php
+				<?php
 						$query = new WP_Query(array(
 
 							"post_type"=>"dar", 
@@ -41,9 +34,7 @@
 									
 
 							));
-
-						
-						
+	
 						if ( $query->have_posts() ) {
 								echo '<ul>';
 								
@@ -64,7 +55,7 @@
 							}
 							
 							?>
-							</ul>
+				</ul>
 </div><!-- end #id -->
 <?php
 

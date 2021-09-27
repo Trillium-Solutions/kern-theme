@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 #single-route-fares th {
   padding-left: 26px !important;
   padding-top: 10px;
@@ -251,16 +250,22 @@ li.minimized i.open-close-icon {
     font-size: 1.5em; 
     } 
   }
-
-  .single-route #route-select-container, .page-template-template-routes-and-schedules #route-select-container {
-    margin-top: 10px;
+  
+  .page-template-template-routes-and-schedules .route-select-container {
+    width: 100%;
   }
-#route-select-container {
-  padding-right: 30px;
+
+  .single-route .route-select-container, .page-template-template-routes-and-schedules .route-select-container {
+    margin-top: 10px;
+   
+  }
+.route-select-container {
+  /*padding-right: 30px;*/
+  width: auto;
   margin-top: 20px; 
 }
 
-  #route-select-container select {
+  .route-select-container select {
     display: inline-block;
     /*margin: 10px; */
   }
@@ -285,9 +290,9 @@ li.minimized i.open-close-icon {
   @media (min-width: 768px) {
     #route-page-title,.route-title{
         /*float: left; */
-        width: 75%;
+        width: 85%;
     }
-    #route-select-container {
+    .route-select-container {
       float: none !important;
     }
   }

@@ -47,7 +47,7 @@ if (strpos(get_the_title(),'_') !== false) {
 }
 ?>
 </h1>
-<div id="route-select-container">
+<div class="route-select-container">
 		<?php
 							wp_reset_query(); 
 								
@@ -84,7 +84,7 @@ if (strpos(get_the_title(),'_') !== false) {
 							wp_reset_postdata();
 							?>
 							
-											</div><!-- end #route-select-container -->
+											</div><!-- end .route-select-container -->
 <br />
 <div id="timetable-return-link"><a href="<?php echo get_the_permalink($parent_id) ?>"><< Back to <?php echo get_the_title($parent_id); ?> Route Page</a></div>
 <div id="generic-wide-container">
@@ -214,7 +214,7 @@ $the_query = new WP_Query( $args );
 </div><!- end #timetable-detail-maps -->
 							
  </div><!-- end #generic-wide-container -->
- <?php get_template_part( 'generic-page-bottom'); ?> 
+ 
 			
 
 

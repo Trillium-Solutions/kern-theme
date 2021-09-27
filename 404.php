@@ -1,10 +1,19 @@
-<?php get_header(); ?>
+<?php 
+/** 
+ * The template for displaying 404 pages (not found)
+ *
+ * 
+ *
+ */
+
+
+get_header(); ?>
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
 
-					<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
 						<article id="post-not-found" class="hentry cf">
 
@@ -26,15 +35,9 @@
 
 							</section>
 
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
 						</article>
 
-					</div>
+					</main>
 
 				</div>
 
