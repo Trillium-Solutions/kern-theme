@@ -156,7 +156,7 @@ function kern_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'kern_scripts' );
 
-//SVG Icons Styling
+//SVG Icon Styling
 function get_svg_icon($icon, $class="standard") {
 	$icon_file = $icon . '.svg';
 	printf('<span class="icon icon-%s icon-%s">', $icon, $class);
@@ -339,7 +339,6 @@ function fare_table() {
 	}
 }
 	
-	
 //Remove the comments column from Posts
 add_action( 'admin_init', 'fb_deactivate_support' );
 function fb_deactivate_support() {
@@ -364,45 +363,14 @@ function remove_menus(){
   }
   add_action( 'admin_menu', 'remove_menus' );
   
-//Remove editor from DAR post type 
+/*Remove editor from DAR post type 
 add_action('init', 'init_remove_support',100);
 function init_remove_support(){
     $post_type = 'dial-a-ride';
     remove_post_type_support( $post_type, 'editor');
 }
-
-/**
-* Change the name of 'Posts' to 'News'
-
-function trillium_change_post_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'News';
-    $submenu['edit.php'][5][0] = 'News';
-    $submenu['edit.php'][10][0] = 'Add News';
-    $submenu['edit.php'][16][0] = 'News Tags';
-}
-function trillium_change_post_object() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'News';
-    $labels->singular_name = 'News';
-    $labels->add_new = 'Add News';
-    $labels->add_new_item = 'Add News';
-    $labels->edit_item = 'Edit News';
-    $labels->new_item = 'News';
-    $labels->view_item = 'View News';
-    $labels->search_items = 'Search News';
-    $labels->not_found = 'No News found';
-    $labels->not_found_in_trash = 'No News found in Trash';
-    $labels->all_items = 'All News';
-    $labels->menu_name = 'News';
-    $labels->name_admin_bar = 'News';
-}
-
-add_action( 'admin_menu', 'trillium_change_post_label' );
-add_action( 'init', 'trillium_change_post_object' );
 */
+
 
 /*
 Activate Custom Post Types:
@@ -418,28 +386,6 @@ require get_template_directory() . '/inc/news.php';
 require get_template_directory() . '/inc/reports.php';
 //require get_template_directory() . '/inc/staff-contacts.php';
 
-function add_menu_icons_styles(){
-?>
-
-<style>
-
-
-#adminmenu .menu-icon-news div.wp-menu-image:before {
-content: "\26A0";
-}
-
-</style>
-
-<?php
-}
-add_action( 'admin_head', 'add_menu_icons_styles' );
-
-
-function my_admin_enqueue_css() {
-	echo '<link rel="stylesheet" id="route_icons-css"  href="https://kerntransit.org/wp-content/themes/kern/library/css/route-icons.css" type="text/css" media="all" />';
-}
-
-add_action( 'admin_enqueue_scripts', 'my_admin_enqueue_css' );
 
 /*Route Select */
 add_action('route_select', 'routeSelect');

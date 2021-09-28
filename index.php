@@ -29,10 +29,9 @@
 									</p>
 
 
-                 	<?php printf( '<p class="footer-category">' . __('filed under', 'kerntheme' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
+									<?php printf( '<p class="footer-category">' . __('filed under', 'kerntheme' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
 
-                  <?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'kerntheme' ) . '</span> ', ', ', '</p>' ); ?>
-
+									<?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'kerntheme' ) . '</span> ', ', ', '</p>' ); ?>
 
 								</footer>
 
@@ -44,26 +43,13 @@
 
 							<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'kerntheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'kerntheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the index.php template.', 'kerntheme' ); ?></p>
-										</footer>
-									</article>
+									<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 							<?php endif; ?>
-
 
 						</div>
 
 					</div>
-
-				
 
 			</div>
 		

@@ -4,19 +4,17 @@
 Template Name: Reports
 */
 
-
     get_header(); ?>
 
 			<?php get_template_part( 'generic-page-top'); ?> 
 			
 			<div class="row-fluid" id="page-holder">
-						<div id="main" class="col-sm-9" role="main">
+				<main id="main" class="col-sm-9" role="main">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); 
+					<?php if (have_posts()) : while (have_posts()) : the_post(); 
 							?>
 									
-                     
-                            <?php 
+                        <?php 
                             $archive_year = date("Y");
                             if(isset($_GET['archiveyear'])) {
                             $archive_year = sanitize_text_field($_GET['archiveyear']);
@@ -24,44 +22,44 @@ Template Name: Reports
                             ?>
 
                             <form method="get" action="">
-                            <label for="archiveyear">Show different year: </label>
-                                <select name="archiveyear" id="archiveyear">
-                                    <?php
-                                    $cur = date("Y");
-                                    $first = 2011;
-                                    $range = range($cur, $first);
-                                    foreach($range as $r) {
-                                    echo '<option value="'.$r.'">'.$r.'</option>';
-                                    }
-                                    ?>
-                                </select>
-                            <input type="submit" value="Get Reports">
+                                <label for="archiveyear">Show different year: </label>
+                                    <select name="archiveyear" id="archiveyear">
+                                        <?php
+                                        $cur = date("Y");
+                                        $first = 2011;
+                                        $range = range($cur, $first);
+                                        foreach($range as $r) {
+                                        echo '<option value="'.$r.'">'.$r.'</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                <input type="submit" value="Get Reports">
                             </form>
 
                             <?php
-                            $start = $archive_year . '0101';
-                            $end = $archive_year . '1231';
-                            $args = array(
-                                'post_type' => 'reports',
-                                'meta_key' => 'posted_on',
-                                'order' => 'DESC',
-                                'orderby' => 'meta_value_num',
-                                'posts_per_page' => -1,
-                                'meta_query'	=> array(
-                                            'relation' => 'AND',
-                                            array(
-                                                'key' => 'posted_on',
-                                                'value' => $start,
-                                                'compare' => '>=',
-                                                'type' => 'NUMERIC',
-                                            ),
-                                            array(
-                                                'key' => 'posted_on',
-                                                'value' => $end,
-                                                'compare' => '<=',
-                                                'type' => 'NUMERIC',
-                                            ),
-                                        )
+                                $start = $archive_year . '0101';
+                                $end = $archive_year . '1231';
+                                $args = array(
+                                    'post_type' => 'reports',
+                                    'meta_key' => 'posted_on',
+                                    'order' => 'DESC',
+                                    'orderby' => 'meta_value_num',
+                                    'posts_per_page' => -1,
+                                    'meta_query'	=> array(
+                                                'relation' => 'AND',
+                                                array(
+                                                    'key' => 'posted_on',
+                                                    'value' => $start,
+                                                    'compare' => '>=',
+                                                    'type' => 'NUMERIC',
+                                                ),
+                                                array(
+                                                    'key' => 'posted_on',
+                                                    'value' => $end,
+                                                    'compare' => '<=',
+                                                    'type' => 'NUMERIC',
+                                                ),
+                                            )
                             );
                             $q = new WP_Query($args);
                             if ( $q->have_posts() ) : ?>
@@ -70,7 +68,6 @@ Template Name: Reports
 
                                 <?php while ($q->have_posts() ) : $q->the_post(); ?>
 
-                          
                                 <table class="table">
                                     <thead>
                                     <tr>
@@ -98,7 +95,7 @@ Template Name: Reports
                                     </tbody>
                                 </table>
 
-                                <?php endwhile; wp_reset_postdata(); ?>
+                            <?php endwhile; wp_reset_postdata(); ?>
 
                             <?php else: ?>
 
@@ -107,19 +104,19 @@ Template Name: Reports
                             <?php endif; ?>
 
 
-							<?php endwhile; else : ?>
+                            <?php endwhile; else : ?>
 
-								<?php get_template_part( 'template-parts/content', 'none' ); ?>
+                                <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 
-							<?php endif; ?>
+                            <?php endif; ?>
 
-						</div>
+                </main>
 
-						<div id="sidebar1" class="sidebar col-sm-3" role="complementary">
+                <aside id="sidebar1" class="sidebar col-sm-3" role="complementary">
 
-						<?php get_template_part( 'generic-sidebar'); ?> 
-				</div>
+                    <?php get_template_part( 'generic-sidebar'); ?> 
+                </aside>
 			</div> <!-- end row -->
 
 <?php get_footer(); ?>

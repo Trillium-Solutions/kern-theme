@@ -44,18 +44,15 @@
 		<?php wp_head(); ?>
 	
 	
-		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
-		<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
-
 		<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js?v=2','ga');
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js?v=2','ga');
 
-		ga('create', 'UA-53349417-1', 'auto');
-			ga('set', 'anonymizeIp', true);
-		ga('send', 'pageview');
+			ga('create', 'UA-53349417-1', 'auto');
+				ga('set', 'anonymizeIp', true);
+			ga('send', 'pageview');
 
 		</script>
 		<script src="https://kit.fontawesome.com/a1f5cfbb67.js"></script>
@@ -65,20 +62,20 @@
 
 	<body <?php body_class(); ?>>
 	
-	<?php
-	$system_alert = new WP_Query( array(
-		'post_type' 		=> 'alert',
-		'posts_per_page' 	=> 1,
-		'meta_key'			=> 'system_alert',
-		'meta_value'		=> 1,
-	));
-	if ( $system_alert->have_posts() ) : while ( $system_alert->have_posts() ) :
-		$system_alert->the_post();
-		?>
-		<div id="system-alert-bar" style="text-align: center; border: 2px solid #ff6; background-color: #fef200; padding: 2px 11.424px 11.424px 11.424px; margin-top: 1px;">
-			<?php echo '<i class="fas fa-exclamation-triangle"></i>' ?> System Alert: <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-		</div>
-	<?php endwhile; wp_reset_postdata(); endif; ?>
+		<?php
+		$system_alert = new WP_Query( array(
+			'post_type' 		=> 'alert',
+			'posts_per_page' 	=> 1,
+			'meta_key'			=> 'system_alert',
+			'meta_value'		=> 1,
+		));
+		if ( $system_alert->have_posts() ) : while ( $system_alert->have_posts() ) :
+			$system_alert->the_post();
+			?>
+			<div id="system-alert-bar" style="text-align: center; border: 2px solid #ff6; background-color: #fef200; padding: 2px 11.424px 11.424px 11.424px; margin-top: 1px;">
+				<?php echo '<i class="fas fa-exclamation-triangle"></i>' ?> System Alert: <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			</div>
+		<?php endwhile; wp_reset_postdata(); endif; ?>
 
 	
 		<div class="container-fluid" style="max-width: 1151px;">
@@ -136,7 +133,6 @@
 						</nav>
 						<?php // if you'd like to use the site description you can un-comment it below ?>
 						<?php // bloginfo('description'); ?>
-
 				</div><!-- end class row -->
 			</header>
 				

@@ -1,6 +1,5 @@
 <?php
 /*
-Template Name: route_individual_page
 */
  get_header(); ?>
 

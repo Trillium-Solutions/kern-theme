@@ -18,9 +18,9 @@ Template Name: Routes and Schedules
    
     <div id="generic-wide-container">
         <main>
-            <div id="route-map">
+            <section id="route-map">
                 <iframe src="https://new-maps.trilliumtransit.com/map/feed/demo-map/"></iframe>
-            </div>
+            </section>
         </main>
     </div><!-- end #generic-wide-container -->
 

@@ -26,12 +26,8 @@
 										<div id="page-anchor-links"><ul></ul></div>
 										<?php
 										}
-										
-									 the_content(); 
-
-																	
-									?>
-
+											 the_content(); 								
+										?>
 							</div>
 
 							<?php endwhile; else : ?>

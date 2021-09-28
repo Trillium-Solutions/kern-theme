@@ -10,7 +10,7 @@ Template Name: route_individual_page
 				
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                        <div class="header-container">
+                        <header class="header-container">
                             <?php the_route_title('class="col-sm-9"'); ?>
                        
                             <div class="route-select-container">
@@ -18,77 +18,67 @@ Template Name: route_individual_page
 								<?php routeSelect(); ?>
 
                             </div><!-- end .route-select-container -->
-                        </div><!-- class="row" -->
+                        </header><!-- class="row" -->
 
                         <div id="generic-wide-container" style="margin-top: 20px">
+                                <main>
 
-                                <div id="route-locations-served">
-                                    <?php  the_field('locations_served'); ?>
-                                </div><!-- end #route-locations-served -->
+                                    <section class=""id="route-locations-served">
+                                        <?php  the_field('locations_served'); ?>
+                                    </section><!-- end #route-locations-served -->
 
-
-                                    <div id="route-alerts"> 
-                                    <?php //get_svg_icon('alert');?>
-                                        <!-- Route Alerts -->
-                                        
+                                    <section id="route-alerts"> 
+            
                                         <?php 
-                                            //get_svg_icon('alert');
                                             tcp_do_alerts( array('collapse' => true, 'route-circles' => false, 'use_button' => true ) ); 
-                                            ?>
+                                        ?>
 
-                                        </div><!--route-alerts -->
-                                
-                                        <hr />
+                                    </section><!--route-alerts -->
+                                    
+                                    <hr />
 
-                                        <div id="route-nav">
-                                            <ul id="route-anchors" <?php
-                                            if (get_field('route_short_name') == '100') {
-                                                echo 'class="route-anchors-100"';
-                                            }
-                                            ?>>
-                                                <li><a style="color:#fff;" href="#schedules">Schedules</a></li>
-                                                <li><a style="color:#fff;" href="#maps">Detail Maps</a></li>
-                                                <li><a style="color:#fff;" href="#connections">Kern Transit Connections</a></li>
-                                                <li><a style="color:#fff;" href="#external-connections">External Connections</a></li>
-                                                <li><a style="color:#fff;" href="/fares">Fares</a></li>
-                                            </ul>
+                                    <nav id="route-nav">
+                                        <ul id="route-anchors">
+                                            <li><a style="color:#fff;" href="#schedules">Schedules</a></li>
+                                            <li><a style="color:#fff;" href="#maps">Detail Maps</a></li>
+                                            <li><a style="color:#fff;" href="#connections">Kern Transit Connections</a></li>
+                                            <li><a style="color:#fff;" href="#external-connections">External Connections</a></li>
+                                            <li><a style="color:#fff;" href="/fares">Fares</a></li>
+                                        </ul>
 
-                                            <div id="route-fares-holder" style="background-color: #<?php the_field('route_color'); ?>">
-                                                <?php fare_table(); ?>
+                                        <div id="route-fares-holder" style="background-color: #<?php the_field('route_color'); ?>">
+                                            <?php fare_table(); ?>
+                                        </div>
+                                    </nav><!-- #route-nav -->
+                                    <div class="route-info-box timetables">
+                                        <h2 class="span-text">
+                                    
+                                        <div id="h2-inner">Schedules</div>
+
+                                            <div id="route_days_of_week">
+                                                <?php the_field('days_of_week'); ?>
                                             </div>
-                                        </div><!-- #route-nav -->
-                                        <div class="route-info-box timetables">
-                                            <h2 class="span-text">
-                                        
-                                            <div id="h2-inner">Schedules</div>
+                                            <?php if (get_field('schedule_pdf')) : ?>
+                                                <span class="span-small-title">
+                                                    <a href="<?php the_field('schedule_pdf'); ?>">Download Schedule (PDF)</a>
+                                                </span>
+                                                <?php endif; ?>
+                                                <br style="clear:both;" />
+                                        </h2>
 
-                                                <div id="route_days_of_week">
-                                                    <?php the_field('days_of_week'); ?>
-                                                </div>
-                                                <?php if (get_field('schedule_pdf')) : ?>
-                                                    <span class="span-small-title">
-                                                        <a href="<?php the_field('schedule_pdf'); ?>">Download Schedule (PDF)</a>
-                                                    </span>
-                                                    <?php endif; ?>
-                                                    <br style="clear:both; margin: 0px;" />
-                                            </h2>
+                                        <?php the_timetables()?>
+                                        <p>
+                                            REQ = Request stop only. Must coordinate with agency.<br />
+                                            &bullet; = Bus may stop at these locations, in addition to the timed stops.<br />
+                                            &darr; = Bus does not stop.
+                                        </p>
 
-                                            <?php the_timetables()?>
-                                            <p>
-                                                REQ = Request stop only. Must coordinate with agency.<br />
-                                                &bullet; = Bus may stop at these locations, in addition to the timed stops.<br />
-                                                &darr; = Bus does not stop.
-                                            </p>
+                                    </div><!-- end #route-info-box -->
 
-                                        </div><!-- end #route-info-box -->
-
-
-                                     <div id="timetable-detail-maps">
-
-                                        <h2 class="span-text"> Route Map</h2>                                  
-
+                                    <div id="timetable-detail-maps">
+                                        <h2 class="span-text"> Route Map</h2>  
                                     </div><!-- end #timetable-detail-maps -->
-
+                                    
                                     <?php the_interactive_map( 'kerncounty-ca-us', array( get_post_meta( get_the_ID(), 'route_id', true )) ); ?>
 
                                     <?php
@@ -100,20 +90,19 @@ Template Name: route_individual_page
 
                                             <ul id="internal-connections">
 
-                                                    <?php while (have_rows('kern_connections')): the_row();
-                                                                    echo '<li>';    
-                                                                        printf('<a href="%s" class="btn-link">%s</a>',
+                                                <?php while 
+                                                    (have_rows('kern_connections')): the_row();
+                                                            echo '<li>';    
+                                                                printf('<a href="%s" class="btn-link">%s</a>',
+                                                                    get_sub_field('connection_link'), get_sub_field('connection_name'));
+                                                    endwhile;
+                                                            echo '</li>';
+                                                    endif;
+                                                ?>
 
-                                                                        get_sub_field('connection_link'), get_sub_field('connection_name'));
-                                                        endwhile;
-                                                                    echo '</li>';
+                                                <?php wp_reset_query(); ?>
 
-                                                        endif;
-                                                        ?>
-
-                                                    <?php wp_reset_query(); ?>
-
-                                                </ul><!-- end #internal-connections -->
+                                             </ul><!-- end #internal-connections -->
 
                                                 <?php 
                                                     if (have_rows('external_connections')): ?>
@@ -121,26 +110,21 @@ Template Name: route_individual_page
                                                     <h2>
                                                         External Connections
                                                         <span class="span-small-title">
-                                                                <a href="<?php echo get_site_url(); ?>/connections"> Go to main connections page >></a>
+                                                                <a href="/connections"> Go to main connections page >></a>
                                                         </span> 
                                                     </h2>
                                                                
                                                         <ul id="external-connections">
 
-                                                        <?php   
-
-
-                                                            while (have_rows('external_connections')): the_row();
-                                                                        echo '<li>';    
-                                                                            printf('<a href="%s" class="btn-link">%s</a> <div>%s</div>',
-
+                                                            <?php while 
+                                                                (have_rows('external_connections')): the_row();
+                                                                    echo '<li>';    
+                                                                        printf('<a href="%s" class="btn-link">%s</a> <div>%s</div>',
                                                                             get_sub_field('connection_link'), get_sub_field('connection_name'),get_sub_field('connection_description') );
-                                                            endwhile;
-                                                                        echo '</li>';
-                                                        
-
-                                                            endif ?>
-
+                                                                endwhile;
+                                                                    echo '</li>';
+                                                                endif 
+                                                            ?>
 
                                                             <?php wp_reset_query(); ?>
 
@@ -148,20 +132,11 @@ Template Name: route_individual_page
 
                                      </div> <!-- end .route-info-box -->
 
-                                         <?php endwhile; ?>
+                                    <?php endwhile; ?>
 
-
-                                         <?php endif; ?>
-
-                    
+                                    <?php endif; ?>
+                                </main>
                         </div><!-- end #generic-wide-container -->
-
-
-
-                 <?php get_template_part( 'generic-page-bottom'); ?>
-
-
-
 
         <?php get_footer(); ?>
 

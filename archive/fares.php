@@ -1,6 +1,5 @@
 <?php
 /*
-Template Name: Fares Page
 */
 
 get_header(); ?>
