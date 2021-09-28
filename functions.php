@@ -117,30 +117,19 @@ new image size.
 function kern_scripts() {
 	
 	//CSS
-	
+
 	wp_enqueue_style( 'kern-style', get_stylesheet_uri(), array() );
 	wp_enqueue_style( 'main-style', get_theme_file_uri('/library/css/style.css'), array( ), );
-	wp_enqueue_style('interactive-map', get_theme_file_uri('/library/css/interactive-map.css?v=2'), true);
 	wp_enqueue_style('bootstrap-css', get_theme_file_uri('/library/bootstrap/css/bootstrap.min.css?v=3'), true);
 	wp_enqueue_style('single-route', get_theme_file_uri('/library/css/single-route.css?v=3'), true);
 	wp_enqueue_style('dar-style', get_theme_file_uri('/library/css/dar.css?v=2'), true);
-	wp_enqueue_style('apple-touch-icon', get_theme_file_uri('/library/images/apple-icon-touch.png'), true);
 	wp_enqueue_style('icon', get_theme_file_uri('/favicon.png?v2'), true);
 	wp_enqueue_style('icon', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', true);
 
 	//JS
 
 	wp_enqueue_script('bootstrap', get_theme_file_uri('/library/bootstrap/js/bootstrap.min.js?v=2'), array('jquery'));
-	//wp_enqueue_script('bootstrap', get_template_directory_uri() . '/library/bootstrap/js/bootstrap.min.js',  array(), '20210129', true  ); 
-	//wp_enqueue_script('kern-js', get_template_directory_uri('/library/js/kern.js'), array(), '20210129', true  ); 
-	//wp_enqueue_script( 'kern-js', get_template_directory_uri() . '/library/js/kern.js', array('jquery'), '20210915', true );
-	//wp_enqueue_script('jquery-ui', 'https://code.jquery.com/ui/1.12.0/jquery-ui.js', array('jquery'));
-
-	//wp_enqueue_script('jquery-ui', 'https://code.jquery.com/ui/1.11.0/jquery-ui.min.js?v=2' , array('jquery'));
-	//wp_enqueue_script('moment-js', 'https://momentjs.com/downloads/moment.min.js?v=2' , array('jquery-ui'));
-	//wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.1.min.js?v=2', array() );
 	
-
 	if ( is_front_page() ) {
 	
 		wp_enqueue_style( 'flatpickr-styles', 'https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css');
@@ -163,21 +152,17 @@ function kern_scripts() {
 
 		wp_enqueue_style('mapbox-css', 'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css');
 
-
 	}
-
-	
-	
 }
 add_action( 'wp_enqueue_scripts', 'kern_scripts' );
 
+//SVG Icons Styling
 function get_svg_icon($icon, $class="standard") {
 	$icon_file = $icon . '.svg';
 	printf('<span class="icon icon-%s icon-%s">', $icon, $class);
 	get_template_part('library/images/icon', $icon_file);
 	echo '</span>';
 }
-
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -195,7 +180,6 @@ function bones_register_sidebars() {
 	
 } // don't remove this bracket!
 
-
 /*
 This is a modification of a function found in the
 twentythirteen theme where we can declare some
@@ -207,8 +191,6 @@ function bones_fonts() {
 
   wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
   wp_enqueue_style( 'googleFonts');
-  wp_register_style('route_icons', get_template_directory_uri().'/library/css/route-icons.css');
-  wp_enqueue_style( 'route_icons');
 }
 
 add_action('wp_print_styles', 'bones_fonts');
@@ -234,7 +216,6 @@ function the_breadcrumb() {
     global $post;
     echo '<ul id="breadcrumbs">';
   
-
     if (!is_home()) {
         echo '<li><a href="';
         echo get_option('home');
@@ -264,7 +245,6 @@ function the_breadcrumb() {
 					$post_type_slug = $post_type_data->rewrite['slug'];
 					echo $post_type_data->label;
 
-
 				}
 			}
     	}
@@ -282,11 +262,7 @@ function the_breadcrumb() {
 				echo '</a></li>';
 			}
 
-
-
             if (is_single()) {
-
-
 
                 echo '</li><li class="separator"> > </li><li>';
                 if( $post_type_data = get_post_type_object( $post_type )->rewrite['slug'] == 'routes-and-schedules') {
@@ -305,8 +281,6 @@ function the_breadcrumb() {
                 echo '</li>';
 
         }
-
-
     echo '</ul>';
 
     }
@@ -444,32 +418,16 @@ require get_template_directory() . '/inc/news.php';
 require get_template_directory() . '/inc/reports.php';
 //require get_template_directory() . '/inc/staff-contacts.php';
 
-
-
-
 function add_menu_icons_styles(){
 ?>
 
 <style>
-#adminmenu .menu-icon-alert div.wp-menu-image:before {
-  content: '\f227';
-}
-#adminmenu .menu-icon-timetable div.wp-menu-image:before {
- content: "\f311";
-}
-#adminmenu .menu-icon-dar div.wp-menu-image:before {
-content: "\f507";
-}
-#adminmenu .menu-icon-route div.wp-menu-image:before {
-content: "\f237";
-}
+
 
 #adminmenu .menu-icon-news div.wp-menu-image:before {
-content: "\f488";
+content: "\26A0";
 }
-#adminmenu .menu-icon-contact-profile div.wp-menu-image:before {
-content: "\f484";
-}
+
 </style>
 
 <?php

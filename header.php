@@ -30,7 +30,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js?v=2"></script>
-		<script src="https://momentjs.com/downloads/moment.min.js?v=2"></script>
+		<!--<script src="https://momentjs.com/downloads/moment.min.js?v=2"></script>-->
 
 		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js?v=2"></script>
 

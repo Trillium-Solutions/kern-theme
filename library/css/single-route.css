@@ -162,14 +162,27 @@
   top: 9px;
 }
 
+.tcp_alerts .container .panel_heading:before {
+  content: url(../images/alert_icon.svg);
+  margin-top: 5px;
+}
 
-.icon-alert svg {
+.tcp_alerts .tcp_panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.tcp_alerts .panel_heading {
+  display: inherit;
+}
+
+/*.icon-alert svg {
     width: 30px;
     height: 1.8em;
     float: left;
     margin-left: 9px;
     margin-top: 3.5px;
-}
+}*/
 
 .panel_body {
   padding-left: 50px;
@@ -179,6 +192,7 @@
   margin-bottom: 5px;
     margin-top: 5px;
 }
+
 
 #route-alerts {
   color: black;

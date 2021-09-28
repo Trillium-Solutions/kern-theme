@@ -1,30 +1,24 @@
 <?php
 /**
  * The template for displaying a static front page
- *
- * 
- *
- *
  */
 	 get_header(); ?>
 
 		<main>
 			<div id="home-desktop-map-container"> 
 						
-				<div id="map-holder">
+				<section id="map-holder">
 					<?php $svg = file_get_contents(get_theme_file_path('library/svg/home_map-01.svg'));
 					echo $svg;
 					?>
-				</div><!-- end map-holder -->
+				</section><!-- end map-holder -->
 				
-				<div id="planner-wrap"  >
+				<section id="planner-wrap">
 					<div id="trip-planner-container" class="minimized">
 						<?php get_template_part( 'template-parts/asset', 'planner'); ?>
-					
-
 					</div> <!-- end #trip-planner-container -->
 					<div id="planner-expand-contract-tab" class="minimized">expand</div>
-				</div><!-- end #planner-wrap -->
+				</section><!-- end #planner-wrap -->
 			
 				<div id="drop-down-info-text-wrap">
 					&#9660; Click a route for details
@@ -70,7 +64,7 @@
 									
 			<div id="home-secondary-container" class="row-fluid"  >
 						
-				<div id="how-to-ride-links" class="col-sm-4">
+				<section id="how-to-ride-links" class="col-sm-4">
 					<div id="right-separator" class="hidden-xs"></div>
 					<h2>How to Ride</h2>
 						<ul>
@@ -90,34 +84,29 @@
 								</svg>Contact Us</a>
 							</li>
 						</ul>
-				</div><!-- end #how-to-ride-links -->
+				</section><!-- end #how-to-ride-links -->
 				
-				<div id="home-news-area" class="col-sm-4" >
+				<section id="home-news-area" class="col-sm-4" >
 					<h2>News</h2>
-					<?php
-						
+					<?php	
 						$query = new WP_Query(array(
 						'posts_per_page' => 3,
 						"post_type"=>"news", 
 
 						));
-
 							if ( $query->have_posts() ) {
 								?>
 								<ul>
 								<?php
 									while ( $query->have_posts() ) {
 										$query->the_post();
-										
 										?>
 											<li class="home-news-outer" >
 												<a href="<?php the_permalink(); ?>" class="home-news-inner">
-								
 													<i></i> <?php the_title(); ?>
 									
 												</a>
-											</li>	
-										
+											</li>		
 									<?php
 									}
 									?>
@@ -129,18 +118,18 @@
 				
 					<div id="home-more-news"><a href="./news">See More News >></a></div>
 				
-				</div> <!-- end #home-news-area -->
-				<div id="right-secondary-links" class="col-sm-4">
+				</section> <!-- end #home-news-area -->
+				<section id="right-secondary-links" class="col-sm-4">
 					<div id="left-separator" class="hidden-xs"></div>
 					<a class="twitter-timeline" data-width="340" data-height="300" data-theme="dark" data-link-color="#e68c2b" href="https://twitter.com/KernTransit">Tweets by KernTransit</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-				</div><!-- end #right-secondary-links -->
+				</section><!-- end #right-secondary-links -->
 					
 				<br style="clear: both;" />
 
-				<div id="home-description-of-services">
+				<section id="home-description-of-services">
 					Kern Transit provides passenger bus service between and in the rural communities of Kern County. There are 16 fixed transit routes, and Dial-A-Ride (DAR) service is available in most communities. The transit system offers intercity service between Arvin, Bakersfield, Bodfish, Boron, Buttonwillow, California City, Delano, Edwards, Frazier Park, Inyokern, Keene, Kernville, Lake Isabella, Lamont, Lebec, Lost Hills, McFarland, Mojave, Onyx, Ridgecrest, Rosamond, Shafter, Taft, Tehachapi, Wasco, Weldon, and Wofford Heights, along with local transit service. Connections to Metrolink in Lancaster are also available. Kern Transit is a division of the Kern County Public Works Department.
 					&nbsp;<a href="<?php echo get_permalink( 56); ?>" >More About Kern Transit</a>
-				</div> <!-- end #home-description-of-services -->
+				</section> <!-- end #home-description-of-services -->
 				
 			</div><!-- end #home-secondary-container -->
 		</main>
