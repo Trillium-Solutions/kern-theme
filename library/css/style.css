@@ -1744,16 +1744,30 @@ FOOTER STYLES
   background-color: black;
   color: #f8f9fa; }
 
-/*
-if you checked out the link above:
-https://www.alistapart.com/articles/organizing-mobile/
-you'll want to style the footer nav
-a bit more in-depth. Remember to keep
-it simple because you'll have to
-override these styles for the desktop
-view.
-*/
-/* end .footer-links */
+/**New Footer Styles ***/
+
+.footer .row {
+  padding: 15px;
+}
+.footer nav {
+  display: flex;
+  line-height: 2em;
+}
+
+.menu-left-footer-nav-container, .menu-right-footer-nav-container {
+  flex: 1
+}
+
+#footer-copyright {
+  margin-top: 0 !important;
+}
+
+.footer #footer-attributions {
+  margin-right: none !important;
+  float: none !important;
+}
+
+
 /******************************************************************
 Site Name:
 Author:
@@ -2035,7 +2049,9 @@ body {
   #home-secondary-container #home-description-of-services {
     margin: 10px 24px 57px 24px;
     padding-top: 36px;
-    border-top: 1px solid #5e8aa9; }
+    border-top: 1px solid #5e8aa9; 
+    line-height: 1.5em !important;
+  }
     #home-secondary-container #home-description-of-services a:link {
       color: #ffc57f !important;
       text-decoration: underline; }

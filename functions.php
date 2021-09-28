@@ -216,12 +216,9 @@ add_action('wp_print_styles', 'bones_fonts');
 
 // This theme uses wp_nav_menu() in one location.
 register_nav_menus( array(
-	'main-nav' => esc_html__( 'Primary', 'kerntheme' ),
-	'menu-2' => esc_html__( 'Mobile', 'kerntheme' ),
-	
+	'footer-left' => esc_html__( 'Footer-left', 'kerntheme' ),
+	'footer-right' => esc_html__( 'Footer-right', 'kerntheme' ),
 ) );
-
-
 
 function register_my_menus() {
   register_nav_menus(
@@ -375,6 +372,13 @@ function fb_deactivate_support() {
     remove_post_type_support( 'post', 'comments' );
     
 }
+
+//Remove the comments column from Pages
+function remove_pages_count_columns($defaults) {
+	unset($defaults['comments']);
+	return $defaults;
+  }
+  add_filter('manage_pages_columns', 'remove_pages_count_columns');
 
 //Remove the comments menu and custom post type menu
 function remove_menus(){
