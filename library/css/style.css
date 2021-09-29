@@ -2122,6 +2122,23 @@ body {
   font-size: 1.35em;
   padding: 1vw; }
 
+  /*Fares*/
+
+    .wp-image-20720 {
+    width: 100px !important; 
+    height: 32px !important;
+  }
+
+  .wp-image-20719 {
+    width: 280px !important;
+    height: 40px !important;
+  }
+  .wp-image-20718, .wp-image-20717 {
+    height: 32px !important;
+    width: 32px !important;
+  }
+
+
   .fare-tables .tablepress-table-name {
     font-size: 20px;
   }
