@@ -4,7 +4,7 @@
  */
 	 get_header(); ?>
 
-		<main>
+		<main id="content">
 			<div id="home-desktop-map-container"> 
 						
 				<section id="map-holder">
@@ -34,16 +34,16 @@
 					?>
 					<?php $count_posts = count($alerts); 
 					if($count_posts > 0) { ?>
-					<div id="map-alerts-wrap">
+					<div class="map-alerts-wrap">
 						<i id="alerts-icon"> </i> <a href="<?php echo get_site_url(); ?>/alerts">Alerts<? if($count_posts > 0) { echo '('.$count_posts.')'; } ?></a> 
-					</div> <!-- end #map-alerts-wrap -->
+					</div> <!-- end .map-alerts-wrap -->
 					<?php
 					} else {
 					
 					?>
-					<div id="map-alerts-wrap" class="no-alerts">
+					<div class="no-alerts map-alerts-wrap">
 						No service alerts at this time.
-					</div> <!-- end #map-alerts-wrap -->
+					</div> <!-- end .map-alerts-wrap -->
 					<?php	
 					}
 				?>
@@ -66,7 +66,9 @@
 						
 				<section id="how-to-ride-links" class="col-sm-4">
 					<div id="right-separator" class="hidden-xs"></div>
-					<h2>How to Ride</h2>
+					<a href="/how-to-ride">
+						<h2>How to Ride</h2>
+					</a>
 						<ul>
 							<li><a href="<?php echo get_permalink( 1267 ); ?>" ><i id="connections-icon"></i>Connections</a></li>
 						<!--	<li><a href="<?php echo get_permalink( 7 ); ?>" ><i id="dial-a-ride-icon"></i>Dial-A-Ride</a></li>-->
@@ -79,15 +81,21 @@
 								<path d="M0 0v1h8v-1h-8zm0 2v5.91c0 .05.04.09.09.09h7.81c.05 0 .09-.04.09-.09v-5.91h-2.97v1.03h-2.03v-1.03h-3z" />
 								</svg>Lost and Found</a>
 							</li>
-							<li><a href="<?php echo get_permalink( 37 ); ?>" ><svg xmlns="https://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 8">
-								<path d="M.09 0c-.06 0-.09.04-.09.09v5.81c0 .05.04.09.09.09h5.91l2 2v-7.91c0-.06-.04-.09-.09-.09h-7.81z" />
-								</svg>Contact Us</a>
+							<li>
+								<a href="<?php echo get_permalink( 37 ); ?>" >
+									<svg xmlns="https://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 8 8">
+										<path d="M.09 0c-.06 0-.09.04-.09.09v5.81c0 .05.04.09.09.09h5.91l2 2v-7.91c0-.06-.04-.09-.09-.09h-7.81z" />
+									</svg>
+								Contact Us
+								</a>
 							</li>
 						</ul>
 				</section><!-- end #how-to-ride-links -->
 				
 				<section id="home-news-area" class="col-sm-4" >
-					<h2>News</h2>
+					<a href="/news">
+						<h2>News</h2>
+					</a>
 					<?php	
 						$query = new WP_Query(array(
 						'posts_per_page' => 3,

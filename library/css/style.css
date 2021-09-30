@@ -1358,6 +1358,44 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+.screen-reader-text:focus {
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		clip-path: none;
+		color: palette(mono, darkest);
+		display: block;
+		@include font-size(0.875);
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
 #logo {
   margin: 0.75em 0; }
   #logo a {
@@ -1896,7 +1934,7 @@ body {
   #planner-wrap input[type="text"] {
     max-width: 100%; }
 
-#map-alerts-wrap {
+.map-alerts-wrap {
   display: none; }
 
 @media (min-width: 700px) {
@@ -1906,11 +1944,13 @@ body {
     position: absolute;
     top: 10px; }
 
-  #map-alerts-wrap {
+  .map-alerts-wrap {
     display: inherit; } }
 @media (max-width: 699px) {
   #map-holder {
     display: none; } }
+
+
 #planner-expand-contract-tab {
   float: left;
   font-size: .8em;
@@ -1925,7 +1965,8 @@ body {
   padding: 5px; }
 
 #trip-planner-container.minimized form {
-  height: 38px; }
+  height: auto !important; 
+}
 
 #trip-planner-container input {
   line-height: inherit; }
@@ -1973,7 +2014,10 @@ body {
     border-radius: 0; }
   #trip-planner-container input[type="radio"] {
     margin-left: 1px;
-    margin-right: 4px; }
+    margin-right: 4px; 
+    position: relative;
+    top: 1.2px;
+  }
   #trip-planner-container input[type="submit"] {
     margin: 7px 0 7px 0;
     width: 100%; }
@@ -1984,6 +2028,10 @@ body {
     margin-left: 2%; }
   #trip-planner-container #daddr {
     width: 100%; }
+
+  #planner-terms {
+    font-size: 12px;
+  }
 
 #sidebar1 #how-to-ride-links {
   margin-left: 0px; }
@@ -2124,9 +2172,8 @@ body {
 
   /*Fares*/
 
-    .wp-image-20720 {
-    width: 100px !important; 
-    height: 32px !important;
+    /*.wp-image-20720 {
+      width: auto !important;
   }
 
   .wp-image-20719 {
@@ -2136,7 +2183,7 @@ body {
   .wp-image-20718, .wp-image-20717 {
     height: 32px !important;
     width: 32px !important;
-  }
+  }*/
 
 
   .fare-tables .tablepress-table-name {
@@ -2535,7 +2582,7 @@ h1#route-page-title i {
   padding: 20px 25px 10px 10px;
   color: white; }
 
-#generic-wide-container {
+#generic-wide-container { 
   margin-top: 20px;
   width: 100%;
   min-height: 400px;

@@ -182,7 +182,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ab489', end
 	}
 }
 
-#map-alerts-wrap {
+.map-alerts-wrap {
 	position:absolute;
 	left: 23px;
 	bottom: 24px;
@@ -215,7 +215,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ab489', end
 
 }
 
-#map-alerts-wrap.no-alerts {
+.map-alerts-wrap.no-alerts {
 	font-size: 1.1em; 
 	font-weight: 300;
 	text-decoration: none;
@@ -254,7 +254,7 @@ position: relative;
 	}
 
 	}
-	#map-alerts-wrap {
+	.map-alerts-wrap {
 		display: none;
 	}
 @media (min-width: 700px) {
@@ -265,7 +265,7 @@ position: relative;
 		position: absolute;
 		top: 10px;
 	}
-	#map-alerts-wrap {
+	.map-alerts-wrap {
 		display: inherit;
 	}
 	

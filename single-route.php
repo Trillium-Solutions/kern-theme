@@ -23,7 +23,7 @@ Template Name: route_individual_page
                         <div id="generic-wide-container" style="margin-top: 20px">
                                 <main>
 
-                                    <section class=""id="route-locations-served">
+                                    <section id="route-locations-served">
                                         <?php  the_field('locations_served'); ?>
                                     </section><!-- end #route-locations-served -->
 

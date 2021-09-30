@@ -85,7 +85,7 @@
 	#home-desktop-map-container img {
 	  height: 680px !important; }
   
-  #map-alerts-wrap {
+  .map-alerts-wrap {
 	position: absolute;
 	left: 23px;
 	bottom: 24px;
@@ -94,12 +94,12 @@
 	text-decoration: underline;
 	font-size: 1.8em;
 	font-weight: 500; }
-	#map-alerts-wrap a:link, #map-alerts-wrap a:active, #map-alerts-wrap a:visited {
+	.map-alerts-wrap a:link, .map-alerts-wrap a:active, .map-alerts-wrap a:visited {
 	  color: white;
 	  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.67); }
-	#map-alerts-wrap a:hover {
+	.map-alerts-wrap a:hover {
 	  color: yellow; }
-	#map-alerts-wrap i {
+	.map-alerts-wrap i {
 	  background-image: url(../images/kern-sprites.png);
 	  width: 30px;
 	  height: 25px;
@@ -109,7 +109,7 @@
 	  position: relative;
 	  top: 9px; }
   
-  #map-alerts-wrap.no-alerts {
+  .map-alerts-wrap.no-alerts {
 	font-size: 1.1em;
 	font-weight: 300;
 	text-decoration: none;

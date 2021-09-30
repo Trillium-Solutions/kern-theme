@@ -12,52 +12,54 @@
 	<input type="hidden" name="f" value="d"/>
 	<input type="hidden" value="194" name="agency"/>
     <table>
-        <tr class="min-hide">
-            <td style="font-size:14px;" class="planner-title"><strong>Start</strong></td>
- 		</tr>
- 
-		 <tr class="minimized-visible">
-            <td valign="top">
-				<input  type="text" alt="Start address"  name="saddr" maxlength="2048" id="saddr" placeholder="Enter your start location"/>
-            	<span class="min-hide"><font size="-2">e.g. 1801 Panorama Dr, Bakersfield, CA</font></span>
-			</td>
-		</tr>
-
-		<tr class="min-hide">
-			<td style="font-size:14px;" class="planner-title" ><strong>End</strong>&nbsp;&nbsp;</td>
-		</tr>
-		<tr class="min-hide">
-			<td>
-				<input  type="text" alt="Destination address" placeholder="Enter your destination" name="daddr" id="daddr" maxlength="2048"/>
-				<input type="hidden" name="sll" value="35.372915,-119.018819" />
-				<font size="-2">e.g. Lake Isabella Public Library</font>
-			</td>
-		</tr> 
-
-
-		<tr class="min-hide">
-			<td>
-				<font size="-1"><input type="radio" id="leave" alt="Leave at" name="ttype" value="dep" checked="checked"/><label for="leave">Depart at</label> &nbsp;or <input type="radio" alt="Arrive by at" id="arrive" name="ttype" value="arr" tabindex="1"/><label for="arrive">Arrive by</label></font></td></tr>
-		<tr class="min-hide">
-			<td>
-				<font size="-1">
-					<input type="text" alt="Date" id="fdate" size="10" name="date" value="" maxlength="100"/>  
-					<input type="text" id="ftime" alt="Time" size="10" name="time" value="" maxlength="100"/>
-				</font>
-			</td>
-		</tr>
-		<tr class="min-hide">
-			<td valign="top">
-				<input type="submit" value="Get Directions"/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<span style="font-size:10px;" class="min-hide">
-					Read <a href="https://kerntransit.org/trip_planner/">info and terms &amp; conditions</a>.  Trip planning is provided using <a href="https://www.google.com/transit">Google Maps</a>.
-				</span>
-			</td>
-		</tr>
+		<tbody>
+			<tr class="minimized-visible">
+				<td valign="top">
+					<label for="saddr" class="min-hide">Start</label>
+					<input type="text" name="saddr" maxlength="2048" id="saddr" placeholder="Enter your start location"/>
+					<span class="min-hide"><font size="-2">e.g. 1801 Panorama Dr, Bakersfield, CA</font></span>
+				</td>
+			</tr>	
+			<tr class="min-hide">
+				<td>
+					<label for="daddr">End</label>
+					<input type="text" placeholder="Enter your destination" name="daddr" id="daddr" maxlength="2048"/>
+					<input type="hidden" name="sll" value="35.372915,-119.018819" />
+					<font size="-2">e.g. Lake Isabella Public Library</font>
+				</td>
+			</tr> 
+			<tr class="min-hide">
+				<td>	
+					<label for="leave">Depart at</label>
+					<input type="radio" id="leave" name="ttype" value="dep" checked="checked"/>
+						<span>or </span>
+					<label for="arrive">Arrive by</label>
+					<input type="radio" id="arrive" name="ttype" value="arr" tabindex="1"/>
+					</td>
+				</tr>
+			<tr class="min-hide">
+				<td>
+					<font size="-1">
+						<label for="fdate" class="screen-reader-text">Date</label>
+						<input type="text" id="fdate" size="10" name="date" value="" maxlength="100"/>
+						<label for="ftime" class="screen-reader-text">Time</label> 
+						<input type="text" id="ftime" size="10" name="time" value="" maxlength="100"/>
+					</font>
+				</td>
+			</tr>
+			<tr class="min-hide">
+				<td valign="top">
+					<input type="submit" value="Get Directions"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span id="planner-terms" class="min-hide">
+						Read <a href="https://kerntransit.org/trip_planner/">info and terms &amp; conditions</a>.  Trip planning is provided using <a href="https://www.google.com/transit">Google Maps</a>.
+					</span>
+				</td>
+			</tr>
+		</tbody>
 	</table>
 </form>
 

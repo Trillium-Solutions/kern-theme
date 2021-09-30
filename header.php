@@ -1,4 +1,12 @@
-<?php ?>
+<?php 
+/**
+* The header for this theme
+*
+* This is the template that displays all of the <head> section and everything up until <div id="content">
+*
+*
+*/
+?>
 <!doctype html>
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -33,17 +41,12 @@
 		<!--<script src="https://momentjs.com/downloads/moment.min.js?v=2"></script>-->
 
 		<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js?v=2"></script>
-
-		
+	
 		<?php // wordpress head functions ?>
-
+			<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
 
 		<?php // drop Google Analytics Here ?>
-		<?php // end analytics ?>
-		<?php wp_head(); ?>
-	
-	
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -55,12 +58,15 @@
 			ga('send', 'pageview');
 
 		</script>
+		<?php // end analytics ?>
+
 		<script src="https://kit.fontawesome.com/a1f5cfbb67.js"></script>
 		<meta name="google-translate-customization" content="f25af25643c7b829-5e44eb73351882d9-gcc7ef8ab8e200b71-13"></meta>
 
 	</head>
 
 	<body <?php body_class(); ?>>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kern' ); ?></a>
 	
 		<?php
 		$system_alert = new WP_Query( array(
@@ -89,8 +95,9 @@
 							<div id="search-wrap" class="form-inline col-sm-4 col-xs-6" >
 								<form action="/" method="get">
 									<label class="sr-only" for="search">Search</label>
+									<img alt="search-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/clear.png" id="header-search-icon-submit" />
 									<input type="text" name="s" id="search" placeholder="Search" value="<?php the_search_query(); ?>" />
-									<input type="image" alt="Search" src="<?php echo get_template_directory_uri(); ?>/library/images/clear.png" id="header-search-icon-submit" />
+									
 								</form>
 							</div>
 							<div id="google_translate_element" class="col-sm-4 col-xs-6"></div>
@@ -99,10 +106,21 @@
 				</div> <!-- end row -->
 				<div class="row">
 					<div class="col-sm-1 visible-sm visible-xs"></div>
-						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+					<?php
+						if(is_front_page()) : ?>
 						<div id="logo-holder" class="col-md-5 col-sm-10" >
-							<a href="<?php echo home_url(); ?>" rel="nofollow"><img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" style="max-width: 400px" /></a>
+							<a href="/">
+								<h1 class="screen-reader-text">Kern Transit</h1>
+									<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" style="max-width: 400px" />
+							</a>
 						</div><!-- end logo-holder -->
+						<?php else: ?>
+						<div id="logo-holder" class="col-md-5 col-sm-10" >
+							<a href="<?php echo home_url(); ?>" rel="nofollow">
+								<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" style="max-width: 400px" />
+							</a>
+						</div><!-- end logo-holder -->
+						<?php endif; ?>
 						<nav id="main-nav" class="col-md-7 col-sm-10" style="padding-top: 30px;">
 							<ul>
 								<li id="routes_and_schedules_link">

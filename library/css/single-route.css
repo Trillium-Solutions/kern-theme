@@ -151,7 +151,7 @@
 
 
 /*Alerts*/
-#map-alerts-wrap i {
+.map-alerts-wrap i {
   background-image: url(../images/kern-sprites.png);
   width: 30px;
   height: 25px;

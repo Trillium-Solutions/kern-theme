@@ -82,7 +82,7 @@ get_header(); ?>
 									<section class="fare-tables">
 										<h2>Get Passes on your Phone</h2>
 										<a href="https://tokentransit.com/app">
-											<img class="alignnone wp-image-13577" src="https://kerntransit.org/wp-content/uploads/2018/04/token_transit_name_logo-1.png" alt="" width="300" height="69" style="max-width:300px;height:auto;"/></a>
+											<img class="alignnone wp-image-13577" src="https://kerntransit.org/wp-content/uploads/2018/04/token_transit_name_logo-1.png" alt="Token-transit-logo" width="300" height="69" style="max-width:300px;height:auto;"/></a>
 										<ol>
 										 	<li><a href="https://tokentransit.com/app">Download the app</a> or <a href="https://tokentransit.com/send/kerntransit">send a pass</a> to any phone number</li>
 										 	<li>Purchase any single-ride or monthly bus pass</li>
