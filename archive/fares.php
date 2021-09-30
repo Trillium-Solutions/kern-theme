@@ -14,13 +14,15 @@ get_header(); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="https://schema.org/BlogPosting">
 
 						 	    <section class="fare-tables">
-									<table>
 										<caption>Single Trip Fares</caption>
-										<tr>
-											<th></th>
-											<th>General</th>
-											<th>Reduced</th>
-										</tr>
+										<thead>
+											<tr>
+												<th></th>
+												<th>General</th>
+												<th>Reduced</th>
+											</tr>
+										</thead>
+										<tbody>
 										<tr>
 											<td>
 												<div class="fare-label">Local Routes</div>  
@@ -49,31 +51,36 @@ get_header(); ?>
 											<td>$5.00</td>
 											<td>$2.50</td>
 										</tr>
+										</tbody>
 									</table>
 									
 									<table>
 										<caption>31-Day Pass</caption>
-										<tr>
-											<th></th>
-											<th>General</th>
-											<th>Reduced</th>
-										</tr>
-										<tr>
-											<td>
-												<div class="fare-label">All Routes</div> 
-												+ Dial-a-Ride
-											</td>
-											<td>$65.00</td>
-											<td>$32.50</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="fare-label">Local Routes Only</div> 
-												+ Dial-a-Ride
-											</td>
-											<td>$45.00</td>
-											<td>$22.50</td>
-										</tr>
+										<thead>
+											<tr>
+												<th></th>
+												<th>General</th>
+												<th>Reduced</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="fare-label">All Routes</div> 
+													+ Dial-a-Ride
+												</td>
+												<td>$65.00</td>
+												<td>$32.50</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="fare-label">Local Routes Only</div> 
+													+ Dial-a-Ride
+												</td>
+												<td>$45.00</td>
+												<td>$22.50</td>
+											</tr>
+										</tbody>			
 									</table>
 									<div class="table-bottom-info">
 										The reduced fare is available for youth (K-12th) with proper identification, and for seniors (62+) and disabled passengers with a Kern Transit "Reduced Fare Card." Up to two (2) pre-K children may ride for free with each paying adult.

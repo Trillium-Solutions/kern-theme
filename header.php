@@ -78,17 +78,17 @@
 		if ( $system_alert->have_posts() ) : while ( $system_alert->have_posts() ) :
 			$system_alert->the_post();
 			?>
-			<div id="system-alert-bar" style="text-align: center; border: 2px solid #ff6; background-color: #fef200; padding: 2px 11.424px 11.424px 11.424px; margin-top: 1px;">
+			<div id="system-alert-bar">
 				<?php echo '<i class="fas fa-exclamation-triangle"></i>' ?> System Alert: <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</div>
 		<?php endwhile; wp_reset_postdata(); endif; ?>
 
 	
-		<div class="container-fluid" style="max-width: 1151px;">
+		<div class="container-fluid">
 			<header>
 				<div class="row">
 					<div id="number-and-search-wrap" class="col-md-6 col-md-push-6 col-xs-10 col-xs-push-1">
-						<div class="row" style="margin-top: 10px">
+						<div class="row">
 							<div id="kern-phone" class="col-sm-4">
 								<a href="tel:8003232396">800-323-2396</a>
 							</div><!-- end #kern-phone -->
@@ -96,7 +96,7 @@
 								<form action="/" method="get">
 									<label class="sr-only" for="search">Search</label>
 									<img alt="search-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/clear.png" id="header-search-icon-submit" />
-									<input type="text" name="s" id="search" placeholder="Search" value="<?php the_search_query(); ?>" />
+									<input type="text" name="s" id="search" placeholder="Search" aria-label="search text value="<?php the_search_query(); ?>" />
 									
 								</form>
 							</div>
@@ -111,17 +111,17 @@
 						<div id="logo-holder" class="col-md-5 col-sm-10" >
 							<a href="/">
 								<h1 class="screen-reader-text">Kern Transit</h1>
-									<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" style="max-width: 400px" />
+									<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" />
 							</a>
 						</div><!-- end logo-holder -->
 						<?php else: ?>
 						<div id="logo-holder" class="col-md-5 col-sm-10" >
 							<a href="<?php echo home_url(); ?>" rel="nofollow">
-								<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" style="max-width: 400px" />
+								<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" />
 							</a>
 						</div><!-- end logo-holder -->
 						<?php endif; ?>
-						<nav id="main-nav" class="col-md-7 col-sm-10" style="padding-top: 30px;">
+						<nav id="site-navigation" class="col-md-7 col-sm-10" role="navigation">
 							<ul>
 								<li id="routes_and_schedules_link">
 									<a href="/routes-and-schedules">

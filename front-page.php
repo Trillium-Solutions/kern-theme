@@ -49,6 +49,8 @@
 				?>
 					
 			</div><!-- end #home-desktop-map-container -->
+
+			<!--Mobile-->
 			<div id="mobile-map-holder" class="row visible-xs-block">
 				<div class="inner">
 				<?php $svg = file_get_contents(get_theme_file_path('library/svg/home_map-01.svg'));
@@ -56,7 +58,7 @@
 				?>
 				</div>
 			</div>
-			<div id="home-route-picker" class="hidden-lg hidden-md hidden-sm" style="margin:20px;">
+			<div id="home-route-picker" class="hidden-lg hidden-md hidden-sm">
 				<div class="row">
 					<?php routeSelect()?> 
 				</div><!-- end row -->

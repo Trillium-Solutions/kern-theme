@@ -69,12 +69,13 @@ Template Name: Reports
                                 <?php while ($q->have_posts() ) : $q->the_post(); ?>
 
                                 <table class="table">
+                                    <caption class="screen-reader-text">Reports</caption>
                                     <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Title</th>
-                                        <th>PDF</th>
-                                    </tr>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Title</th>
+                                            <th>PDF</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>

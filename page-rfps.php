@@ -22,7 +22,7 @@ Template Name: RFPS
                                 }
                             ?>
 
-                            <form method="get" action="">
+                            <form method="get" action="" role="form">
                                 <label for="archiveyear">Show different year: </label>
                                     <select name="archiveyear" id="archiveyear">
                                         <?php
@@ -70,14 +70,15 @@ Template Name: RFPS
                                 <?php while ($q->have_posts() ) : $q->the_post(); ?>
        
                                 <table class="table">
+                                    <caption class="screen-reader-text">Rfps</caption>
                                     <thead>
-                                    <tr>
-                                        <th>Posted</th>
-                                        <th>Title</th>
-                                        <th>Type</th>
-                                        <th>Status</th>
-                                        <th>Documents</th>
-                                    </tr>
+                                        <tr>
+                                            <th>Posted</th>
+                                            <th>Title</th>
+                                            <th>Type</th>
+                                            <th>Status</th>
+                                            <th>Documents</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <tr>

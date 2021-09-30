@@ -414,6 +414,10 @@ ul#route-anchors {
     padding: 8px;
   }
 
+  #route-anchors a {
+    color: #ffffff !important;
+  }
+
 #alert-click-message {
   font-size: .65em;
   margin-left: 15px; }

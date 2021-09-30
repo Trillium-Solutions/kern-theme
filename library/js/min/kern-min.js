@@ -33,7 +33,7 @@ $(document).ready(function(){
 	
 	});
 	
-	$('#main-nav li, .area-box li, .route-info-box ul li').click(function() {
+	$('#site-navigation li, .area-box li, .route-info-box ul li').click(function() {
 	
 		window.location.href = $(this).find('a').attr('href');	
 	

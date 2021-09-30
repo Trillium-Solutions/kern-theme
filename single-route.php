@@ -37,13 +37,13 @@ Template Name: route_individual_page
                                     
                                     <hr />
 
-                                    <nav id="route-nav">
+                                    <nav id="route-nav" role="navigation">
                                         <ul id="route-anchors">
-                                            <li><a style="color:#fff;" href="#schedules">Schedules</a></li>
-                                            <li><a style="color:#fff;" href="#maps">Detail Maps</a></li>
-                                            <li><a style="color:#fff;" href="#connections">Kern Transit Connections</a></li>
-                                            <li><a style="color:#fff;" href="#external-connections">External Connections</a></li>
-                                            <li><a style="color:#fff;" href="/fares">Fares</a></li>
+                                            <li><a href="#schedules">Schedules</a></li>
+                                            <li><a href="#maps">Detail Maps</a></li>
+                                            <li><a href="#connections">Kern Transit Connections</a></li>
+                                            <li><a href="#external-connections">External Connections</a></li>
+                                            <li><a href="/fares">Fares</a></li>
                                         </ul>
 
                                         <div id="route-fares-holder" style="background-color: #<?php the_field('route_color'); ?>">
