@@ -44,3 +44,9 @@
   .single-dial-a-ride #single-route-fares th {
   padding-left: 25px;
 }
+
+@media (max-width: 768px) {
+  .route-select-container {
+    width: auto !important;
+  }
+}

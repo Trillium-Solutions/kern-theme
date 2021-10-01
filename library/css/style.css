@@ -1965,9 +1965,20 @@ body {
 
   .map-alerts-wrap {
     display: inherit; } }
+
 @media (max-width: 699px) {
   #map-holder {
-    display: none; } }
+    display: none; 
+   }
+   header #page-title {
+    float: none !important;
+    width: auto !important;
+   }
+   #route-map {
+     height: 500px !important;
+   }
+  }
+
 
 
 #planner-expand-contract-tab {
@@ -2812,6 +2823,7 @@ h1#page-title {
   height: 80%;
   top: 10%;
   border-right: 1px solid rgba(255, 255, 255, 0.3); }
+
 
 /*  #map-holder svg {
     width: 100%; 

@@ -239,6 +239,7 @@ li.minimized i.open-close-icon {
 #route-page-title,.route-title  {
   /*top: 10px;*/
   position: relative; 
+  width: 85%; 
   /*margin-top: 20px;*/
   /*margin-bottom: 10px;*/
 }
@@ -259,11 +260,31 @@ li.minimized i.open-close-icon {
   line-height: 2.2em;
 }
 
+
+
 @media (max-width: 700px) {
-  #route-page-title, .route-title {
-    font-size: 1.5em; 
-    } 
+
+  .header-container {
+    display: block !important;
   }
+  #route-page-title, .route-title {
+    font-size: 2em; 
+    } 
+    #route-locations-served {
+      font-size: 18px !important;
+    }
+    .route-map {
+      height: 500px !important;
+    }
+    .route-info-box h2 {
+      font-size: 1.75em !important;
+  }
+  .route-info-box h2 span {
+    float: none !important; 
+    display: block;
+    margin-top: 10px;
+  }
+}
   
   .page-template-template-routes-and-schedules .route-select-container {
     width: 100%;
@@ -294,22 +315,39 @@ li.minimized i.open-close-icon {
     .table-responsive .table tr, .table-responsive tbody tr, .table-responsive caption tr {
       background: white; }
     .table-responsive .table tr:first-of-type, .table-responsive tbody tr:first-of-type, .table-responsive caption tr:first-of-type {
-      padding-top: 100px; } }
-@media (max-width: 768px) {
-  .timetable-header span {
-    text-align: left !important; } }
-#generic-wide-container {
+      padding-top: 100px; } 
+
+      .timetable-header span {
+        text-align: left !important; }
+
+        .header-container {
+          display: block !important; 
+        }
+      #route-page-title,.route-title{
+        /*float: left; */
+        /*width: auto !important; */
+    }
+    /*.page-template-page-dar .route-select-container {
+      width: auto;
+    }*/
+    
+    }
+
+    #generic-wide-container {
   clear: both; }
 
-  @media (min-width: 768px) {
+ /* @media (min-width: 768px) {
+
+    
+    .header-container, 
     #route-page-title,.route-title{
-        /*float: left; */
+        /*float: left; 
         width: 85%;
     }
     .route-select-container {
       float: none !important;
     }
-  }
+  }*/
 
 .route-detail-holder {
   line-height: 0;

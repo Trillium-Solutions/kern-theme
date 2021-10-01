@@ -21,7 +21,7 @@ Template Name: Reports
                             }
                             ?>
 
-                            <form method="get" action="">
+                            <form method="get" action="" role="form">
                                 <label for="archiveyear">Show different year: </label>
                                     <select name="archiveyear" id="archiveyear">
                                         <?php
