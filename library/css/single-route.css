@@ -260,6 +260,9 @@ li.minimized i.open-close-icon {
   line-height: 2.2em;
 }
 
+.city-row {
+  color: #0072bc;
+}
 
 
 @media (max-width: 700px) {
