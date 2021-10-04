@@ -40,7 +40,7 @@ Template Name: route_individual_page
                                     <nav id="route-nav" role="navigation">
                                         <ul id="route-anchors">
                                             <li><a href="#schedules">Schedules</a></li>
-                                            <li><a href="#maps">Detail Maps</a></li>
+                                            <li><a href="#timetable-detail-maps">Detail Maps</a></li>
                                             <li><a href="#connections">Kern Transit Connections</a></li>
                                             <li><a href="#external-connections">External Connections</a></li>
                                             <li><a href="/fares">Fares</a></li>
