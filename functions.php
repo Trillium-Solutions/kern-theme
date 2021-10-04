@@ -396,8 +396,8 @@ function routeSelect() {
 	$query = new WP_Query(array(
 	'posts_per_page' => -1,
 	"post_type"     =>"route",
-	'meta_key'      => 'route_id',
-	'orderby'       => 'meta_value',
+	'meta_key'      => 'route_sort_order',
+	'orderby'       => 'meta_value_num',
 	'order'         => 'ASC'
 
 
