@@ -67,11 +67,7 @@ Template Name: route_individual_page
                                         </h2>
 
                                         <?php the_timetables()?>
-                                        <p>
-                                            REQ = Request stop only. Must coordinate with agency.<br />
-                                            &bullet; = Bus may stop at these locations, in addition to the timed stops.<br />
-                                            &darr; = Bus does not stop.
-                                        </p>
+                                        <?php the_content() ?>
 
                                     </div><!-- end #route-info-box -->
 
