@@ -74,6 +74,20 @@
 			'posts_per_page' 	=> 1,
 			'meta_key'			=> 'system_alert',
 			'meta_value'		=> 1,
+			'meta_query' => array(
+				'relation' => 'OR',
+				array(
+					'key'		=> 'end_date',
+					'compare'	=> 'NOT EXISTS',
+					'value'		=> '',
+				),
+				array(
+					'key'		=> 'end_date',
+					'value' 	=> current_time('Y-m-d'),
+					'compare'	=> '>=',
+					'type'		=> 'DATE',
+				),
+			),
 		));
 		if ( $system_alert->have_posts() ) : while ( $system_alert->have_posts() ) :
 			$system_alert->the_post();

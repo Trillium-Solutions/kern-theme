@@ -162,6 +162,10 @@
   top: 9px;
 }
 
+.tcp_alerts .panel_description {
+  max-width: 970px !important;
+}
+
 .tcp_alerts .container .panel_heading:before {
   content: url(../images/alert_icon.svg);
   margin-top: 5px;
@@ -185,7 +189,7 @@
 }*/
 
 .panel_body {
-  padding-left: 50px;
+  padding-left: 10px;
   font-size: 16px;
 }
 .panel_description {
