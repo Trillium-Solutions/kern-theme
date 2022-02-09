@@ -109,7 +109,9 @@
     margin-left: 15px;
     margin-right: 15px;
   }
-
+.timetable {
+  margin: 2em 4em !important;
+}
   .timetable .row {
     margin: 0 !important;
     margin: 0 !important;
@@ -120,8 +122,8 @@
   }
 
   .single-route .table-container {
-    display: flex;
-    justify-content: center;
+    /*display: flex;
+    justify-content: center;*/
   }
   
 
@@ -252,7 +254,9 @@
 #generic-wide-container {
   clear: both; }
 
-
+  .single-route table {
+    width: 95%;
+  }
 
 .single-route table, .single-route caption {
   background: white; }
