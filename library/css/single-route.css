@@ -121,11 +121,6 @@
     color: #0072bc;
   }
 
-  .single-route .table-container {
-    /*display: flex;
-    justify-content: center;*/
-  }
-  
 
 #timetable-detail-maps h2 {
   color: black;
@@ -232,6 +227,10 @@
     display: block;
     margin-top: 10px;
   }
+
+  .timetable {
+    margin: auto !important;
+  }
 }
   
   .page-template-template-routes-and-schedules .route-select-container {
@@ -255,7 +254,7 @@
   clear: both; }
 
   .single-route table {
-    width: 95%;
+    width: 100%;
   }
 
 .single-route table, .single-route caption {
