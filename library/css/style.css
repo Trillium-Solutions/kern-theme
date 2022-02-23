@@ -1891,7 +1891,7 @@ body {
   font-size: 1.3em;
   top: 2px; }
   #kern-phone a:link, #kern-phone a:visited, #kern-phone a:active {
-    color: #84a990;
+    color: #fff;
     text-decoration: none; }
   #kern-phone a:hover {
     text-decoration: underline; }
@@ -1899,7 +1899,7 @@ body {
 #search-wrap input#search {
   height: 30px;
   background: none;
-  border: solid 1px #a1a1a1;
+  border: solid 1px #fff;
   border-radius: 0;
   padding-left: 30px;
   padding-top: 3px;
@@ -1920,12 +1920,18 @@ body {
 #search-wrap #header-search-icon-submit {
   position: absolute;
   top: 2px;
-  background-image: url(../images/kern-sprites.png);
   background-position: -128px -2px;
   width: 23px;
   height: 22px;
   border: 0 none !important;
   outline: 0 none; }
+
+  #header-search-icon-submit{
+        height: 15px !important;
+        width: 15px !important;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+  }
 
   #logo-image {
     max-width: 400px;

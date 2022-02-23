@@ -128,7 +128,7 @@
 							<div id="search-wrap" class="form-inline col-sm-4 col-xs-6" >
 								<form action="/" method="get">
 									<label class="sr-only" for="search">Search</label>
-									<img alt="search-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/clear.png" id="header-search-icon-submit" />
+									<img alt="search-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/search-icon.png" id="header-search-icon-submit" />
 									<input type="text" name="s" id="search" placeholder="Search" aria-label="search text value="<?php the_search_query(); ?>" />
 									
 								</form>
@@ -144,13 +144,13 @@
 						<div id="logo-holder" class="col-md-5 col-sm-10" >
 							<a href="/">
 								<h1 class="screen-reader-text">Kern Transit</h1>
-									<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" />
+									<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit logo" />
 							</a>
 						</div><!-- end logo-holder -->
 						<?php else: ?>
 						<div id="logo-holder" class="col-md-5 col-sm-10" >
 							<a href="<?php echo home_url(); ?>" rel="nofollow">
-								<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit home" />
+								<img id="logo-image" src="<?php echo get_template_directory_uri();?>/library/images/kern-transit-logo.png" alt="Kern Transit logo" />
 							</a>
 						</div><!-- end logo-holder -->
 						<?php endif; ?>
