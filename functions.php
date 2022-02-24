@@ -292,7 +292,8 @@ function fare_table() {
 
 		if ( ! empty ( $table ) ) {
 
-		echo '<table id="single-route-fares">';
+		echo'<div id="route-fares-holder">';
+			echo '<table id="single-route-fares">';
 
 			if ( ! empty( $table['caption'] ) ) {
 
@@ -336,6 +337,10 @@ function fare_table() {
 			echo '</tbody>';
 
 		echo '</table>';
+		echo '</div>';
+	}
+	else {
+		echo '<br><br/>';
 	}
 }
 	

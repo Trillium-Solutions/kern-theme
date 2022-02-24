@@ -8,8 +8,8 @@ get_header(); ?>
 
 			<?php get_template_part( 'generic-page-top'); ?> 
 			
-			<div class="row-fluid" id="page-holder">
-					<main id="main" class="col-sm-9" role="main">
+			<div class="row-fluid content-container" id="page-holder">
+					<main id="content" class="col-sm-9 main" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); 
 							?>

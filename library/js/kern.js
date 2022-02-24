@@ -123,10 +123,10 @@ $(document).ready(function(){
     
    
     // make generic columns the same height:
-    if( $("#main").height() < $('#sidebar1').height()) {
-    	$("#main").height($('#sidebar1').height() - $("#main").css('margin-top') - $("#main").css('margin-bottom'));
-    } else if( $("#main").height() > $('#sidebar1').height()){
-   		 $("#sidebar1").height($('#main').height() - 20 );
+    if( $(".main").height() < $('#sidebar1').height()) {
+    	$(".main").height($('#sidebar1').height() - $(".main").css('margin-top') - $(".main").css('margin-bottom'));
+    } else if( $(".main").height() > $('#sidebar1').height()){
+   		 $("#sidebar1").height($('.main').height() - 20 );
     }
     
     
@@ -210,10 +210,10 @@ $(document).ready(function(){
 
 $(window).load( function() {
 	 // make generic columns the same height:
-    if( $("#main").height() < $('#sidebar1').height()) {
-    	$("#main").height($('#sidebar1').height() - $("#main").css('margin-top') - $("#main").css('margin-bottom'));
-    } else if( $("#main").height() > $('#sidebar1').height()){
-   		 $("#sidebar1").height($('#main').height() - 20 );
+    if( $(".main").height() < $('#sidebar1').height()) {
+    	$(".main").height($('#sidebar1').height() - $(".main").css('margin-top') - $(".main").css('margin-bottom'));
+    } else if( $(".main").height() > $('#sidebar1').height()){
+   		 $("#sidebar1").height($('.main').height() - 20 );
     }
     
      if( $('body').hasClass('single-route') ) {

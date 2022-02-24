@@ -18,7 +18,7 @@
 					</div><!-- end .route-select-container -->
 				</header><!-- class="header-container" -->
 				<div id="generic-wide-container" class="row-fluid">
-					<main>
+					<main id-"content">
 						<section id="dar-info-container" class="col-sm-4" >
 							<div id="dar-cities">
 								<?php the_field('cities');  ?>

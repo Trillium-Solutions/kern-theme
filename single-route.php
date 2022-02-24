@@ -21,7 +21,7 @@ Template Name: route_individual_page
                         </header><!-- class="row" -->
 
                         <div id="generic-wide-container" style="margin-top: 20px">
-                                <main>
+                                <main id="content">
 
                                     <section id="route-locations-served">
                                         <?php  the_field('locations_served'); ?>
@@ -37,7 +37,7 @@ Template Name: route_individual_page
                                     
                                     <hr />
 
-                                    <nav id="route-nav" role="navigation">
+                                    <nav id="route-nav" role="navigation" style="background-color: #<?php the_field("route_color"); ?>">
                                         <ul id="route-anchors">
                                             <li><a href="#schedules">Schedules</a></li>
                                             <li><a href="#timetable-detail-maps">Detail Maps</a></li>
@@ -46,10 +46,10 @@ Template Name: route_individual_page
                                             <li><a href="/fares">Fares</a></li>
                                         </ul>
 
-                                        <div id="route-fares-holder" style="background-color: #<?php the_field('route_color'); ?>">
-                                            <?php fare_table(); ?>
-                                        </div>
+                                        <?php fare_table(); ?>
+                                    
                                     </nav><!-- #route-nav -->
+                                 
                                     <div class="route-info-box timetables">
                                         <h2 class="span-text">
                                     
