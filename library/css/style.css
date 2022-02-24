@@ -1906,6 +1906,9 @@ body {
   padding-top: 3px;
   color: white;
   line-height: 15px; }
+  #search-wrap input::placeholder {
+    color: white;
+  }
 #search-wrap *::-webkit-input-placeholder {
   /* WebKit browsers */
   line-height: 15px; }

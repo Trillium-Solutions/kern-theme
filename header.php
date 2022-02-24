@@ -129,7 +129,7 @@
 								<form action="/" method="get">
 									<label class="sr-only" for="search">Search</label>
 									<img alt="search-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/search-icon.png" id="header-search-icon-submit" />
-									<input type="text" name="s" id="search" placeholder="Search" aria-label="search text value="<?php the_search_query(); ?>" />
+									<input type="text" name="search" id="search" placeholder="Search" aria-label="search text value="<?php the_search_query(); ?>" />
 									
 								</form>
 							</div>
