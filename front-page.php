@@ -126,7 +126,7 @@
 						wp_reset_postdata();
 						?>
 				
-					<div id="home-more-news"><a href="./news">See More News >></a></div>
+					<div id="home-more-news"><a href="./news">See More News ></a></div>
 				
 				</section> <!-- end #home-news-area -->
 				<section id="right-secondary-links" class="col-sm-4">
