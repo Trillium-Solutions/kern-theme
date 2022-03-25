@@ -167,8 +167,8 @@
 }
 
 .tcp_alerts .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
   width: auto;
 }
 
@@ -180,20 +180,30 @@
 .tcp_alerts .container .panel_heading:before {
   content: url(../images/alert_icon.svg);
   margin-top: 5px;
+  margin-left: 10px;
 }
 
 .tcp_alerts .tcp_panel {
   display: flex;
   flex-direction: column;
+  border-bottom: .5px solid;
+  background: #fbf0a5;
 }
 
 .tcp_alerts .panel_heading {
   display: inherit;
+  margin: 5px;
 }
-
+.tcp_alerts .panel_heading .btn-link {
+  font-size: 18.5px;
+  text-align: left;
+  margin-left: .5em;
+  line-height: 1.3em;
+}
 .panel_body {
   padding-left: 10px;
   font-size: 16px;
+  background-color: #fdf8d6;
 }
 .panel_description {
   margin-bottom: 5px;

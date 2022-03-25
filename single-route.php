@@ -35,7 +35,7 @@ Template Name: route_individual_page
 
                                     </section><!--route-alerts -->
                                     
-                                    <hr />
+                                
 
                                     <nav id="route-nav" role="navigation" style="background-color: #<?php the_field("route_color"); ?>">
                                         <ul id="route-anchors">
