@@ -135,8 +135,11 @@ function kern_scripts() {
 		wp_enqueue_style( 'flatpickr-styles', 'https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css');
 
 		wp_enqueue_script( 'flatpickr', 'https://cdn.jsdelivr.net/npm/flatpickr', array(), false, true );
-	
-		wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=AIzaSyCgfsid1_jCd-BSTDqugAFgqDnJHywObXA&libraries=places", array(), false, true );
+
+		$google_maps_api_key = get_field('google_maps_api_key', 'option');
+		if ( ! empty( $google_maps_api_key ) ) {
+			wp_enqueue_script('google-maps', "https://maps.googleapis.com/maps/api/js?key=" . $google_maps_api_key . "&libraries=places", array(), false, true );
+		}
 
 		wp_enqueue_script( 'map', get_template_directory_uri() . '/library/js/map.js', array('jquery'), '20210915', true );
 
