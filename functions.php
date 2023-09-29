@@ -479,9 +479,9 @@ function darSelect() {
 function the_interactive_map($feedname, $route_ids = array() ) {
 	if (!$feedname) { return; }
 	if (empty($route_ids)) {
-		printf('<div class="system-map"><iframe src="https://new-maps.trilliumtransit.com/map/feed/%s/"></iframe></div>', $feedname);
+		printf('<div class="system-map"><iframe src="https://maps.trilliumtransit.com/map/feed/%s/"></iframe></div>', $feedname);
 	} else {
-		printf('<div class="route-map"><iframe src="https://new-maps.trilliumtransit.com/map/feed/%s/routes/%s?noui=true&page_embed=true"></iframe></div>',
+		printf('<div class="route-map"><iframe src="https://maps.trilliumtransit.com/map/feed/%s/routes/%s?noui=true&page_embed=true"></iframe></div>',
 			$feedname, implode(',', $route_ids));
 	}
 }
