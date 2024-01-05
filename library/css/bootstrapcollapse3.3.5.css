@@ -1,0 +1,14 @@
+.collapse {
+    display: none;
+}
+
+.in {
+    max-height: 100%;
+    display: block;  }
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}

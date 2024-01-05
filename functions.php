@@ -125,10 +125,13 @@ function kern_scripts() {
 	wp_enqueue_style('dar-style', get_theme_file_uri('/library/css/dar.css?v=2'), true);
 	wp_enqueue_style('icon', get_theme_file_uri('/favicon.png?v2'), true);
 	wp_enqueue_style('icon', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', true);
+	wp_enqueue_style('bootstrap-accordion-styles', get_theme_file_uri('/library/css/bootstrapcollapse3.3.5.css'), true);
 
 	//JS
 
 	wp_enqueue_script('bootstrap', get_theme_file_uri('/library/bootstrap/js/bootstrap.min.js?v=2'), array('jquery'));
+	// Collapse JS - Bootstrap
+	wp_enqueue_script( 'js-collapse', get_template_directory_uri() . '/library/js/collapse.min.js', array(), '20201106', true );
 	
 	if ( is_front_page() ) {
 	
@@ -483,5 +486,17 @@ function the_interactive_map($feedname, $route_ids = array() ) {
 			$feedname, implode(',', $route_ids));
 	}
 }
+
+
+
+// TCP accordion assets
+
+
+
+
+
+
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
