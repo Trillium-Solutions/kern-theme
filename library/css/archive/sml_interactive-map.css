@@ -64,15 +64,15 @@
   background-repeat: no-repeat;
   background-position: 68px 168px;
 }
-.mapWidth735 #map-hovers._210-frazier-park-local {
-  background-image: url("../images/sml_map/210-frazier-park-local_scale_735_out.jpg");
-  background-repeat: no-repeat;
-  background-position: 155px 378px;
-}
 .mapWidth735 #map-hovers._130-frazier-park-bakersfield {
   background-image: url("../images/sml_map/130-frazier-park-bakersfield_scale_735_out.jpg");
   background-repeat: no-repeat;
   background-position: 206px 180px;
+}
+.mapWidth735 #map-hovers._210-frazier-park-local {
+  background-image: url("../images/sml_map/210-frazier-park-local_scale_735_out.jpg");
+  background-repeat: no-repeat;
+  background-position: 155px 378px;
 }
 .mapWidth735 #map-hovers._92-GET {
   background-image: url("../images/sml_map/92-GET_scale_735_out.jpg");
